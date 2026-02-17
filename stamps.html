@@ -33,8 +33,14 @@
 
   <!-- ============ MAIN ============ -->
   <main class="stamps-content">
-    <div id="stamps-grid" class="stamps-grid">
-      <!-- Rendered by JS -->
+    <div class="passport-book">
+      <div class="passport-page-header">
+        <span class="passport-page-label">VISAS &amp; ENTRY STAMPS</span>
+        <span class="passport-page-label">VISAS ET CACHETS D'ENTR&Eacute;E</span>
+      </div>
+      <div id="stamps-grid" class="stamps-grid">
+        <!-- Rendered by JS -->
+      </div>
     </div>
   </main>
 
@@ -50,59 +56,60 @@
     (function () {
       'use strict';
 
-      // Country-specific stamp designs — flag-inspired colors + icon
+      // Country stamp ink colors — muted/faded to look like real passport ink
+      // Real passport stamps use reds, blues, greens, purples, blacks
       var COUNTRY_STAMPS = {
-        "Argentina":           { bg: '#75aadb', fg: '#ffffff', accent: '#f6b40e', icon: '🇦🇷' },
-        "Australia":           { bg: '#00008b', fg: '#ffffff', accent: '#ff0000', icon: '🇦🇺' },
-        "Brazil":              { bg: '#009c3b', fg: '#ffffff', accent: '#ffdf00', icon: '🇧🇷' },
-        "Cambodia":            { bg: '#032ea1', fg: '#ffffff', accent: '#e00025', icon: '🇰🇭' },
-        "Canada":              { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇨🇦' },
-        "China":               { bg: '#de2910', fg: '#ffde00', accent: '#ffde00', icon: '🇨🇳' },
-        "Colombia":            { bg: '#fcd116', fg: '#003893', accent: '#ce1126', icon: '🇨🇴' },
-        "Cuba":                { bg: '#002a8f', fg: '#ffffff', accent: '#cb1515', icon: '🇨🇺' },
-        "Denmark":             { bg: '#c60c30', fg: '#ffffff', accent: '#ffffff', icon: '🇩🇰' },
-        "Ethiopia":            { bg: '#078930', fg: '#ffffff', accent: '#fcdd09', icon: '🇪🇹' },
-        "France":              { bg: '#002395', fg: '#ffffff', accent: '#ed2939', icon: '🇫🇷' },
-        "Georgia":             { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇬🇪' },
-        "Greece":              { bg: '#0d5eaf', fg: '#ffffff', accent: '#ffffff', icon: '🇬🇷' },
-        "Hong Kong":           { bg: '#de2910', fg: '#ffffff', accent: '#ffffff', icon: '🇭🇰' },
-        "India":               { bg: '#ff9933', fg: '#ffffff', accent: '#138808', icon: '🇮🇳' },
-        "Indonesia":           { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇮🇩' },
-        "Iran":                { bg: '#239f40', fg: '#ffffff', accent: '#da0000', icon: '🇮🇷' },
-        "Israel":              { bg: '#0038b8', fg: '#ffffff', accent: '#ffffff', icon: '🇮🇱' },
-        "Italy":               { bg: '#008c45', fg: '#ffffff', accent: '#cd212a', icon: '🇮🇹' },
-        "Jamaica":             { bg: '#009b3a', fg: '#000000', accent: '#fed100', icon: '🇯🇲' },
-        "Japan":               { bg: '#bc002d', fg: '#ffffff', accent: '#ffffff', icon: '🇯🇵' },
-        "Kenya":               { bg: '#006600', fg: '#ffffff', accent: '#bb0000', icon: '🇰🇪' },
-        "Laos":                { bg: '#002868', fg: '#ffffff', accent: '#ce1126', icon: '🇱🇦' },
-        "Lebanon":             { bg: '#ed1c24', fg: '#ffffff', accent: '#00a651', icon: '🇱🇧' },
-        "Madagascar":          { bg: '#007e39', fg: '#ffffff', accent: '#fc3d32', icon: '🇲🇬' },
-        "Malaysia":            { bg: '#010066', fg: '#ffcc00', accent: '#cc0001', icon: '🇲🇾' },
-        "Mexico":              { bg: '#006847', fg: '#ffffff', accent: '#ce1126', icon: '🇲🇽' },
-        "Morocco":             { bg: '#c1272d', fg: '#006233', accent: '#006233', icon: '🇲🇦' },
-        "Myanmar":             { bg: '#fecb00', fg: '#34b233', accent: '#ea2839', icon: '🇲🇲' },
-        "Nigeria":             { bg: '#008751', fg: '#ffffff', accent: '#ffffff', icon: '🇳🇬' },
-        "Peru":                { bg: '#d91023', fg: '#ffffff', accent: '#ffffff', icon: '🇵🇪' },
-        "Philippines":         { bg: '#0038a8', fg: '#ffffff', accent: '#ce1126', icon: '🇵🇭' },
-        "Portugal":            { bg: '#006600', fg: '#ffffff', accent: '#ff0000', icon: '🇵🇹' },
-        "Puerto Rico":         { bg: '#3c3b6e', fg: '#ffffff', accent: '#b22234', icon: '🇵🇷' },
-        "Senegal":             { bg: '#00853f', fg: '#fdef42', accent: '#e31b23', icon: '🇸🇳' },
-        "Singapore":           { bg: '#ed2939', fg: '#ffffff', accent: '#ffffff', icon: '🇸🇬' },
-        "South Korea":         { bg: '#003478', fg: '#ffffff', accent: '#c60c30', icon: '🇰🇷' },
-        "Spain":               { bg: '#c60b1e', fg: '#ffc400', accent: '#ffc400', icon: '🇪🇸' },
-        "Tanzania":            { bg: '#1eb53a', fg: '#ffffff', accent: '#00a3dd', icon: '🇹🇿' },
-        "Thailand":            { bg: '#a51931', fg: '#ffffff', accent: '#2d2a4a', icon: '🇹🇭' },
-        "Trinidad and Tobago": { bg: '#ce1126', fg: '#ffffff', accent: '#000000', icon: '🇹🇹' },
-        "Turkey":              { bg: '#e30a17', fg: '#ffffff', accent: '#ffffff', icon: '🇹🇷' },
-        "Uganda":              { bg: '#000000', fg: '#fcdc04', accent: '#d90000', icon: '🇺🇬' },
-        "United Kingdom":      { bg: '#012169', fg: '#ffffff', accent: '#c8102e', icon: '🇬🇧' },
-        "United States":       { bg: '#3c3b6e', fg: '#ffffff', accent: '#b22234', icon: '🇺🇸' },
-        "Uruguay":             { bg: '#001489', fg: '#ffffff', accent: '#ffffff', icon: '🇺🇾' },
-        "Vietnam":             { bg: '#da251d', fg: '#ffcd00', accent: '#ffcd00', icon: '🇻🇳' },
+        "Argentina":           { ink: '#4a7a9e', icon: '🇦🇷' },
+        "Australia":           { ink: '#1a3a6b', icon: '🇦🇺' },
+        "Brazil":              { ink: '#2a7a3b', icon: '🇧🇷' },
+        "Cambodia":            { ink: '#6b2d4a', icon: '🇰🇭' },
+        "Canada":              { ink: '#8b2a2a', icon: '🇨🇦' },
+        "China":               { ink: '#a0342a', icon: '🇨🇳' },
+        "Colombia":            { ink: '#8a6b1a', icon: '🇨🇴' },
+        "Cuba":                { ink: '#2a4a7b', icon: '🇨🇺' },
+        "Denmark":             { ink: '#943040', icon: '🇩🇰' },
+        "Ethiopia":            { ink: '#2a6b3a', icon: '🇪🇹' },
+        "France":              { ink: '#1a2a6b', icon: '🇫🇷' },
+        "Georgia":             { ink: '#8b3a3a', icon: '🇬🇪' },
+        "Greece":              { ink: '#2a4a8b', icon: '🇬🇷' },
+        "Hong Kong":           { ink: '#a0342a', icon: '🇭🇰' },
+        "India":               { ink: '#b06a1a', icon: '🇮🇳' },
+        "Indonesia":           { ink: '#8b2a2a', icon: '🇮🇩' },
+        "Iran":                { ink: '#2a6b4a', icon: '🇮🇷' },
+        "Israel":              { ink: '#1a3a7b', icon: '🇮🇱' },
+        "Italy":               { ink: '#2a6b3a', icon: '🇮🇹' },
+        "Jamaica":             { ink: '#3a6b2a', icon: '🇯🇲' },
+        "Japan":               { ink: '#a03030', icon: '🇯🇵' },
+        "Kenya":               { ink: '#3a5a2a', icon: '🇰🇪' },
+        "Laos":                { ink: '#2a3a6b', icon: '🇱🇦' },
+        "Lebanon":             { ink: '#8b3040', icon: '🇱🇧' },
+        "Madagascar":          { ink: '#2a5a3a', icon: '🇲🇬' },
+        "Malaysia":            { ink: '#1a2a5b', icon: '🇲🇾' },
+        "Mexico":              { ink: '#3a5a3a', icon: '🇲🇽' },
+        "Morocco":             { ink: '#8b3030', icon: '🇲🇦' },
+        "Myanmar":             { ink: '#8a7a1a', icon: '🇲🇲' },
+        "Nigeria":             { ink: '#2a6b3a', icon: '🇳🇬' },
+        "Peru":                { ink: '#943030', icon: '🇵🇪' },
+        "Philippines":         { ink: '#2a4a8b', icon: '🇵🇭' },
+        "Portugal":            { ink: '#2a5a2a', icon: '🇵🇹' },
+        "Puerto Rico":         { ink: '#3a3a6b', icon: '🇵🇷' },
+        "Senegal":             { ink: '#2a6b3a', icon: '🇸🇳' },
+        "Singapore":           { ink: '#8b3040', icon: '🇸🇬' },
+        "South Korea":         { ink: '#1a3a6b', icon: '🇰🇷' },
+        "Spain":               { ink: '#8b2a1a', icon: '🇪🇸' },
+        "Tanzania":            { ink: '#2a6b4a', icon: '🇹🇿' },
+        "Thailand":            { ink: '#6b2a3a', icon: '🇹🇭' },
+        "Trinidad and Tobago": { ink: '#8b3030', icon: '🇹🇹' },
+        "Turkey":              { ink: '#a03020', icon: '🇹🇷' },
+        "Uganda":              { ink: '#3a3a2a', icon: '🇺🇬' },
+        "United Kingdom":      { ink: '#1a2a5b', icon: '🇬🇧' },
+        "United States":       { ink: '#2a3a6b', icon: '🇺🇸' },
+        "Uruguay":             { ink: '#1a2a7b', icon: '🇺🇾' },
+        "Vietnam":             { ink: '#943020', icon: '🇻🇳' },
       };
 
-      // Fallback for any country not in the map
-      var DEFAULT_STAMP = { bg: '#5a4d3e', fg: '#f4efe4', accent: '#b8860b', icon: '' };
+      // Fallback
+      var DEFAULT_STAMP = { ink: '#5a4d3e', icon: '' };
 
       // Gather country data from restaurants
       var countryData = {};
@@ -133,11 +140,17 @@
       var grid = document.getElementById('stamps-grid');
       var html = '';
 
+      // Random opacity variation (0.55 - 0.85) for worn ink effect
+      function randOpacity() {
+        return (0.55 + Math.random() * 0.3).toFixed(2);
+      }
+
       countries.forEach(function (country, idx) {
         var data = countryData[country];
         var stamp = COUNTRY_STAMPS[country] || DEFAULT_STAMP;
         var shape = shapes[idx % shapes.length];
         var rotation = randRotation();
+        var opacity = randOpacity();
         var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
         var showList = Array.from(data.shows).map(function (s) {
           return SHOW_MAP[s] ? SHOW_MAP[s].abbr : s;
@@ -145,12 +158,11 @@
 
         html += '<div class="passport-stamp ' + shape + '" style="';
         html += 'transform: rotate(' + rotation + 'deg);';
-        html += '--stamp-bg: ' + stamp.bg + ';';
-        html += '--stamp-fg: ' + stamp.fg + ';';
-        html += '--stamp-accent: ' + stamp.accent + ';';
+        html += '--stamp-ink: ' + stamp.ink + ';';
+        html += 'opacity: ' + opacity + ';';
         html += '">';
         html += '<div class="stamp-icon">' + stamp.icon + '</div>';
-        html += '<div class="stamp-country">' + country + '</div>';
+        html += '<div class="stamp-country">' + country.toUpperCase() + '</div>';
         html += '<div class="stamp-count">' + data.count + ' spot' + (data.count > 1 ? 's' : '') + '</div>';
         html += '<div class="stamp-cities">' + cities + '</div>';
         html += '<div class="stamp-shows">' + showList + '</div>';

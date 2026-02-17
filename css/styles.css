@@ -1081,104 +1081,168 @@ body::before {
   padding: 2rem 1.5rem;
 }
 
+/* Passport book wrapper — looks like open passport pages */
+.passport-book {
+  background: #f0eadb;
+  border: 2px solid var(--parchment-dark);
+  border-radius: 2px;
+  padding: 2rem 1.5rem 2.5rem;
+  position: relative;
+  box-shadow:
+    inset 0 0 40px rgba(139, 90, 43, 0.06),
+    3px 4px 12px rgba(0,0,0,0.15);
+  /* Paper texture */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  background-color: #f0eadb;
+}
+
+/* Spine shadow on left */
+.passport-book::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(to right,
+    rgba(44, 36, 24, 0.08),
+    rgba(44, 36, 24, 0.03) 40%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* Center fold line */
+.passport-book::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  bottom: 1rem;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(44, 36, 24, 0.1) 15%,
+    rgba(44, 36, 24, 0.06) 50%,
+    rgba(44, 36, 24, 0.1) 85%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.passport-page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(44, 36, 24, 0.12);
+}
+
+.passport-page-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: rgba(44, 36, 24, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.passport-page-label + .passport-page-label {
+  font-style: italic;
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  margin-top: 0.15rem;
+}
+
 .stamps-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem 0;
+  gap: 1.8rem 1.5rem;
+  padding: 0.5rem 0;
 }
 
-/* Individual passport stamp — filled with country colors */
+/* Individual passport stamp — ink on parchment */
 .passport-stamp {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1.25rem 1rem;
-  background: var(--stamp-bg, #5a4d3e);
-  color: var(--stamp-fg, #f4efe4);
-  border: 3px solid var(--stamp-accent, #b8860b);
+  padding: 1.1rem 0.9rem;
+  background: transparent;
+  color: var(--stamp-ink, #5a4d3e);
+  border: 3px solid var(--stamp-ink, #5a4d3e);
   position: relative;
-  transition: transform 0.25s, box-shadow 0.25s;
-  min-width: 150px;
-  max-width: 185px;
-  box-shadow: 2px 3px 8px rgba(0,0,0,0.25), inset 0 0 20px rgba(0,0,0,0.1);
-  /* Subtle worn ink texture */
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-  background-color: var(--stamp-bg, #5a4d3e);
+  transition: opacity 0.3s, transform 0.3s;
+  min-width: 145px;
+  max-width: 175px;
 }
 
 .passport-stamp:hover {
-  transform: rotate(0deg) scale(1.08) !important;
-  box-shadow: 3px 5px 15px rgba(0,0,0,0.35), inset 0 0 20px rgba(0,0,0,0.1);
+  opacity: 1 !important;
+  transform: rotate(0deg) scale(1.06) !important;
   z-index: 2;
 }
 
 /* Stamp shapes */
 .stamp-circle {
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
-  border-width: 4px;
-  outline: 2px solid var(--stamp-accent, #b8860b);
-  outline-offset: -8px;
+  width: 165px;
+  height: 165px;
+  border-width: 3px;
+  /* Inner ring for authentic look */
+  box-shadow: inset 0 0 0 4px transparent, inset 0 0 0 6px var(--stamp-ink, #5a4d3e);
 }
 
 .stamp-rect {
-  border-radius: 3px;
+  border-radius: 2px;
   border-width: 3px;
-  padding: 1rem 1.25rem;
-  /* Double border effect */
-  outline: 2px solid var(--stamp-accent, #b8860b);
-  outline-offset: 4px;
+  padding: 1rem 1.15rem;
+  /* Double border via outline */
+  outline: 2px solid var(--stamp-ink, #5a4d3e);
+  outline-offset: 3px;
 }
 
 .stamp-rounded {
-  border-radius: 14px;
+  border-radius: 10px;
   border-width: 3px;
-  padding: 1rem 1.25rem;
-  outline: 2px solid var(--stamp-accent, #b8860b);
-  outline-offset: -7px;
+  padding: 1rem 1.15rem;
+  /* Dashed inner border */
+  box-shadow: inset 0 0 0 3px transparent, inset 0 0 0 5px var(--stamp-ink, #5a4d3e);
 }
 
 .stamp-icon {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   line-height: 1;
-  margin-bottom: 0.15rem;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+  margin-bottom: 0.1rem;
 }
 
 .stamp-country {
   font-family: var(--font-typewriter);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
   line-height: 1.2;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .stamp-count {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.15rem;
-  opacity: 0.85;
+  margin-bottom: 0.1rem;
 }
 
 .stamp-cities {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-style: italic;
   line-height: 1.3;
-  margin-bottom: 0.15rem;
-  opacity: 0.8;
-  max-width: 145px;
+  margin-bottom: 0.1rem;
+  max-width: 140px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1186,42 +1250,55 @@ body::before {
 
 .stamp-shows {
   font-family: var(--font-typewriter);
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  opacity: 0.7;
-  border-top: 1px solid var(--stamp-accent, rgba(255,255,255,0.4));
+  border-top: 1px solid var(--stamp-ink, #5a4d3e);
   padding-top: 0.2rem;
   margin-top: 0.15rem;
 }
 
 /* Responsive stamps */
 @media (max-width: 600px) {
+  .passport-book {
+    padding: 1.25rem 0.75rem 1.5rem;
+  }
+
+  .passport-book::after {
+    display: none;
+  }
+
   .stamps-grid {
-    gap: 1rem;
+    gap: 1.2rem 0.8rem;
   }
 
   .passport-stamp {
-    min-width: 125px;
-    max-width: 155px;
-    padding: 0.9rem 0.75rem;
+    min-width: 120px;
+    max-width: 148px;
+    padding: 0.85rem 0.65rem;
   }
 
   .stamp-circle {
-    width: 140px;
-    height: 140px;
+    width: 135px;
+    height: 135px;
   }
 
   .stamp-icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .stamp-country {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
   }
 
   .stat-item {
     font-size: 0.75rem;
+  }
+
+  .passport-page-label {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
   }
 }
 
