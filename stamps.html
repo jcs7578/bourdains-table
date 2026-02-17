@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Passport Stamps — Eat Like Anthony</title>
-  <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps. Click to mark countries you've been to.">
+  <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps. Check off restaurants you've been to.">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -37,16 +37,11 @@
 
     <!-- Personal passport controls -->
     <div class="passport-controls">
-      <span class="passport-progress" id="passport-progress">
-        0 of 47 stamped
-        <span class="passport-progress-bar">
-          <span class="passport-progress-fill" id="progress-fill" style="width: 0%"></span>
-        </span>
-      </span>
+      <span class="passport-progress" id="passport-progress"></span>
       <button class="btn-clear-passport" id="btn-clear">Clear All</button>
     </div>
     <p style="text-align:center; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-light); margin-bottom: 1rem; opacity: 0.7;">
-      Click a stamp to mark countries you've visited
+      Click a stamp to check off restaurants you've visited
     </p>
 
     <div class="passport-book">
@@ -60,22 +55,38 @@
     </div>
   </main>
 
+  <!-- ============ MODAL ============ -->
+  <div id="stamp-modal" class="stamp-modal" hidden>
+    <div class="stamp-modal-backdrop"></div>
+    <div class="stamp-modal-content">
+      <button class="stamp-modal-close" id="modal-close">&times;</button>
+      <div class="stamp-modal-header">
+        <span class="stamp-modal-icon" id="modal-icon"></span>
+        <h2 class="stamp-modal-title" id="modal-title"></h2>
+        <span class="stamp-modal-progress" id="modal-progress"></span>
+      </div>
+      <div class="stamp-modal-list" id="modal-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <p class="footer-quote">"Without experimentation, a willingness to ask questions and try new things, we shall surely become static, repetitive, and moribund."</p>
     <p>Built with Leaflet.js &middot; No frameworks, no fuss.</p>
   </footer>
 
-  <!-- Data (needed for stamp generation) -->
+  <!-- Data -->
   <script src="js/data.js"></script>
   <script>
     (function () {
       'use strict';
 
-      // ---- localStorage for visited countries ----
-      var STORAGE_KEY = 'eatlikeanthony_visited';
+      // ---- localStorage for visited restaurants ----
+      var STORAGE_KEY = 'eatlikeanthony_visited_restaurants';
 
-      function getVisited() {
+      function getVisitedSet() {
         try {
           var raw = localStorage.getItem(STORAGE_KEY);
           return raw ? JSON.parse(raw) : [];
@@ -84,25 +95,44 @@
         }
       }
 
-      function saveVisited(arr) {
+      function saveVisitedSet(arr) {
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-        } catch (e) { /* silently fail */ }
+        } catch (e) {}
       }
 
-      function toggleVisited(country) {
-        var visited = getVisited();
-        var idx = visited.indexOf(country);
+      function isRestaurantVisited(name) {
+        return getVisitedSet().indexOf(name) !== -1;
+      }
+
+      function toggleRestaurant(name) {
+        var set = getVisitedSet();
+        var idx = set.indexOf(name);
         if (idx === -1) {
-          visited.push(country);
+          set.push(name);
         } else {
-          visited.splice(idx, 1);
+          set.splice(idx, 1);
         }
-        saveVisited(visited);
-        return visited;
+        saveVisitedSet(set);
+        return set;
       }
 
-      // Country stamp ink colors — muted/faded to look like real passport ink
+      // Migrate old country-level data if present
+      (function migrateOldData() {
+        var oldKey = 'eatlikeanthony_visited';
+        try {
+          var old = localStorage.getItem(oldKey);
+          if (old) localStorage.removeItem(oldKey);
+        } catch (e) {}
+      })();
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      // Country stamp ink colors
       var COUNTRY_STAMPS = {
         "Argentina":           { ink: '#4a7a9e', icon: '🇦🇷' },
         "Australia":           { ink: '#1a3a6b', icon: '🇦🇺' },
@@ -152,118 +182,241 @@
         "Uruguay":             { ink: '#1a2a7b', icon: '🇺🇾' },
         "Vietnam":             { ink: '#943020', icon: '🇻🇳' },
       };
-
       var DEFAULT_STAMP = { ink: '#5a4d3e', icon: '' };
 
-      // Gather country data from restaurants
+      // ---- Build country data ----
       var countryData = {};
+      var countryRestaurants = {}; // country -> [restaurant objects]
       RESTAURANTS.forEach(function (r) {
         var c = r.country;
         if (!countryData[c]) {
           countryData[c] = { shows: new Set(), count: 0, cities: new Set() };
+          countryRestaurants[c] = [];
         }
         countryData[c].count++;
         countryData[c].shows.add(r.show);
         countryData[c].cities.add(r.city);
+        countryRestaurants[c].push(r);
       });
 
-      // Sort countries by restaurant count (descending)
       var countries = Object.keys(countryData).sort(function (a, b) {
         return countryData[b].count - countryData[a].count;
       });
 
-      // Random rotation between -5 and 5 degrees
+      // ---- Helpers ----
       function randRotation() {
         return (Math.random() * 10 - 5).toFixed(1);
       }
 
-      // Random opacity variation (0.45 - 0.65) for unvisited worn ink
-      function randOpacity() {
-        return (0.45 + Math.random() * 0.2).toFixed(2);
+      function getCountryProgress(country) {
+        var restaurants = countryRestaurants[country] || [];
+        var visited = getVisitedSet();
+        var checked = 0;
+        restaurants.forEach(function (r) {
+          if (visited.indexOf(r.name) !== -1) checked++;
+        });
+        return { checked: checked, total: restaurants.length };
       }
 
+      // ---- Render stamps ----
       var shapes = ['stamp-circle', 'stamp-rect', 'stamp-rounded'];
-
-      // Render stamps
       var grid = document.getElementById('stamps-grid');
-      var html = '';
-      var visited = getVisited();
 
-      countries.forEach(function (country, idx) {
-        var data = countryData[country];
-        var stamp = COUNTRY_STAMPS[country] || DEFAULT_STAMP;
-        var shape = shapes[idx % shapes.length];
-        var rotation = randRotation();
-        var opacity = randOpacity();
-        var isVisited = visited.indexOf(country) !== -1;
-        var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
-        var showList = Array.from(data.shows).map(function (s) {
-          return SHOW_MAP[s] ? SHOW_MAP[s].abbr : s;
-        }).join(' / ');
+      function renderStamps() {
+        var html = '';
+        countries.forEach(function (country, idx) {
+          var data = countryData[country];
+          var stamp = COUNTRY_STAMPS[country] || DEFAULT_STAMP;
+          var shape = shapes[idx % shapes.length];
+          var rotation = randRotation();
+          var progress = getCountryProgress(country);
+          var allVisited = progress.checked === progress.total;
+          var someVisited = progress.checked > 0;
+          var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
+          var showList = Array.from(data.shows).map(function (s) {
+            return SHOW_MAP[s] ? SHOW_MAP[s].abbr : s;
+          }).join(' / ');
 
-        html += '<div class="passport-stamp ' + shape + (isVisited ? ' visited' : '') + '"';
-        html += ' data-country="' + country + '"';
-        html += ' data-base-opacity="' + opacity + '"';
-        html += ' style="';
-        html += 'transform: rotate(' + rotation + 'deg);';
-        html += '--stamp-ink: ' + stamp.ink + ';';
-        if (!isVisited) html += 'opacity: ' + opacity + ';';
-        html += '">';
-        html += '<span class="stamp-check">&#10003;</span>';
-        html += '<div class="stamp-icon">' + stamp.icon + '</div>';
-        html += '<div class="stamp-country">' + country.toUpperCase() + '</div>';
-        html += '<div class="stamp-count">' + data.count + ' spot' + (data.count > 1 ? 's' : '') + '</div>';
-        html += '<div class="stamp-cities">' + cities + '</div>';
-        html += '<div class="stamp-shows">' + showList + '</div>';
-        html += '</div>';
-      });
+          var cls = 'passport-stamp ' + shape;
+          if (allVisited) cls += ' visited';
+          else if (someVisited) cls += ' partial';
 
-      grid.innerHTML = html;
+          html += '<div class="' + cls + '"';
+          html += ' data-country="' + escapeHtml(country) + '"';
+          html += ' style="';
+          html += 'transform: rotate(' + rotation + 'deg);';
+          html += '--stamp-ink: ' + stamp.ink + ';';
+          html += '">';
 
-      // ---- Progress bar ----
-      var progressEl = document.getElementById('passport-progress');
-      var progressFill = document.getElementById('progress-fill');
-
-      function updateProgress() {
-        var v = getVisited();
-        var count = v.length;
-        var total = countries.length;
-        var pct = total > 0 ? Math.round((count / total) * 100) : 0;
-        progressEl.innerHTML = count + ' of ' + total + ' stamped (' + pct + '%)' +
-          ' <span class="passport-progress-bar"><span class="passport-progress-fill" id="progress-fill" style="width:' + pct + '%"></span></span>';
-      }
-
-      updateProgress();
-
-      // ---- Click handlers on stamps ----
-      var stamps = grid.querySelectorAll('.passport-stamp');
-      stamps.forEach(function (el) {
-        el.addEventListener('click', function () {
-          var country = this.getAttribute('data-country');
-          var visited = toggleVisited(country);
-          var isNowVisited = visited.indexOf(country) !== -1;
-
-          if (isNowVisited) {
-            this.classList.add('visited');
-            this.style.opacity = '';
-          } else {
-            this.classList.remove('visited');
-            this.style.opacity = this.getAttribute('data-base-opacity');
+          // Progress badge
+          if (someVisited) {
+            html += '<span class="stamp-check">' + progress.checked + '/' + progress.total + '</span>';
           }
 
-          updateProgress();
+          html += '<div class="stamp-icon">' + stamp.icon + '</div>';
+          html += '<div class="stamp-country">' + country.toUpperCase() + '</div>';
+          html += '<div class="stamp-count">' + progress.checked + ' / ' + progress.total + ' visited</div>';
+          html += '<div class="stamp-cities">' + cities + '</div>';
+          html += '<div class="stamp-shows">' + showList + '</div>';
+          html += '</div>';
         });
+        grid.innerHTML = html;
+        attachStampClicks();
+      }
+
+      // ---- Global progress ----
+      var progressEl = document.getElementById('passport-progress');
+
+      function updateProgress() {
+        var visited = getVisitedSet();
+        var totalRestaurants = RESTAURANTS.length;
+        var checkedRestaurants = visited.length;
+        var pct = totalRestaurants > 0 ? Math.round((checkedRestaurants / totalRestaurants) * 100) : 0;
+
+        // Count fully completed countries
+        var completedCountries = 0;
+        countries.forEach(function (c) {
+          var p = getCountryProgress(c);
+          if (p.checked === p.total) completedCountries++;
+        });
+
+        progressEl.innerHTML =
+          checkedRestaurants + ' / ' + totalRestaurants + ' restaurants (' + pct + '%) &middot; ' +
+          completedCountries + ' / ' + countries.length + ' countries complete' +
+          ' <span class="passport-progress-bar"><span class="passport-progress-fill" style="width:' + pct + '%"></span></span>';
+      }
+
+      // ---- Modal ----
+      var modal = document.getElementById('stamp-modal');
+      var modalTitle = document.getElementById('modal-title');
+      var modalIcon = document.getElementById('modal-icon');
+      var modalProgress = document.getElementById('modal-progress');
+      var modalList = document.getElementById('modal-list');
+      var modalClose = document.getElementById('modal-close');
+      var backdrop = modal.querySelector('.stamp-modal-backdrop');
+      var currentModalCountry = null;
+
+      function openModal(country) {
+        currentModalCountry = country;
+        var stamp = COUNTRY_STAMPS[country] || DEFAULT_STAMP;
+        var restaurants = countryRestaurants[country] || [];
+        var progress = getCountryProgress(country);
+
+        modalIcon.textContent = stamp.icon;
+        modalTitle.textContent = country;
+        modalTitle.style.color = stamp.ink;
+        updateModalProgress(progress);
+
+        var html = '';
+        restaurants.forEach(function (r) {
+          var checked = isRestaurantVisited(r.name);
+          var loc = r.state ? r.city + ', ' + r.state : r.city;
+
+          html += '<label class="modal-restaurant' + (checked ? ' checked' : '') + '" data-name="' + escapeHtml(r.name) + '">';
+          html += '<input type="checkbox"' + (checked ? ' checked' : '') + '>';
+          html += '<span class="modal-checkbox-custom"></span>';
+          html += '<span class="modal-restaurant-info">';
+          html += '<span class="modal-restaurant-name">' + escapeHtml(r.name) + '</span>';
+          html += '<span class="modal-restaurant-detail">' + escapeHtml(loc);
+          if (r.dish) html += ' &mdash; ' + escapeHtml(r.dish);
+          html += '</span>';
+          html += '</span>';
+          html += '</label>';
+        });
+        modalList.innerHTML = html;
+
+        // Attach checkbox handlers
+        var labels = modalList.querySelectorAll('.modal-restaurant');
+        labels.forEach(function (label) {
+          var checkbox = label.querySelector('input[type="checkbox"]');
+          checkbox.addEventListener('change', function () {
+            var name = label.getAttribute('data-name');
+            toggleRestaurant(name);
+            label.classList.toggle('checked', checkbox.checked);
+            var p = getCountryProgress(currentModalCountry);
+            updateModalProgress(p);
+            updateProgress();
+            updateStampAppearance(currentModalCountry);
+          });
+        });
+
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function updateModalProgress(progress) {
+        modalProgress.textContent = progress.checked + ' / ' + progress.total + ' visited';
+        if (progress.checked === progress.total) {
+          modalProgress.classList.add('complete');
+        } else {
+          modalProgress.classList.remove('complete');
+        }
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        currentModalCountry = null;
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
       });
 
-      // ---- Clear all button ----
-      document.getElementById('btn-clear').addEventListener('click', function () {
-        saveVisited([]);
+      // ---- Update individual stamp appearance without full re-render ----
+      function updateStampAppearance(country) {
+        var stampEl = grid.querySelector('[data-country="' + country + '"]');
+        if (!stampEl) return;
+        var progress = getCountryProgress(country);
+        var allVisited = progress.checked === progress.total;
+        var someVisited = progress.checked > 0;
+
+        stampEl.classList.toggle('visited', allVisited);
+        stampEl.classList.toggle('partial', someVisited && !allVisited);
+
+        // Update the count text
+        var countEl = stampEl.querySelector('.stamp-count');
+        if (countEl) countEl.textContent = progress.checked + ' / ' + progress.total + ' visited';
+
+        // Update badge
+        var badge = stampEl.querySelector('.stamp-check');
+        if (someVisited) {
+          if (!badge) {
+            badge = document.createElement('span');
+            badge.className = 'stamp-check';
+            stampEl.insertBefore(badge, stampEl.firstChild);
+          }
+          badge.textContent = progress.checked + '/' + progress.total;
+          badge.style.display = '';
+        } else if (badge) {
+          badge.style.display = 'none';
+        }
+      }
+
+      // ---- Attach click handlers to stamps ----
+      function attachStampClicks() {
+        var stamps = grid.querySelectorAll('.passport-stamp');
         stamps.forEach(function (el) {
-          el.classList.remove('visited');
-          el.style.opacity = el.getAttribute('data-base-opacity');
+          el.addEventListener('click', function () {
+            var country = this.getAttribute('data-country');
+            openModal(country);
+          });
         });
+      }
+
+      // ---- Clear all ----
+      document.getElementById('btn-clear').addEventListener('click', function () {
+        if (!confirm('Clear all visited restaurants?')) return;
+        saveVisitedSet([]);
+        renderStamps();
         updateProgress();
       });
+
+      // ---- Init ----
+      renderStamps();
+      updateProgress();
 
       // Stats
       document.getElementById('stat-countries').textContent = countries.length + ' Countries';
