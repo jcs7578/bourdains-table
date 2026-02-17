@@ -44,43 +44,16 @@
       worldCopyJump: true,
     });
 
-    // Vintage / watercolor tile layer
-    const watercolor = L.tileLayer(
-      'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg',
-      {
-        attribution:
-          'Map tiles by <a href="https://stamen.com">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org">OpenStreetMap</a>',
-        maxZoom: 18,
-      }
-    );
-
-    // Fallback: CartoDB Voyager (cleaner but still muted)
-    const voyager = L.tileLayer(
+    // CartoDB Voyager — free, muted, vintage-friendly, no API key needed
+    L.tileLayer(
       'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
       {
         attribution:
           '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
         maxZoom: 18,
+        subdomains: 'abcd',
       }
-    );
-
-    // Try watercolor first, fall back to voyager on error
-    watercolor.on('tileerror', function () {
-      map.removeLayer(watercolor);
-      voyager.addTo(map);
-    });
-    watercolor.addTo(map);
-
-    // Add text labels on top of watercolor (Stamen Toner Labels)
-    const labels = L.tileLayer(
-      'https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}{r}.png',
-      {
-        maxZoom: 18,
-        opacity: 0.6,
-        pane: 'overlayPane',
-      }
-    );
-    labels.addTo(map);
+    ).addTo(map);
 
     // Marker cluster group
     markerClusterGroup = L.markerClusterGroup({
