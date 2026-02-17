@@ -263,6 +263,19 @@ body::before {
   color: var(--red-stamp) !important;
 }
 
+/* Ensure popups and tooltips use themed fonts */
+.leaflet-popup-content {
+  font-family: var(--font-body) !important;
+  color: var(--ink-dark) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+}
+
+.leaflet-tooltip {
+  font-family: var(--font-typewriter) !important;
+  color: var(--ink-dark) !important;
+}
+
 /* ---------- Custom Map Markers ---------- */
 .marker-stamp {
   display: flex;
