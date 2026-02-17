@@ -157,8 +157,8 @@ body::before {
   font-size: 0.85rem;
   padding: 0.5rem 1rem;
   border: 2px solid var(--ink-medium);
-  background: transparent;
-  color: var(--ink-dark);
+  background: var(--ink-dark);
+  color: var(--parchment-light);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -166,29 +166,31 @@ body::before {
 }
 
 .btn:hover {
-  background: var(--ink-dark);
+  background: var(--ink-medium);
   color: var(--parchment-light);
 }
 
 .btn-locate {
-  border-color: var(--red-stamp);
-  color: var(--red-stamp);
+  border-color: var(--red-dark);
+  background: var(--red-stamp);
+  color: var(--parchment-light);
 }
 
 .btn-locate:hover {
-  background: var(--red-stamp);
+  background: var(--red-dark);
   color: var(--parchment-light);
 }
 
 .btn-reset {
   border-color: var(--ink-light);
-  color: var(--ink-light);
+  background: var(--ink-light);
+  color: var(--parchment-light);
   font-size: 0.75rem;
   padding: 0.4rem 0.75rem;
 }
 
 .btn-reset:hover {
-  background: var(--ink-light);
+  background: var(--ink-medium);
   color: var(--parchment-light);
 }
 
@@ -225,11 +227,12 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: 1;
+  background: #b8ccd8;
 }
 
-/* Warm vintage tint — vibrant with clear detail */
+/* Warm vintage tint — keep water blue, warm the land */
 #map .leaflet-tile-pane {
-  filter: sepia(0.15) contrast(1.2) saturate(0.85);
+  filter: contrast(1.15) saturate(0.9);
 }
 
 /* Override Leaflet's default fonts on all map UI */
