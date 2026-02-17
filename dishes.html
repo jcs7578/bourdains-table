@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dishes — Eat Like Anthony</title>
+  <meta name="description" content="Browse every dish Anthony Bourdain ate, filtered by cuisine type.">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-link">Map</a>
+    <a href="stamps.html" class="nav-link">Passport</a>
+    <a href="dishes.html" class="nav-link active">Dishes</a>
+    <a href="about.html" class="nav-link">About</a>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <h1 class="site-title">The Dishes</h1>
+    <p class="site-subtitle">"Your body is not a temple, it's an amusement park. Enjoy the ride."</p>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main class="dishes-content">
+
+    <div class="dishes-controls">
+      <div id="cuisine-filters" class="cuisine-filters">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="dishes-count-bar">
+        <span id="dishes-count" class="dishes-count-text"></span>
+      </div>
+    </div>
+
+    <div id="dishes-grid" class="dishes-grid">
+      <!-- Rendered by JS -->
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p class="footer-quote">"Good food is very often, even most often, simple food."</p>
+    <p>Built with Leaflet.js &middot; No frameworks, no fuss.</p>
+  </footer>
+
+  <!-- Data -->
+  <script src="js/data.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // ---- Cuisine categories with keyword matching ----
+      var CATEGORIES = [
+        {
+          name: 'Noodles & Soup',
+          icon: '🍜',
+          keywords: ['noodle', 'pho', 'phở', 'ramen', 'soup', 'laksa', 'soba', 'kalguksu',
+                     'bún chả', 'bun cha', 'mohinga', 'caldo', 'broth']
+        },
+        {
+          name: 'From the Sea',
+          icon: '🐟',
+          keywords: ['fish', 'seafood', 'shrimp', 'lobster', 'crab', 'oyster', 'clam',
+                     'squid', 'octopus', 'sushi', 'sashimi', 'ceviche', 'tiradito',
+                     'prawn', 'mussel', 'barnacle', 'percebes', 'tuna', 'bonito',
+                     'sea urchin', 'halibut', 'cioppino', 'sand dab', 'snapper']
+        },
+        {
+          name: 'Fire & Smoke',
+          icon: '🔥',
+          keywords: ['grill', 'grilled', 'bbq', 'barbecue', 'kebab', 'asado', 'jerk',
+                     'yakitori', 'anticucho', 'satay', 'roast', 'smoke', 'smoked',
+                     'wood-fired', 'flame', 'churrasco', 'galbi', 'bulgogi']
+        },
+        {
+          name: 'Street Eats',
+          icon: '🛒',
+          keywords: ['street', 'taco', 'hot dog', 'doubles', 'takoyaki', 'okonomiyaki',
+                     'dumpling', 'xiaolongbao', 'pad thai', 'sisig', 'suya',
+                     'manakish', 'lahmacun', 'pintxos', 'chili dog']
+        },
+        {
+          name: 'Comfort & Deli',
+          icon: '🥪',
+          keywords: ['burger', 'sandwich', 'pizza', 'deli', 'pastrami', 'po\'boy',
+                     'french dip', 'fried chicken', 'hash brown', 'mac and cheese',
+                     'slider', 'cheesesteak', 'hot tamale', 'italian beef',
+                     'brisket', 'porterhouse', 'steak frites', 'cheeseburger']
+        },
+        {
+          name: 'Chef\'s Table',
+          icon: '🍽️',
+          keywords: ['tasting menu', 'omakase', 'avant-garde', 'modern', 'foie gras',
+                     'new nordic', 'mole madre', 'bone marrow']
+        },
+        {
+          name: 'Curries & Stews',
+          icon: '🍲',
+          keywords: ['curry', 'stew', 'tagine', 'feijoada', 'injera', 'dal', 'korma',
+                     'ropa vieja', 'ajiaco', 'rendang', 'wot', 'gumbo', 'cassoulet',
+                     'cozido', 'romazava', 'ribollita', 'cochin']
+        },
+        {
+          name: 'Rice & Grain',
+          icon: '🍚',
+          keywords: ['rice', 'nasi', 'tahdig', 'jollof', 'thiéboudienne', 'clay pot',
+                     'sticky rice', 'broken rice']
+        }
+      ];
+
+      // Categorize a restaurant by its dish field
+      function categorize(dish) {
+        if (!dish) return ['Local Specialties'];
+        var lower = dish.toLowerCase();
+        var matched = [];
+        CATEGORIES.forEach(function (cat) {
+          for (var i = 0; i < cat.keywords.length; i++) {
+            if (lower.indexOf(cat.keywords[i]) !== -1) {
+              matched.push(cat.name);
+              break;
+            }
+          }
+        });
+        return matched.length > 0 ? matched : ['Local Specialties'];
+      }
+
+      // Build categorized data
+      var dishes = [];
+      RESTAURANTS.forEach(function (r, idx) {
+        var cats = categorize(r.dish);
+        dishes.push({
+          data: r,
+          index: idx,
+          categories: cats
+        });
+      });
+
+      // ---- State ----
+      var activeCategory = null; // null = show all
+
+      // ---- Render filter buttons ----
+      var filterContainer = document.getElementById('cuisine-filters');
+
+      // "All" button
+      var allBtn = document.createElement('button');
+      allBtn.className = 'cuisine-btn active';
+      allBtn.innerHTML = '🌍 All';
+      allBtn.addEventListener('click', function () {
+        activeCategory = null;
+        updateActive();
+        renderGrid();
+      });
+      filterContainer.appendChild(allBtn);
+
+      // Category buttons
+      CATEGORIES.forEach(function (cat) {
+        var count = dishes.filter(function (d) {
+          return d.categories.indexOf(cat.name) !== -1;
+        }).length;
+        var btn = document.createElement('button');
+        btn.className = 'cuisine-btn';
+        btn.innerHTML = cat.icon + ' ' + cat.name + ' <span class="cuisine-count">' + count + '</span>';
+        btn.setAttribute('data-category', cat.name);
+        btn.addEventListener('click', function () {
+          activeCategory = cat.name;
+          updateActive();
+          renderGrid();
+        });
+        filterContainer.appendChild(btn);
+      });
+
+      // Local Specialties button
+      var localCount = dishes.filter(function (d) {
+        return d.categories.indexOf('Local Specialties') !== -1;
+      }).length;
+      var localBtn = document.createElement('button');
+      localBtn.className = 'cuisine-btn';
+      localBtn.innerHTML = '🌶️ Local Specialties <span class="cuisine-count">' + localCount + '</span>';
+      localBtn.setAttribute('data-category', 'Local Specialties');
+      localBtn.addEventListener('click', function () {
+        activeCategory = 'Local Specialties';
+        updateActive();
+        renderGrid();
+      });
+      filterContainer.appendChild(localBtn);
+
+      function updateActive() {
+        var btns = filterContainer.querySelectorAll('.cuisine-btn');
+        btns.forEach(function (b) { b.classList.remove('active'); });
+        if (activeCategory === null) {
+          allBtn.classList.add('active');
+        } else {
+          btns.forEach(function (b) {
+            if (b.getAttribute('data-category') === activeCategory) {
+              b.classList.add('active');
+            }
+          });
+        }
+      }
+
+      // ---- Render grid ----
+      var grid = document.getElementById('dishes-grid');
+      var countEl = document.getElementById('dishes-count');
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function getShowClass(show) {
+        var info = SHOW_MAP[show];
+        return info ? info.cssClass : 'show-nr';
+      }
+
+      function renderGrid() {
+        var filtered = dishes;
+        if (activeCategory !== null) {
+          filtered = dishes.filter(function (d) {
+            return d.categories.indexOf(activeCategory) !== -1;
+          });
+        }
+
+        countEl.textContent = filtered.length + ' of ' + RESTAURANTS.length + ' dishes';
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '<div class="no-results">No dishes in this category.</div>';
+          return;
+        }
+
+        var html = '';
+        filtered.forEach(function (d) {
+          var r = d.data;
+          var cssClass = getShowClass(r.show);
+          var loc = r.state
+            ? r.city + ', ' + r.state
+            : r.city + ', ' + r.country;
+
+          html += '<div class="dish-card">';
+
+          // Dish name (hero)
+          if (r.dish) {
+            html += '<div class="dish-name">' + escapeHtml(r.dish) + '</div>';
+          } else {
+            html += '<div class="dish-name dish-unknown">Local specialties</div>';
+          }
+
+          // Restaurant name
+          html += '<div class="dish-restaurant">' + escapeHtml(r.name) + '</div>';
+
+          // Location
+          html += '<div class="dish-location">' + escapeHtml(loc) + '</div>';
+
+          // Show stamp + episode
+          html += '<div class="dish-meta">';
+          html += '<span class="dish-show ' + cssClass + '">' + escapeHtml(r.show) + '</span>';
+          if (r.season || r.episode) {
+            html += '<span class="dish-episode">';
+            if (r.season) html += 'S' + r.season;
+            if (r.episode) html += 'E' + r.episode;
+            html += '</span>';
+          }
+          html += '</div>';
+
+          // Note
+          if (r.note) {
+            html += '<div class="dish-note">' + escapeHtml(r.note) + '</div>';
+          }
+
+          // Status
+          if (r.status === 'closed') {
+            html += '<div class="dish-status closed">Permanently Closed</div>';
+          }
+
+          // Category tags
+          html += '<div class="dish-tags">';
+          d.categories.forEach(function (cat) {
+            html += '<span class="dish-tag">' + escapeHtml(cat) + '</span>';
+          });
+          html += '</div>';
+
+          html += '</div>';
+        });
+
+        grid.innerHTML = html;
+      }
+
+      renderGrid();
+    })();
+  </script>
+
+</body>
+</html>

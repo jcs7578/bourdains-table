@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Passport Stamps — Eat Like Anthony</title>
-  <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps.">
+  <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps. Click to mark countries you've been to.">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -15,12 +15,13 @@
   <nav class="site-nav">
     <a href="index.html" class="nav-link">Map</a>
     <a href="stamps.html" class="nav-link active">Passport</a>
+    <a href="dishes.html" class="nav-link">Dishes</a>
     <a href="about.html" class="nav-link">About</a>
   </nav>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
-    <h1 class="site-title">Passport Stamps</h1>
+    <h1 class="site-title">Your Passport</h1>
     <p class="site-subtitle">"Walk in someone else's shoes — or at least eat their food."</p>
     <div class="stamps-stats">
       <span class="stat-item" id="stat-countries"></span>
@@ -33,6 +34,21 @@
 
   <!-- ============ MAIN ============ -->
   <main class="stamps-content">
+
+    <!-- Personal passport controls -->
+    <div class="passport-controls">
+      <span class="passport-progress" id="passport-progress">
+        0 of 47 stamped
+        <span class="passport-progress-bar">
+          <span class="passport-progress-fill" id="progress-fill" style="width: 0%"></span>
+        </span>
+      </span>
+      <button class="btn-clear-passport" id="btn-clear">Clear All</button>
+    </div>
+    <p style="text-align:center; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-light); margin-bottom: 1rem; opacity: 0.7;">
+      Click a stamp to mark countries you've visited
+    </p>
+
     <div class="passport-book">
       <div class="passport-page-header">
         <span class="passport-page-label">VISAS &amp; ENTRY STAMPS</span>
@@ -56,8 +72,37 @@
     (function () {
       'use strict';
 
+      // ---- localStorage for visited countries ----
+      var STORAGE_KEY = 'eatlikeanthony_visited';
+
+      function getVisited() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          return raw ? JSON.parse(raw) : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveVisited(arr) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        } catch (e) { /* silently fail */ }
+      }
+
+      function toggleVisited(country) {
+        var visited = getVisited();
+        var idx = visited.indexOf(country);
+        if (idx === -1) {
+          visited.push(country);
+        } else {
+          visited.splice(idx, 1);
+        }
+        saveVisited(visited);
+        return visited;
+      }
+
       // Country stamp ink colors — muted/faded to look like real passport ink
-      // Real passport stamps use reds, blues, greens, purples, blacks
       var COUNTRY_STAMPS = {
         "Argentina":           { ink: '#4a7a9e', icon: '🇦🇷' },
         "Australia":           { ink: '#1a3a6b', icon: '🇦🇺' },
@@ -108,7 +153,6 @@
         "Vietnam":             { ink: '#943020', icon: '🇻🇳' },
       };
 
-      // Fallback
       var DEFAULT_STAMP = { ink: '#5a4d3e', icon: '' };
 
       // Gather country data from restaurants
@@ -133,17 +177,17 @@
         return (Math.random() * 10 - 5).toFixed(1);
       }
 
-      // Stamp shapes cycle
+      // Random opacity variation (0.45 - 0.65) for unvisited worn ink
+      function randOpacity() {
+        return (0.45 + Math.random() * 0.2).toFixed(2);
+      }
+
       var shapes = ['stamp-circle', 'stamp-rect', 'stamp-rounded'];
 
       // Render stamps
       var grid = document.getElementById('stamps-grid');
       var html = '';
-
-      // Random opacity variation (0.55 - 0.85) for worn ink effect
-      function randOpacity() {
-        return (0.55 + Math.random() * 0.3).toFixed(2);
-      }
+      var visited = getVisited();
 
       countries.forEach(function (country, idx) {
         var data = countryData[country];
@@ -151,16 +195,21 @@
         var shape = shapes[idx % shapes.length];
         var rotation = randRotation();
         var opacity = randOpacity();
+        var isVisited = visited.indexOf(country) !== -1;
         var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
         var showList = Array.from(data.shows).map(function (s) {
           return SHOW_MAP[s] ? SHOW_MAP[s].abbr : s;
         }).join(' / ');
 
-        html += '<div class="passport-stamp ' + shape + '" style="';
+        html += '<div class="passport-stamp ' + shape + (isVisited ? ' visited' : '') + '"';
+        html += ' data-country="' + country + '"';
+        html += ' data-base-opacity="' + opacity + '"';
+        html += ' style="';
         html += 'transform: rotate(' + rotation + 'deg);';
         html += '--stamp-ink: ' + stamp.ink + ';';
-        html += 'opacity: ' + opacity + ';';
+        if (!isVisited) html += 'opacity: ' + opacity + ';';
         html += '">';
+        html += '<span class="stamp-check">&#10003;</span>';
         html += '<div class="stamp-icon">' + stamp.icon + '</div>';
         html += '<div class="stamp-country">' + country.toUpperCase() + '</div>';
         html += '<div class="stamp-count">' + data.count + ' spot' + (data.count > 1 ? 's' : '') + '</div>';
@@ -170,6 +219,51 @@
       });
 
       grid.innerHTML = html;
+
+      // ---- Progress bar ----
+      var progressEl = document.getElementById('passport-progress');
+      var progressFill = document.getElementById('progress-fill');
+
+      function updateProgress() {
+        var v = getVisited();
+        var count = v.length;
+        var total = countries.length;
+        var pct = total > 0 ? Math.round((count / total) * 100) : 0;
+        progressEl.innerHTML = count + ' of ' + total + ' stamped (' + pct + '%)' +
+          ' <span class="passport-progress-bar"><span class="passport-progress-fill" id="progress-fill" style="width:' + pct + '%"></span></span>';
+      }
+
+      updateProgress();
+
+      // ---- Click handlers on stamps ----
+      var stamps = grid.querySelectorAll('.passport-stamp');
+      stamps.forEach(function (el) {
+        el.addEventListener('click', function () {
+          var country = this.getAttribute('data-country');
+          var visited = toggleVisited(country);
+          var isNowVisited = visited.indexOf(country) !== -1;
+
+          if (isNowVisited) {
+            this.classList.add('visited');
+            this.style.opacity = '';
+          } else {
+            this.classList.remove('visited');
+            this.style.opacity = this.getAttribute('data-base-opacity');
+          }
+
+          updateProgress();
+        });
+      });
+
+      // ---- Clear all button ----
+      document.getElementById('btn-clear').addEventListener('click', function () {
+        saveVisited([]);
+        stamps.forEach(function (el) {
+          el.classList.remove('visited');
+          el.style.opacity = el.getAttribute('data-base-opacity');
+        });
+        updateProgress();
+      });
 
       // Stats
       document.getElementById('stat-countries').textContent = countries.length + ' Countries';

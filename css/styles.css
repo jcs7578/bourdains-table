@@ -1302,6 +1302,307 @@ body::before {
   }
 }
 
+/* ---------- Dishes Page ---------- */
+.dishes-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.dishes-controls {
+  margin-bottom: 1.5rem;
+}
+
+.cuisine-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.cuisine-btn {
+  font-family: var(--font-typewriter);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--parchment-dark);
+  background: transparent;
+  color: var(--ink-light);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+
+.cuisine-btn:hover {
+  border-color: var(--ink-light);
+  color: var(--ink-dark);
+  background: var(--parchment-mid);
+}
+
+.cuisine-btn.active {
+  border-color: var(--red-stamp);
+  color: var(--parchment-light);
+  background: var(--red-stamp);
+}
+
+.cuisine-count {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  opacity: 0.7;
+  margin-left: 0.2rem;
+}
+
+.cuisine-btn.active .cuisine-count {
+  opacity: 0.9;
+}
+
+.dishes-count-bar {
+  text-align: center;
+}
+
+.dishes-count-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.dish-card {
+  background: var(--parchment-mid);
+  border: 1px solid var(--parchment-dark);
+  padding: 1.1rem 1.25rem;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(to bottom right, var(--parchment-mid), var(--parchment-mid));
+}
+
+.dish-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dish-name {
+  font-family: var(--font-typewriter);
+  font-size: 1rem;
+  color: var(--ink-dark);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  border-bottom: 1px dashed var(--parchment-dark);
+  padding-bottom: 0.4rem;
+}
+
+.dish-name.dish-unknown {
+  font-style: italic;
+  color: var(--ink-light);
+}
+
+.dish-restaurant {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: bold;
+  color: var(--ink-medium);
+  margin-bottom: 0.2rem;
+}
+
+.dish-location {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-light);
+  margin-bottom: 0.4rem;
+}
+
+.dish-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.dish-show {
+  font-family: var(--font-typewriter);
+  font-size: 0.6rem;
+  padding: 1px 5px;
+  border: 1.5px solid;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dish-show.show-nr { border-color: var(--red-stamp); color: var(--red-stamp); }
+.dish-show.show-pu { border-color: var(--navy); color: var(--navy); }
+.dish-show.show-lo { border-color: var(--gold); color: var(--gold); }
+.dish-show.show-ct { border-color: #5b7553; color: #5b7553; }
+
+.dish-episode {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-light);
+}
+
+.dish-note {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-light);
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.dish-status.closed {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--red-stamp);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.dish-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.dish-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--ink-light);
+  background: var(--parchment-light);
+  border: 1px solid var(--parchment-dark);
+  padding: 0.1rem 0.45rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cuisine-btn {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.55rem;
+  }
+}
+
+/* ---------- Personal Passport (Stamps Interaction) ---------- */
+.passport-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.passport-progress {
+  font-family: var(--font-typewriter);
+  font-size: 0.85rem;
+  color: var(--ink-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.passport-progress-bar {
+  width: 160px;
+  height: 6px;
+  background: var(--parchment-dark);
+  border-radius: 3px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.passport-progress-fill {
+  height: 100%;
+  background: var(--red-stamp);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.btn-clear-passport {
+  font-family: var(--font-typewriter);
+  font-size: 0.68rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--parchment-dark);
+  background: transparent;
+  color: var(--ink-light);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.btn-clear-passport:hover {
+  border-color: var(--red-stamp);
+  color: var(--red-stamp);
+}
+
+/* Stamp visited/unvisited states */
+.passport-stamp {
+  cursor: pointer;
+  user-select: none;
+}
+
+.passport-stamp.visited {
+  opacity: 1 !important;
+  background: var(--stamp-ink, #5a4d3e);
+  color: var(--parchment-light);
+  border-color: var(--stamp-ink, #5a4d3e);
+}
+
+.passport-stamp.visited .stamp-shows {
+  border-top-color: rgba(244, 239, 228, 0.35);
+}
+
+.stamp-circle.visited {
+  box-shadow: inset 0 0 0 4px transparent, inset 0 0 0 6px rgba(244, 239, 228, 0.4);
+}
+
+.stamp-rounded.visited {
+  box-shadow: inset 0 0 0 3px transparent, inset 0 0 0 5px rgba(244, 239, 228, 0.4);
+}
+
+.stamp-rect.visited {
+  outline-color: var(--stamp-ink, #5a4d3e);
+}
+
+.stamp-check {
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  background: var(--red-stamp);
+  color: var(--parchment-light);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid var(--parchment-light);
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+.passport-stamp.visited .stamp-check {
+  display: block;
+}
+
 /* ---------- Utility Classes ---------- */
 .hidden {
   display: none !important;
