@@ -227,14 +227,40 @@ body::before {
   z-index: 1;
 }
 
-/* Vintage tint overlay on the map */
+/* Vintage sepia filter on map tiles */
+#map .leaflet-tile-pane {
+  filter: saturate(0.3) sepia(0.4) brightness(1.02) contrast(0.95);
+}
+
+/* Warm parchment overlay on the map */
 .map-container::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(244, 239, 228, 0.08);
+  background: rgba(228, 215, 190, 0.12);
   pointer-events: none;
   z-index: 2;
+}
+
+/* Override Leaflet's default fonts on all map UI */
+.leaflet-container {
+  font-family: var(--font-body) !important;
+}
+
+.leaflet-control-zoom a {
+  font-family: var(--font-mono) !important;
+  color: var(--ink-dark) !important;
+}
+
+.leaflet-control-attribution {
+  font-family: var(--font-mono) !important;
+  font-size: 0.65rem !important;
+  background: rgba(244, 239, 228, 0.85) !important;
+  color: var(--ink-light) !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--red-stamp) !important;
 }
 
 /* ---------- Custom Map Markers ---------- */
@@ -345,12 +371,14 @@ body::before {
 }
 
 .popup-content .popup-dish {
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
 }
 
 .popup-content .popup-note {
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--ink-medium);
   line-height: 1.4;
@@ -631,6 +659,7 @@ body::before {
 }
 
 .card-dish {
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 0.85rem;
   color: var(--ink-medium);
@@ -638,6 +667,7 @@ body::before {
 }
 
 .card-note {
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: var(--ink-light);
   line-height: 1.5;
