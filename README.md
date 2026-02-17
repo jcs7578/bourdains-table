@@ -1,4 +1,4 @@
-# Bourdain's Table
+# Eat Like Anthony
 
 An interactive world map of every restaurant Anthony Bourdain visited across all of his TV shows — *A Cook's Tour*, *No Reservations*, *The Layover*, and *Parts Unknown*.
 

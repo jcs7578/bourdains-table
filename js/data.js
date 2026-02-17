@@ -1,5 +1,5 @@
 /**
- * Bourdain's Table — Restaurant Dataset
+ * Eat Like Anthony — Restaurant Dataset
  *
  * Restaurants Anthony Bourdain visited across his TV shows:
  *   - A Cook's Tour (CT) — Food Network, 2002–2003

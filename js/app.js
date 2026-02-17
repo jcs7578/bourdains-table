@@ -1,5 +1,5 @@
 /**
- * Bourdain's Table — Main Application
+ * Eat Like Anthony — Main Application
  *
  * Handles: Leaflet map initialization, marker creation & clustering,
  * sidebar rendering, search/filter, zip code proximity, geolocation,

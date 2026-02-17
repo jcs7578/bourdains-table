@@ -1,5 +1,5 @@
 /**
- * Utility functions for Bourdain's Table
+ * Utility functions for Eat Like Anthony
  */
 
 /**

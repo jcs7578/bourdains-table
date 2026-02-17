@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Passport Stamps — Bourdain's Table</title>
+  <title>Passport Stamps — Eat Like Anthony</title>
   <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps.">
 
   <!-- App CSS -->
@@ -50,6 +50,60 @@
     (function () {
       'use strict';
 
+      // Country-specific stamp designs — flag-inspired colors + icon
+      var COUNTRY_STAMPS = {
+        "Argentina":           { bg: '#75aadb', fg: '#ffffff', accent: '#f6b40e', icon: '🇦🇷' },
+        "Australia":           { bg: '#00008b', fg: '#ffffff', accent: '#ff0000', icon: '🇦🇺' },
+        "Brazil":              { bg: '#009c3b', fg: '#ffffff', accent: '#ffdf00', icon: '🇧🇷' },
+        "Cambodia":            { bg: '#032ea1', fg: '#ffffff', accent: '#e00025', icon: '🇰🇭' },
+        "Canada":              { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇨🇦' },
+        "China":               { bg: '#de2910', fg: '#ffde00', accent: '#ffde00', icon: '🇨🇳' },
+        "Colombia":            { bg: '#fcd116', fg: '#003893', accent: '#ce1126', icon: '🇨🇴' },
+        "Cuba":                { bg: '#002a8f', fg: '#ffffff', accent: '#cb1515', icon: '🇨🇺' },
+        "Denmark":             { bg: '#c60c30', fg: '#ffffff', accent: '#ffffff', icon: '🇩🇰' },
+        "Ethiopia":            { bg: '#078930', fg: '#ffffff', accent: '#fcdd09', icon: '🇪🇹' },
+        "France":              { bg: '#002395', fg: '#ffffff', accent: '#ed2939', icon: '🇫🇷' },
+        "Georgia":             { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇬🇪' },
+        "Greece":              { bg: '#0d5eaf', fg: '#ffffff', accent: '#ffffff', icon: '🇬🇷' },
+        "Hong Kong":           { bg: '#de2910', fg: '#ffffff', accent: '#ffffff', icon: '🇭🇰' },
+        "India":               { bg: '#ff9933', fg: '#ffffff', accent: '#138808', icon: '🇮🇳' },
+        "Indonesia":           { bg: '#ff0000', fg: '#ffffff', accent: '#ffffff', icon: '🇮🇩' },
+        "Iran":                { bg: '#239f40', fg: '#ffffff', accent: '#da0000', icon: '🇮🇷' },
+        "Israel":              { bg: '#0038b8', fg: '#ffffff', accent: '#ffffff', icon: '🇮🇱' },
+        "Italy":               { bg: '#008c45', fg: '#ffffff', accent: '#cd212a', icon: '🇮🇹' },
+        "Jamaica":             { bg: '#009b3a', fg: '#000000', accent: '#fed100', icon: '🇯🇲' },
+        "Japan":               { bg: '#bc002d', fg: '#ffffff', accent: '#ffffff', icon: '🇯🇵' },
+        "Kenya":               { bg: '#006600', fg: '#ffffff', accent: '#bb0000', icon: '🇰🇪' },
+        "Laos":                { bg: '#002868', fg: '#ffffff', accent: '#ce1126', icon: '🇱🇦' },
+        "Lebanon":             { bg: '#ed1c24', fg: '#ffffff', accent: '#00a651', icon: '🇱🇧' },
+        "Madagascar":          { bg: '#007e39', fg: '#ffffff', accent: '#fc3d32', icon: '🇲🇬' },
+        "Malaysia":            { bg: '#010066', fg: '#ffcc00', accent: '#cc0001', icon: '🇲🇾' },
+        "Mexico":              { bg: '#006847', fg: '#ffffff', accent: '#ce1126', icon: '🇲🇽' },
+        "Morocco":             { bg: '#c1272d', fg: '#006233', accent: '#006233', icon: '🇲🇦' },
+        "Myanmar":             { bg: '#fecb00', fg: '#34b233', accent: '#ea2839', icon: '🇲🇲' },
+        "Nigeria":             { bg: '#008751', fg: '#ffffff', accent: '#ffffff', icon: '🇳🇬' },
+        "Peru":                { bg: '#d91023', fg: '#ffffff', accent: '#ffffff', icon: '🇵🇪' },
+        "Philippines":         { bg: '#0038a8', fg: '#ffffff', accent: '#ce1126', icon: '🇵🇭' },
+        "Portugal":            { bg: '#006600', fg: '#ffffff', accent: '#ff0000', icon: '🇵🇹' },
+        "Puerto Rico":         { bg: '#3c3b6e', fg: '#ffffff', accent: '#b22234', icon: '🇵🇷' },
+        "Senegal":             { bg: '#00853f', fg: '#fdef42', accent: '#e31b23', icon: '🇸🇳' },
+        "Singapore":           { bg: '#ed2939', fg: '#ffffff', accent: '#ffffff', icon: '🇸🇬' },
+        "South Korea":         { bg: '#003478', fg: '#ffffff', accent: '#c60c30', icon: '🇰🇷' },
+        "Spain":               { bg: '#c60b1e', fg: '#ffc400', accent: '#ffc400', icon: '🇪🇸' },
+        "Tanzania":            { bg: '#1eb53a', fg: '#ffffff', accent: '#00a3dd', icon: '🇹🇿' },
+        "Thailand":            { bg: '#a51931', fg: '#ffffff', accent: '#2d2a4a', icon: '🇹🇭' },
+        "Trinidad and Tobago": { bg: '#ce1126', fg: '#ffffff', accent: '#000000', icon: '🇹🇹' },
+        "Turkey":              { bg: '#e30a17', fg: '#ffffff', accent: '#ffffff', icon: '🇹🇷' },
+        "Uganda":              { bg: '#000000', fg: '#fcdc04', accent: '#d90000', icon: '🇺🇬' },
+        "United Kingdom":      { bg: '#012169', fg: '#ffffff', accent: '#c8102e', icon: '🇬🇧' },
+        "United States":       { bg: '#3c3b6e', fg: '#ffffff', accent: '#b22234', icon: '🇺🇸' },
+        "Uruguay":             { bg: '#001489', fg: '#ffffff', accent: '#ffffff', icon: '🇺🇾' },
+        "Vietnam":             { bg: '#da251d', fg: '#ffcd00', accent: '#ffcd00', icon: '🇻🇳' },
+      };
+
+      // Fallback for any country not in the map
+      var DEFAULT_STAMP = { bg: '#5a4d3e', fg: '#f4efe4', accent: '#b8860b', icon: '' };
+
       // Gather country data from restaurants
       var countryData = {};
       RESTAURANTS.forEach(function (r) {
@@ -67,31 +121,12 @@
         return countryData[b].count - countryData[a].count;
       });
 
-      // Show color mapping
-      var showColors = {
-        "No Reservations": { bg: '#8b3a3a', border: '#6b2d2d' },
-        "Parts Unknown": { bg: '#2d3748', border: '#1a202c' },
-        "The Layover": { bg: '#b8860b', border: '#8b6914' },
-        "A Cook's Tour": { bg: '#5b7553', border: '#3d5035' },
-      };
-
-      // Pick the "primary" show for each country (most common, or first alphabetically)
-      function getPrimaryShow(shows) {
-        var arr = Array.from(shows);
-        // Priority: PU > NR > LO > CT
-        var priority = ["Parts Unknown", "No Reservations", "The Layover", "A Cook's Tour"];
-        for (var i = 0; i < priority.length; i++) {
-          if (arr.indexOf(priority[i]) !== -1) return priority[i];
-        }
-        return arr[0];
-      }
-
-      // Random rotation between -6 and 6 degrees
+      // Random rotation between -5 and 5 degrees
       function randRotation() {
-        return (Math.random() * 12 - 6).toFixed(1);
+        return (Math.random() * 10 - 5).toFixed(1);
       }
 
-      // Stamp shapes: circle, rectangle, rounded rectangle
+      // Stamp shapes cycle
       var shapes = ['stamp-circle', 'stamp-rect', 'stamp-rounded'];
 
       // Render stamps
@@ -100,8 +135,7 @@
 
       countries.forEach(function (country, idx) {
         var data = countryData[country];
-        var primaryShow = getPrimaryShow(data.shows);
-        var colors = showColors[primaryShow] || showColors["No Reservations"];
+        var stamp = COUNTRY_STAMPS[country] || DEFAULT_STAMP;
         var shape = shapes[idx % shapes.length];
         var rotation = randRotation();
         var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
@@ -111,9 +145,11 @@
 
         html += '<div class="passport-stamp ' + shape + '" style="';
         html += 'transform: rotate(' + rotation + 'deg);';
-        html += '--stamp-color: ' + colors.bg + ';';
-        html += '--stamp-border: ' + colors.border + ';';
+        html += '--stamp-bg: ' + stamp.bg + ';';
+        html += '--stamp-fg: ' + stamp.fg + ';';
+        html += '--stamp-accent: ' + stamp.accent + ';';
         html += '">';
+        html += '<div class="stamp-icon">' + stamp.icon + '</div>';
         html += '<div class="stamp-country">' + country + '</div>';
         html += '<div class="stamp-count">' + data.count + ' spot' + (data.count > 1 ? 's' : '') + '</div>';
         html += '<div class="stamp-cities">' + cities + '</div>';

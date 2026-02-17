@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Bourdain's Table — Grungy Passport Aesthetic
+   Eat Like Anthony — Grungy Passport Aesthetic
    ========================================================================== */
 
 /* ---------- Fonts ---------- */
@@ -1089,7 +1089,7 @@ body::before {
   padding: 1rem 0;
 }
 
-/* Individual passport stamp */
+/* Individual passport stamp — filled with country colors */
 .passport-stamp {
   display: flex;
   flex-direction: column;
@@ -1097,28 +1097,34 @@ body::before {
   justify-content: center;
   text-align: center;
   padding: 1.25rem 1rem;
-  border: 3px solid var(--stamp-color, #8b3a3a);
-  color: var(--stamp-color, #8b3a3a);
-  background: transparent;
+  background: var(--stamp-bg, #5a4d3e);
+  color: var(--stamp-fg, #f4efe4);
+  border: 3px solid var(--stamp-accent, #b8860b);
   position: relative;
-  transition: transform 0.2s;
-  min-width: 140px;
-  max-width: 180px;
-  /* Faded ink look */
-  opacity: 0.82;
+  transition: transform 0.25s, box-shadow 0.25s;
+  min-width: 150px;
+  max-width: 185px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.25), inset 0 0 20px rgba(0,0,0,0.1);
+  /* Subtle worn ink texture */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  background-color: var(--stamp-bg, #5a4d3e);
 }
 
 .passport-stamp:hover {
-  opacity: 1;
-  transform: rotate(0deg) scale(1.05) !important;
+  transform: rotate(0deg) scale(1.08) !important;
+  box-shadow: 3px 5px 15px rgba(0,0,0,0.35), inset 0 0 20px rgba(0,0,0,0.1);
+  z-index: 2;
 }
 
 /* Stamp shapes */
 .stamp-circle {
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  border-width: 3px;
+  width: 170px;
+  height: 170px;
+  border-width: 4px;
+  outline: 2px solid var(--stamp-accent, #b8860b);
+  outline-offset: -8px;
 }
 
 .stamp-rect {
@@ -1126,43 +1132,53 @@ body::before {
   border-width: 3px;
   padding: 1rem 1.25rem;
   /* Double border effect */
-  outline: 2px solid var(--stamp-color, #8b3a3a);
-  outline-offset: 3px;
+  outline: 2px solid var(--stamp-accent, #b8860b);
+  outline-offset: 4px;
 }
 
 .stamp-rounded {
-  border-radius: 12px;
+  border-radius: 14px;
   border-width: 3px;
   padding: 1rem 1.25rem;
+  outline: 2px solid var(--stamp-accent, #b8860b);
+  outline-offset: -7px;
+}
+
+.stamp-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
 }
 
 .stamp-country {
   font-family: var(--font-typewriter);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .stamp-count {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.2rem;
-  opacity: 0.8;
+  margin-bottom: 0.15rem;
+  opacity: 0.85;
 }
 
 .stamp-cities {
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-style: italic;
   line-height: 1.3;
-  margin-bottom: 0.2rem;
-  opacity: 0.7;
-  max-width: 140px;
+  margin-bottom: 0.15rem;
+  opacity: 0.8;
+  max-width: 145px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1170,11 +1186,11 @@ body::before {
 
 .stamp-shows {
   font-family: var(--font-typewriter);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  opacity: 0.6;
-  border-top: 1px solid;
+  opacity: 0.7;
+  border-top: 1px solid var(--stamp-accent, rgba(255,255,255,0.4));
   padding-top: 0.2rem;
   margin-top: 0.15rem;
 }
@@ -1186,18 +1202,22 @@ body::before {
   }
 
   .passport-stamp {
-    min-width: 120px;
-    max-width: 150px;
+    min-width: 125px;
+    max-width: 155px;
     padding: 0.9rem 0.75rem;
   }
 
   .stamp-circle {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .stamp-icon {
+    font-size: 1.2rem;
   }
 
   .stamp-country {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .stat-item {
