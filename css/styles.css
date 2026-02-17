@@ -69,6 +69,37 @@ body::before {
   z-index: 0;
 }
 
+/* ---------- Navigation ---------- */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  background: var(--ink-dark);
+  padding: 0 1rem;
+}
+
+.nav-link {
+  font-family: var(--font-typewriter);
+  font-size: 0.85rem;
+  color: var(--parchment-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.6rem 1.25rem;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--parchment-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: var(--parchment-light);
+  border-bottom-color: var(--red-stamp);
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: relative;
@@ -401,6 +432,25 @@ body::before {
   font-weight: bold;
 }
 
+.popup-content .popup-website {
+  margin-top: 0.35rem;
+}
+
+.popup-content .popup-website a {
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  color: var(--red-stamp);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px dashed var(--red-stamp);
+}
+
+.popup-content .popup-website a:hover {
+  color: var(--red-dark);
+  border-bottom-style: solid;
+}
+
 .popup-content .popup-distance {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -690,6 +740,26 @@ body::before {
   font-weight: bold;
 }
 
+.card-website {
+  margin-top: 0.4rem;
+}
+
+.card-website a {
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  color: var(--red-stamp);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px dashed var(--red-stamp);
+  padding-bottom: 1px;
+}
+
+.card-website a:hover {
+  color: var(--red-dark);
+  border-bottom-style: solid;
+}
+
 /* No results message */
 .no-results {
   font-family: var(--font-typewriter);
@@ -855,6 +925,119 @@ body::before {
     rgba(139, 90, 43, 0.05) 68%,
     transparent 74%
   );
+}
+
+/* ---------- About Page ---------- */
+.about-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--parchment-dark);
+}
+
+.about-section:last-child {
+  border-bottom: none;
+}
+
+.about-heading {
+  font-family: var(--font-typewriter);
+  font-size: 1.4rem;
+  color: var(--ink-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-medium);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink-medium);
+  line-height: 1.7;
+  padding: 0.35rem 0 0.35rem 1.5rem;
+  position: relative;
+}
+
+.about-list li::before {
+  content: '\2022';
+  color: var(--red-stamp);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.3rem;
+}
+
+.about-list a {
+  color: var(--red-stamp);
+  text-decoration: none;
+}
+
+.about-list a:hover {
+  text-decoration: underline;
+}
+
+.about-quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-light);
+  border-left: 3px solid var(--red-stamp);
+  padding: 0.75rem 1.25rem;
+  margin: 1.25rem 0;
+  background: var(--parchment-mid);
+  line-height: 1.7;
+}
+
+/* Show cards on the about page */
+.show-card {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--parchment-mid);
+  border: 1px solid var(--parchment-dark);
+  border-left: 5px solid var(--parchment-dark);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(to right, var(--parchment-mid), var(--parchment-mid));
+}
+
+.show-ct-card { border-left-color: #5b7553; }
+.show-nr-card { border-left-color: var(--red-stamp); }
+.show-lo-card { border-left-color: var(--gold); }
+.show-pu-card { border-left-color: var(--navy); }
+
+.show-card-title {
+  font-family: var(--font-typewriter);
+  font-size: 1.15rem;
+  color: var(--ink-dark);
+  margin-bottom: 0.2rem;
+}
+
+.show-card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  margin-bottom: 0.6rem;
+}
+
+.show-card p:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Utility Classes ---------- */

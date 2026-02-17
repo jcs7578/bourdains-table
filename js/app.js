@@ -132,6 +132,10 @@
       html += '<div class="popup-status closed">PERMANENTLY CLOSED</div>';
     }
 
+    if (restaurant.website) {
+      html += '<div class="popup-website"><a href="' + escapeHtml(restaurant.website) + '" target="_blank" rel="noopener">Visit Website</a></div>';
+    }
+
     if (distance !== null && distance !== undefined) {
       html += '<div class="popup-distance">' + formatDistance(distance) + ' from you</div>';
     }
@@ -263,6 +267,11 @@
       // Status
       if (r.status === 'closed') {
         html += '<div class="card-status closed">Permanently Closed</div>';
+      }
+
+      // Website link
+      if (r.website) {
+        html += '<div class="card-website"><a href="' + escapeHtml(r.website) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">View Menu / Website</a></div>';
       }
 
       html += '</div>';
