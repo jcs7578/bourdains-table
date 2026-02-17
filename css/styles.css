@@ -227,17 +227,17 @@ body::before {
   z-index: 1;
 }
 
-/* Vintage sepia filter on map tiles */
+/* Vintage tint on map tiles — warm but with visible detail */
 #map .leaflet-tile-pane {
-  filter: saturate(0.3) sepia(0.4) brightness(1.02) contrast(0.95);
+  filter: saturate(0.5) sepia(0.25) brightness(1.0) contrast(1.1);
 }
 
-/* Warm parchment overlay on the map */
+/* Subtle warm overlay — very light so borders and lines show through */
 .map-container::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(228, 215, 190, 0.12);
+  background: rgba(228, 215, 190, 0.05);
   pointer-events: none;
   z-index: 2;
 }
