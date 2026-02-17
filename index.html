@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bourdain's Table — Every Restaurant Anthony Bourdain Visited</title>
+  <meta name="description" content="An interactive world map of every restaurant Anthony Bourdain visited across A Cook's Tour, No Reservations, The Layover, and Parts Unknown.">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Leaflet MarkerCluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <h1 class="site-title">Bourdain's Table</h1>
+    <p class="site-subtitle">"If I'm an advocate for anything, it's to move. As far as you can, as much as you can."</p>
+
+    <div class="location-bar">
+      <input
+        type="text"
+        id="zip-input"
+        class="zip-input"
+        placeholder="ZIP code"
+        maxlength="5"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        aria-label="Enter US zip code"
+      >
+      <button id="btn-search" class="btn" aria-label="Search by zip code">Find</button>
+      <button id="btn-locate" class="btn btn-locate" aria-label="Use my location">Use My Location</button>
+      <button id="btn-reset" class="btn btn-reset" aria-label="Reset">Reset</button>
+    </div>
+    <div id="location-status" class="location-status" aria-live="polite"></div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main-content">
+
+    <!-- Map -->
+    <section class="map-container" aria-label="Interactive map">
+      <div id="map"></div>
+    </section>
+
+    <!-- Sidebar Directory -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">The Directory</h2>
+        <span id="restaurant-count" class="restaurant-count"></span>
+      </div>
+
+      <!-- Controls: search + filter stamps -->
+      <div class="controls">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search by name, city, or dish..."
+          aria-label="Search restaurants"
+        >
+      </div>
+
+      <div id="filter-stamps" class="filter-stamps"></div>
+
+      <!-- Restaurant Cards -->
+      <div id="restaurant-list" class="restaurant-list" role="list">
+        <!-- Rendered by JS -->
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p class="footer-quote">"Travel isn't always pretty. It isn't always comfortable. But that's okay. The journey changes you."</p>
+    <p>
+      Data sourced from
+      <a href="https://www.anthonybourdainworldmap.com/" target="_blank" rel="noopener">anthonybourdainworldmap.com</a>,
+      <a href="https://eatlikebourdain.com/" target="_blank" rel="noopener">eatlikebourdain.com</a>,
+      <a href="https://www.noreservationslocations.com/" target="_blank" rel="noopener">noreservationslocations.com</a>,
+      and various episode guides.
+    </p>
+    <p>Built with Leaflet.js &middot; No frameworks, no fuss.</p>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <!-- Leaflet MarkerCluster JS -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <!-- App Scripts (order matters: data & utils first, then app) -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
