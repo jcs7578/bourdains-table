@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passport Stamps — Bourdain's Table</title>
+  <meta name="description" content="Every country Anthony Bourdain visited, displayed as passport stamps.">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-link">Map</a>
+    <a href="stamps.html" class="nav-link active">Passport</a>
+    <a href="about.html" class="nav-link">About</a>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <h1 class="site-title">Passport Stamps</h1>
+    <p class="site-subtitle">"Walk in someone else's shoes — or at least eat their food."</p>
+    <div class="stamps-stats">
+      <span class="stat-item" id="stat-countries"></span>
+      <span class="stat-divider">/</span>
+      <span class="stat-item" id="stat-restaurants"></span>
+      <span class="stat-divider">/</span>
+      <span class="stat-item" id="stat-shows"></span>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main class="stamps-content">
+    <div id="stamps-grid" class="stamps-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p class="footer-quote">"Without experimentation, a willingness to ask questions and try new things, we shall surely become static, repetitive, and moribund."</p>
+    <p>Built with Leaflet.js &middot; No frameworks, no fuss.</p>
+  </footer>
+
+  <!-- Data (needed for stamp generation) -->
+  <script src="js/data.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // Gather country data from restaurants
+      var countryData = {};
+      RESTAURANTS.forEach(function (r) {
+        var c = r.country;
+        if (!countryData[c]) {
+          countryData[c] = { shows: new Set(), count: 0, cities: new Set() };
+        }
+        countryData[c].count++;
+        countryData[c].shows.add(r.show);
+        countryData[c].cities.add(r.city);
+      });
+
+      // Sort countries by restaurant count (descending)
+      var countries = Object.keys(countryData).sort(function (a, b) {
+        return countryData[b].count - countryData[a].count;
+      });
+
+      // Show color mapping
+      var showColors = {
+        "No Reservations": { bg: '#8b3a3a', border: '#6b2d2d' },
+        "Parts Unknown": { bg: '#2d3748', border: '#1a202c' },
+        "The Layover": { bg: '#b8860b', border: '#8b6914' },
+        "A Cook's Tour": { bg: '#5b7553', border: '#3d5035' },
+      };
+
+      // Pick the "primary" show for each country (most common, or first alphabetically)
+      function getPrimaryShow(shows) {
+        var arr = Array.from(shows);
+        // Priority: PU > NR > LO > CT
+        var priority = ["Parts Unknown", "No Reservations", "The Layover", "A Cook's Tour"];
+        for (var i = 0; i < priority.length; i++) {
+          if (arr.indexOf(priority[i]) !== -1) return priority[i];
+        }
+        return arr[0];
+      }
+
+      // Random rotation between -6 and 6 degrees
+      function randRotation() {
+        return (Math.random() * 12 - 6).toFixed(1);
+      }
+
+      // Stamp shapes: circle, rectangle, rounded rectangle
+      var shapes = ['stamp-circle', 'stamp-rect', 'stamp-rounded'];
+
+      // Render stamps
+      var grid = document.getElementById('stamps-grid');
+      var html = '';
+
+      countries.forEach(function (country, idx) {
+        var data = countryData[country];
+        var primaryShow = getPrimaryShow(data.shows);
+        var colors = showColors[primaryShow] || showColors["No Reservations"];
+        var shape = shapes[idx % shapes.length];
+        var rotation = randRotation();
+        var cities = Array.from(data.cities).slice(0, 3).join(' \u2022 ');
+        var showList = Array.from(data.shows).map(function (s) {
+          return SHOW_MAP[s] ? SHOW_MAP[s].abbr : s;
+        }).join(' / ');
+
+        html += '<div class="passport-stamp ' + shape + '" style="';
+        html += 'transform: rotate(' + rotation + 'deg);';
+        html += '--stamp-color: ' + colors.bg + ';';
+        html += '--stamp-border: ' + colors.border + ';';
+        html += '">';
+        html += '<div class="stamp-country">' + country + '</div>';
+        html += '<div class="stamp-count">' + data.count + ' spot' + (data.count > 1 ? 's' : '') + '</div>';
+        html += '<div class="stamp-cities">' + cities + '</div>';
+        html += '<div class="stamp-shows">' + showList + '</div>';
+        html += '</div>';
+      });
+
+      grid.innerHTML = html;
+
+      // Stats
+      document.getElementById('stat-countries').textContent = countries.length + ' Countries';
+      document.getElementById('stat-restaurants').textContent = RESTAURANTS.length + ' Restaurants';
+      document.getElementById('stat-shows').textContent = '4 Shows';
+    })();
+  </script>
+
+</body>
+</html>

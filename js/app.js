@@ -24,6 +24,7 @@
   const btnSearch = document.getElementById('btn-search');
   const btnLocate = document.getElementById('btn-locate');
   const btnReset = document.getElementById('btn-reset');
+  const btnSurprise = document.getElementById('btn-surprise');
   const locationStatus = document.getElementById('location-status');
   const searchInput = document.getElementById('search-input');
   const filterContainer = document.getElementById('filter-stamps');
@@ -459,6 +460,17 @@
   }
 
   // ==================================================================
+  // Surprise Me
+  // ==================================================================
+
+  function handleSurprise() {
+    var filtered = getFilteredRestaurants();
+    if (filtered.length === 0) return;
+    var pick = filtered[Math.floor(Math.random() * filtered.length)];
+    flyToMarker(pick.index);
+  }
+
+  // ==================================================================
   // Filters
   // ==================================================================
 
@@ -502,6 +514,9 @@
 
     // Reset
     btnReset.addEventListener('click', clearLocation);
+
+    // Surprise Me
+    btnSurprise.addEventListener('click', handleSurprise);
 
     // Search
     var debouncedSearch = debounce(function () {
