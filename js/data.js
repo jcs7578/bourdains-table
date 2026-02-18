@@ -1915,8 +1915,8 @@ const RESTAURANTS = [
     lat: -34.599,
     lng: -58.3795,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Pastrami on rye, matzo ball soup",
+    note: "A New York icon since 1888. Bourdain called the hand-carved pastrami an essential New York experience.",
     status: "closed"
   },
   {
@@ -1926,8 +1926,8 @@ const RESTAURANTS = [
     lat: -34.6028,
     lng: -58.3837,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Asado, grilled sweetbreads, chorizo",
+    note: "Traditional parrilla in Buenos Aires. Bourdain loved the primal ritual of Argentine open-flame grilling.",
     status: "open"
   },
 
@@ -1939,8 +1939,8 @@ const RESTAURANTS = [
     lat: 45.5045,
     lng: -73.5603,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Maple syrup, pea soup, tourtière",
+    note: "A sugar shack in the woods outside Montreal. Bourdain experienced the Québécois tradition of cabane à sucre.",
     status: "open"
   },
   {
@@ -1950,8 +1950,8 @@ const RESTAURANTS = [
     lat: 45.4964,
     lng: -73.5663,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Montreal-style wood-fired bagels",
+    note: "Hand-rolled, boiled in honey water, baked in a wood-fired oven. Bourdain loved the Montreal bagel debate.",
     status: "open"
   },
   {
@@ -1961,8 +1961,8 @@ const RESTAURANTS = [
     lat: 45.5077,
     lng: -73.5707,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beauty's Special omelet, bagels with lox",
+    note: "A Montreal breakfast institution since 1942. Bourdain loved the old-school diner charm and loyal regulars.",
     status: "open"
   },
   {
@@ -1972,8 +1972,8 @@ const RESTAURANTS = [
     lat: 45.5038,
     lng: -73.5659,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Quebec cheeses, charcuterie, seasonal produce",
+    note: "Bourdain explored Montreal's vibrant markets, sampling Québécois cheeses and local specialties.",
     status: "open"
   },
   {
@@ -1983,8 +1983,8 @@ const RESTAURANTS = [
     lat: 45.5055,
     lng: -73.5705,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Venison, foie gras, seasonal tasting menu",
+    note: "An elegant Old Montreal restaurant. Bourdain appreciated its refined take on Québécois ingredients.",
     status: "open"
   },
   {
@@ -1994,8 +1994,8 @@ const RESTAURANTS = [
     lat: 45.5044,
     lng: -73.5616,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Artisan pastries, croissants",
+    note: "A tiny Montreal pastry shop. Bourdain stopped in for buttery, flaky Québécois-style croissants.",
     status: "closed"
   },
   {
@@ -2005,8 +2005,8 @@ const RESTAURANTS = [
     lat: 45.4975,
     lng: -73.5625,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Smoked meat, Lebanese pizza, kibbeh",
+    note: "A Montreal hybrid — Lebanese and Jewish deli traditions under one roof. Bourdain found it gloriously unique.",
     status: "open"
   },
   {
@@ -2016,8 +2016,8 @@ const RESTAURANTS = [
     lat: 45.5009,
     lng: -73.5648,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Oysters, tartare, cocktails",
+    note: "A grand old Montreal tavern. Bourdain drank and ate here during his Layover exploration of the city.",
     status: "closed"
   },
   {
@@ -2027,8 +2027,8 @@ const RESTAURANTS = [
     lat: 45.4992,
     lng: -73.5724,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Orange Julep drink, hot dogs, poutine",
+    note: "The giant orange-shaped roadside stand. Bourdain was charmed by this retro Montreal landmark.",
     status: "open"
   },
   {
@@ -2038,8 +2038,8 @@ const RESTAURANTS = [
     lat: 45.4979,
     lng: -73.57,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Steak tartare, bone marrow, French bistro classics",
+    note: "Montreal's quintessential French bistro. Bourdain loved the no-reservation, late-night Parisian atmosphere.",
     status: "open"
   },
   {
@@ -2049,8 +2049,8 @@ const RESTAURANTS = [
     lat: 45.5079,
     lng: -73.5741,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Braised short ribs, tartare, craft beer",
+    note: "Normand Laprise's casual brasserie concept. Bourdain explored Montreal's evolving dining scene here.",
     status: "closed"
   },
   {
@@ -2060,8 +2060,8 @@ const RESTAURANTS = [
     lat: 45.5097,
     lng: -73.56,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Japanese whisky, yakitori, small plates",
+    note: "A hidden speakeasy-style bar in Montreal. Bourdain found the secret entrance and the Japanese whisky selection.",
     status: "open"
   },
   {
@@ -2071,8 +2071,8 @@ const RESTAURANTS = [
     lat: 45.5082,
     lng: -73.5671,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Smoked meat sandwich (medium fat)",
+    note: "Montreal's legendary smoked meat since 1928. Bourdain was a devoted fan — medium fat, on rye, mustard.",
     status: "open"
   },
   {
@@ -2082,8 +2082,8 @@ const RESTAURANTS = [
     lat: 45.5096,
     lng: -73.5673,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Wilensky Special (salami and bologna on a pressed roll)",
+    note: "Bourdain paired a refined bistro with Wilensky's old-school pressed sandwich — Montreal's duality in one meal.",
     status: "closed"
   },
 
@@ -2095,8 +2095,8 @@ const RESTAURANTS = [
     lat: 48.8585,
     lng: 2.3587,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Wine, cheese, charcuterie",
+    note: "A bohemian Paris wine bar. Bourdain drank natural wines and soaked up the Left Bank atmosphere.",
     status: "closed"
   },
   {
@@ -2106,8 +2106,8 @@ const RESTAURANTS = [
     lat: 48.85,
     lng: 2.3569,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Wholesale seafood, meat, produce",
+    note: "The massive wholesale market that feeds Paris. Bourdain explored it at 3 AM, awed by the scale.",
     status: "open"
   },
   {
@@ -2117,8 +2117,8 @@ const RESTAURANTS = [
     lat: 48.8604,
     lng: 2.3484,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Côte de boeuf grilled over open fire",
+    note: "A medieval-feeling Marais restaurant with an open hearth. Bourdain loved the primal fire-cooked beef.",
     status: "open"
   },
   {
@@ -2128,8 +2128,8 @@ const RESTAURANTS = [
     lat: 48.8635,
     lng: 2.3592,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Croissants, éclairs, tarts",
+    note: "A traditional Parisian pâtisserie. Bourdain indulged in classic French pastry perfection.",
     status: "open"
   },
   {
@@ -2139,8 +2139,8 @@ const RESTAURANTS = [
     lat: 48.8608,
     lng: 2.3468,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Olive oil tasting, Sicilian-French small plates",
+    note: "A tiny olive oil shop doubling as a restaurant. Bourdain was charmed by the intimate, passion-driven concept.",
     status: "open"
   },
   {
@@ -2150,8 +2150,8 @@ const RESTAURANTS = [
     lat: 48.8557,
     lng: 2.3469,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tea-infused pastries, artisan teas",
+    note: "A Parisian tea salon with creative pastries. Part of Bourdain's exploration of Paris beyond the bistro.",
     status: "closed"
   },
   {
@@ -2161,8 +2161,8 @@ const RESTAURANTS = [
     lat: 48.8509,
     lng: 2.3601,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tasting menu with natural wines",
+    note: "Greg Marchand's acclaimed neo-bistro. Bourdain was excited by the new generation of Paris chefs.",
     status: "open"
   },
   {
@@ -2172,8 +2172,8 @@ const RESTAURANTS = [
     lat: 48.8536,
     lng: 2.3522,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Prime aged beef, steak",
+    note: "Paris's most celebrated butcher-turned-restaurateur. Bourdain admired the devotion to perfectly sourced meat.",
     status: "closed"
   },
   {
@@ -2183,8 +2183,8 @@ const RESTAURANTS = [
     lat: 48.8562,
     lng: 2.3538,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Seasonal market-driven French dishes",
+    note: "A convivial Parisian bistro with an ever-changing menu. Bourdain loved its unpretentious neighborhood feel.",
     status: "closed"
   },
   {
@@ -2194,8 +2194,8 @@ const RESTAURANTS = [
     lat: 48.85,
     lng: 2.3522,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Contemporary French tasting menu",
+    note: "A modern Paris restaurant. Bourdain explored the city's new wave of creative, ingredient-driven dining.",
     status: "open"
   },
   {
@@ -2205,8 +2205,8 @@ const RESTAURANTS = [
     lat: 48.8541,
     lng: 2.3466,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Standing-room pintxos, small plates, wine",
+    note: "Yves Camdeborde's legendary counter. Bourdain squeezed in for pintxos and natural wine at the bar.",
     status: "open"
   },
   {
@@ -2216,8 +2216,8 @@ const RESTAURANTS = [
     lat: 48.8624,
     lng: 2.3566,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Mashed potatoes, tasting menu",
+    note: "Robuchon's counter-dining concept. Bourdain respected the precision — the mashed potatoes are legendary.",
     status: "open"
   },
   {
@@ -2227,8 +2227,8 @@ const RESTAURANTS = [
     lat: 48.8544,
     lng: 2.3479,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Coffee, wine, simple French plates",
+    note: "A classic Parisian café featured in Before Sunset. Bourdain stopped for coffee and people-watching.",
     status: "open"
   },
   {
@@ -2238,8 +2238,8 @@ const RESTAURANTS = [
     lat: 48.8508,
     lng: 2.3582,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Croque monsieur, wine, café culture",
+    note: "A tiny horseshoe-shaped bar in the Marais. Bourdain loved this quintessential Parisian zinc counter.",
     status: "open"
   },
   {
@@ -2249,8 +2249,8 @@ const RESTAURANTS = [
     lat: 48.8584,
     lng: 2.3554,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pintxos, jamón, natural wine",
+    note: "Yves Camdeborde's standing-only wine and pintxos bar. Bourdain called it essential Paris drinking.",
     status: "open"
   },
   {
@@ -2260,8 +2260,8 @@ const RESTAURANTS = [
     lat: 48.8531,
     lng: 2.3523,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Natural wine, small plates",
+    note: "A Parisian natural wine bar in Oberkampf. Bourdain drank and snacked at this local favorite.",
     status: "open"
   },
   {
@@ -2271,8 +2271,8 @@ const RESTAURANTS = [
     lat: 48.8585,
     lng: 2.3455,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Steak frites, Paris-Brest, Grand Marnier soufflé",
+    note: "The platonic ideal of a Parisian bistro. Bourdain called the steak frites here near-perfect.",
     status: "open"
   },
   {
@@ -2282,8 +2282,8 @@ const RESTAURANTS = [
     lat: 48.8606,
     lng: 2.3497,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Seasonal tasting menu with wine pairings",
+    note: "Bertrand Grébaut's acclaimed neo-bistro. Part of the new wave of Parisian dining that excited Bourdain.",
     status: "open"
   },
   {
@@ -2293,8 +2293,8 @@ const RESTAURANTS = [
     lat: 48.8493,
     lng: 2.3487,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pain des amis, escargot pastry, fougasse",
+    note: "Christophe Vasseur's legendary bakery. Bourdain loved the flaky, buttery escargot-shaped pastries.",
     status: "open"
   },
   {
@@ -2304,8 +2304,8 @@ const RESTAURANTS = [
     lat: 48.8597,
     lng: 2.3564,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Organic bread, pastries",
+    note: "A Montmartre bakery with organic sourdough. Bourdain admired the craft and neighborhood tradition.",
     status: "closed"
   },
   {
@@ -2315,8 +2315,8 @@ const RESTAURANTS = [
     lat: 48.852,
     lng: 2.3497,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Gourmet burgers from a food truck",
+    note: "Paris street food on wheels. Bourdain noted the food truck trend reaching even Paris.",
     status: "open"
   },
   {
@@ -2326,8 +2326,8 @@ const RESTAURANTS = [
     lat: 48.8552,
     lng: 2.3525,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "California-inspired bowls and salads",
+    note: "A Parisian take on California cuisine. Bourdain explored how American food trends landed in Paris.",
     status: "closed"
   },
   {
@@ -2337,8 +2337,8 @@ const RESTAURANTS = [
     lat: 48.8556,
     lng: 2.3567,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Artisan ice cream and sorbet",
+    note: "Paris's most famous glacier on Île Saint-Louis. Bourdain indulged in the legendary scoops.",
     status: "open"
   },
   {
@@ -2348,8 +2348,8 @@ const RESTAURANTS = [
     lat: 48.8583,
     lng: 2.3574,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Plateau de fruits de mer, sole meunière",
+    note: "A Montparnasse institution since 1898. Bourdain drank where Hemingway and Picasso once sat.",
     status: "open"
   },
   {
@@ -2359,8 +2359,8 @@ const RESTAURANTS = [
     lat: 48.859,
     lng: 2.3565,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Oysters, choucroute, brasserie classics",
+    note: "An old-school Parisian brasserie. Bourdain appreciated the timeless seafood platters and bustle.",
     status: "open"
   },
   {
@@ -2370,8 +2370,8 @@ const RESTAURANTS = [
     lat: 48.8545,
     lng: 2.3551,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Lamb dürüm kebab, lahmacun",
+    note: "Turkish street food in Paris. Bourdain loved finding great kebabs in unexpected Parisian corners.",
     status: "open"
   },
   {
@@ -2381,8 +2381,8 @@ const RESTAURANTS = [
     lat: 48.8639,
     lng: 2.3459,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Moroccan couscous, Japanese bento, crêpes",
+    note: "Paris's oldest covered market. Bourdain grazed through the multicultural food stalls.",
     status: "open"
   },
   {
@@ -2392,8 +2392,8 @@ const RESTAURANTS = [
     lat: 48.8566,
     lng: 2.3481,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Natural wine, charcuterie, seasonal plates",
+    note: "A beloved Canal Saint-Martin wine bar. Bourdain embraced the natural wine movement here.",
     status: "open"
   },
 
@@ -2405,8 +2405,8 @@ const RESTAURANTS = [
     lat: 22.3901,
     lng: 114.1036,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Wonton noodles, beef brisket noodles",
+    note: "A dai pai dong known for hand-pulled noodles. Bourdain slurped the springy wontons with gusto.",
     status: "closed"
   },
   {
@@ -2416,8 +2416,8 @@ const RESTAURANTS = [
     lat: 22.4024,
     lng: 114.1154,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Shrimp roe noodles, wontons",
+    note: "A traditional noodle shop. Bourdain explored Hong Kong's obsessive noodle culture at this local spot.",
     status: "open"
   },
   {
@@ -2427,8 +2427,8 @@ const RESTAURANTS = [
     lat: 22.4025,
     lng: 114.1088,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Typhoon shelter crab, wind-sand chicken",
+    note: "A raucous dai pai dong where the chef pours beer into your mouth. Bourdain loved the mayhem.",
     status: "open"
   },
   {
@@ -2438,8 +2438,8 @@ const RESTAURANTS = [
     lat: 22.3954,
     lng: 114.1059,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Typhoon shelter spicy crab",
+    note: "Late-night crab under the Causeway Bay overpass. Bourdain devoured the chili-garlic fried crab.",
     status: "open"
   },
   {
@@ -2449,8 +2449,8 @@ const RESTAURANTS = [
     lat: 22.404,
     lng: 114.11,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Dim sum — har gow, siu mai, char siu bao",
+    note: "Old-school dim sum with trolley carts and chaos. Bourdain loved the aggressive cart-chasing tradition.",
     status: "open"
   },
   {
@@ -2460,8 +2460,8 @@ const RESTAURANTS = [
     lat: 22.3943,
     lng: 114.1051,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Char siu (roast pork), roast goose",
+    note: "A no-frills Wan Chai shop with glistening roast meats. Bourdain raved about the lacquered char siu.",
     status: "open"
   },
   {
@@ -2471,8 +2471,8 @@ const RESTAURANTS = [
     lat: 22.3936,
     lng: 114.1016,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Tomato noodle soup, crispy bun with condensed milk",
+    note: "A street-side dai pai dong near the Central escalator. Bourdain loved the tomato instant noodle soup.",
     status: "open"
   },
   {
@@ -2482,8 +2482,8 @@ const RESTAURANTS = [
     lat: 22.401,
     lng: 114.1064,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Mango sago, mango pancake",
+    note: "Hong Kong's beloved mango dessert chain. Bourdain cooled down with the sweet, creamy mango treats.",
     status: "open"
   },
   {
@@ -2493,8 +2493,8 @@ const RESTAURANTS = [
     lat: 22.3955,
     lng: 114.1057,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Hong Kong-style milk tea, pork chop bun",
+    note: "A cha chaan teng serving classic Hong Kong comfort food. Bourdain appreciated the silk-stocking milk tea.",
     status: "open"
   },
   {
@@ -2504,8 +2504,8 @@ const RESTAURANTS = [
     lat: 22.3932,
     lng: 114.1053,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Clay pot rice, Chinese sausage",
+    note: "A clay pot rice specialist. Bourdain loved the sizzling crispy rice crust at the bottom of the pot.",
     status: "open"
   },
   {
@@ -2515,8 +2515,8 @@ const RESTAURANTS = [
     lat: 22.3896,
     lng: 114.1093,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Steamed fish, salt and pepper squid",
+    note: "Fresh seafood at a waterfront restaurant. Bourdain enjoyed the Cantonese-style simply prepared seafood.",
     status: "open"
   },
   {
@@ -2526,8 +2526,8 @@ const RESTAURANTS = [
     lat: 22.3971,
     lng: 114.1109,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Stir-fried noodles, wok hei dishes",
+    note: "A Sham Shui Po street food stall. Bourdain explored Hong Kong's working-class food neighborhoods.",
     status: "open"
   },
   {
@@ -2537,8 +2537,8 @@ const RESTAURANTS = [
     lat: 22.4011,
     lng: 114.1059,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Hong Kong-style Western food, baked pork chop rice",
+    note: "A cha chaan teng serving Hong Kong's unique fusion comfort food. Part of Bourdain's deep Hong Kong dive.",
     status: "closed"
   },
   {
@@ -2548,8 +2548,8 @@ const RESTAURANTS = [
     lat: 22.4016,
     lng: 114.1041,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Steamed fish, shrimp paste, salt fish",
+    note: "A fishing village restaurant in Tai O. Bourdain traveled to the stilt houses for fresh-off-the-boat seafood.",
     status: "open"
   },
   {
@@ -2559,8 +2559,8 @@ const RESTAURANTS = [
     lat: 22.4027,
     lng: 114.1051,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Butter chicken, naan, biryani",
+    note: "Indian food in Chungking Mansions. Bourdain explored Hong Kong's multicultural culinary underbelly.",
     status: "open"
   },
   {
@@ -2570,8 +2570,8 @@ const RESTAURANTS = [
     lat: 22.4043,
     lng: 114.1067,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Early-morning dim sum",
+    note: "Dim sum starting at 3 AM. Bourdain joined the late-night and early-morning crowd for cheap, excellent dumplings.",
     status: "open"
   },
   {
@@ -2581,8 +2581,8 @@ const RESTAURANTS = [
     lat: 22.4042,
     lng: 114.1135,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Modern Cantonese, creative cocktails",
+    note: "A neo-Cantonese restaurant with neon-lit interiors. Bourdain explored Hong Kong's new dining scene.",
     status: "closed"
   },
   {
@@ -2592,8 +2592,8 @@ const RESTAURANTS = [
     lat: 22.3928,
     lng: 114.1076,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Shrimp roe noodles, wonton noodles",
+    note: "Handmade bamboo-pressed noodles since the 1950s. Bourdain admired the dying art of traditional noodle-making.",
     status: "open"
   },
 
@@ -2605,8 +2605,8 @@ const RESTAURANTS = [
     lat: 41.9021,
     lng: 12.4987,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cacio e pepe served in a Parmesan basket",
+    note: "Famous for its cacio e pepe in a cheese bowl. Bourdain loved this Trastevere classic.",
     status: "open"
   },
   {
@@ -2616,8 +2616,8 @@ const RESTAURANTS = [
     lat: 41.9007,
     lng: 12.491,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Roman-Jewish fried artichokes, coda alla vaccinara",
+    note: "A historic Roman trattoria near Trastevere. Bourdain explored the Roman Jewish culinary tradition.",
     status: "closed"
   },
   {
@@ -2627,8 +2627,8 @@ const RESTAURANTS = [
     lat: 41.9053,
     lng: 12.4885,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Pasta alla gricia, abbacchio",
+    note: "A neighborhood Roman trattoria. Bourdain sought out the authentic, tourist-free trattorias of Rome.",
     status: "closed"
   },
   {
@@ -2638,8 +2638,8 @@ const RESTAURANTS = [
     lat: 41.9007,
     lng: 12.4995,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Homestyle Roman pasta, supplì",
+    note: "Home-cooking in a trattoria setting. Bourdain loved the nonna-style approach to Roman classics.",
     status: "open"
   },
   {
@@ -2649,8 +2649,8 @@ const RESTAURANTS = [
     lat: 41.9024,
     lng: 12.5021,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Porchetta, Roman street food",
+    note: "In Rome's hip Pigneto neighborhood. Bourdain explored the changing face of Roman dining.",
     status: "open"
   },
   {
@@ -2660,8 +2660,8 @@ const RESTAURANTS = [
     lat: 41.8955,
     lng: 12.4988,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pizza al taglio (Roman-style pizza by the slice)",
+    note: "Gabriele Bonci's legendary pizza al taglio. Bourdain called it some of the best pizza in Rome.",
     status: "open"
   },
   {
@@ -2671,8 +2671,8 @@ const RESTAURANTS = [
     lat: 41.9008,
     lng: 12.5037,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Aperitivo cocktails, buffet snacks",
+    note: "A Trastevere aperitivo bar in a former auto shop. Bourdain enjoyed the Roman ritual of evening drinks.",
     status: "open"
   },
   {
@@ -2682,8 +2682,8 @@ const RESTAURANTS = [
     lat: 41.8988,
     lng: 12.4896,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pizza bianca, supplì, fried cod",
+    note: "A Testaccio neighborhood pizzeria. Bourdain ate cheap, excellent Roman street food here.",
     status: "open"
   },
   {
@@ -2693,8 +2693,8 @@ const RESTAURANTS = [
     lat: 41.9052,
     lng: 12.4944,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Gourmet panini with Italian cured meats",
+    note: "Elevated Italian sandwich-making. Bourdain appreciated the quality ingredients in a simple panino.",
     status: "open"
   },
   {
@@ -2704,8 +2704,8 @@ const RESTAURANTS = [
     lat: 41.9023,
     lng: 12.501,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cacio e pepe, tonnarelli, Roman pastas",
+    note: "Named after Rome's iconic pasta dish. Bourdain ate the definitive version at this neighborhood spot.",
     status: "open"
   },
   {
@@ -2715,8 +2715,8 @@ const RESTAURANTS = [
     lat: 41.8967,
     lng: 12.5017,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Roman classics — amatriciana, saltimbocca",
+    note: "A family-run Roman osteria since 1931. Bourdain loved the generational continuity of Roman cooking.",
     status: "open"
   },
   {
@@ -2726,8 +2726,8 @@ const RESTAURANTS = [
     lat: 41.8983,
     lng: 12.4936,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Carciofi alla giudia, pasta e ceci",
+    note: "Old-school Roman cooking near the Vatican. Bourdain sought out the authentic neighborhood trattorias.",
     status: "open"
   },
 
@@ -2739,8 +2739,8 @@ const RESTAURANTS = [
     lat: 35.6966,
     lng: 139.6941,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Chanko nabe (sumo wrestler's stew)",
+    note: "A sumo-themed restaurant. Bourdain ate the massive communal hot pot that fuels Japan's wrestlers.",
     status: "open"
   },
   {
@@ -2750,8 +2750,8 @@ const RESTAURANTS = [
     lat: 35.6934,
     lng: 139.6996,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fugu (blowfish sashimi and hot pot)",
+    note: "Bourdain braved the potentially lethal fugu — sliced paper-thin, a thrill of Japanese dining.",
     status: "closed"
   },
   {
@@ -2761,8 +2761,8 @@ const RESTAURANTS = [
     lat: 35.692,
     lng: 139.6972,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Handmade soba noodles, tempura",
+    note: "Artisan soba in Tokyo. Bourdain appreciated the Zen-like precision of handmade buckwheat noodles.",
     status: "closed"
   },
   {
@@ -2772,8 +2772,8 @@ const RESTAURANTS = [
     lat: 35.6912,
     lng: 139.6965,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Yakitori — chicken thigh, tsukune, liver",
+    note: "A classic Tokyo yakitori joint. Bourdain loved the smoke-filled, after-work yakitori ritual.",
     status: "closed"
   },
   {
@@ -2783,8 +2783,8 @@ const RESTAURANTS = [
     lat: 35.6862,
     lng: 139.6898,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Japanese whisky, craft cocktails",
+    note: "A hidden Tokyo cocktail bar. Bourdain marveled at the Japanese bartending precision and ritual.",
     status: "open"
   },
   {
@@ -2794,8 +2794,8 @@ const RESTAURANTS = [
     lat: 35.6862,
     lng: 139.6984,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Shio ramen with rye noodles",
+    note: "Ivan Orkin's ramen shop — an American making ramen in Tokyo. Bourdain was fascinated by the audacity.",
     status: "closed"
   },
   {
@@ -2805,8 +2805,8 @@ const RESTAURANTS = [
     lat: 35.6816,
     lng: 139.6937,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Yakitori, beer, izakaya favorites",
+    note: "A cheap, smoky yakitori stand. Bourdain loved these no-frills neighborhood drinking spots.",
     status: "closed"
   },
   {
@@ -2816,8 +2816,8 @@ const RESTAURANTS = [
     lat: 35.6893,
     lng: 139.6919,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Ramen, gyoza",
+    note: "A Tokyo ramen shop. Bourdain continued his exploration of Tokyo's obsessive ramen culture.",
     status: "open"
   },
   {
@@ -2827,8 +2827,8 @@ const RESTAURANTS = [
     lat: 35.6837,
     lng: 139.6945,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Onigiri, egg sandwich, nikuman",
+    note: "Bourdain championed Japanese convenience store food — genuinely delicious onigiri and sandwiches.",
     status: "open"
   },
   {
@@ -2838,8 +2838,8 @@ const RESTAURANTS = [
     lat: 35.6892,
     lng: 139.6908,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Pork yakitori, horumon (offal)",
+    note: "Grilled pork skewers in Tokyo. Bourdain loved the nose-to-tail approach of Japanese yakitori culture.",
     status: "open"
   },
   {
@@ -2849,8 +2849,8 @@ const RESTAURANTS = [
     lat: 35.6926,
     lng: 139.6993,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Steak, sushi bar, cocktails with a view",
+    note: "The Park Hyatt's famous 52nd-floor restaurant from Lost in Translation. Bourdain dined above the Tokyo skyline.",
     status: "open"
   },
   {
@@ -2860,8 +2860,8 @@ const RESTAURANTS = [
     lat: 35.6826,
     lng: 139.691,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Omakase sushi",
+    note: "Master sushi chef Naomichi Yasuda's Tokyo outpost. Bourdain experienced the ultimate in Edomae sushi.",
     status: "closed"
   },
   {
@@ -2871,8 +2871,8 @@ const RESTAURANTS = [
     lat: 35.6892,
     lng: 139.69,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Monjayaki (Tokyo-style savory pancake)",
+    note: "A Tsukishima monjayaki spot. Bourdain tried Tokyo's goopy, crispy answer to Osaka's okonomiyaki.",
     status: "open"
   },
   {
@@ -2882,8 +2882,8 @@ const RESTAURANTS = [
     lat: 35.6831,
     lng: 139.6972,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Chanko nabe, sumo stable food",
+    note: "Named after a sumo champion. Bourdain dove deeper into the world of sumo dining culture.",
     status: "open"
   },
   {
@@ -2893,8 +2893,8 @@ const RESTAURANTS = [
     lat: 35.6965,
     lng: 139.6879,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Japanese craft cocktails, bar snacks",
+    note: "A moody Tokyo bar. Bourdain explored the city's world-class cocktail scene after dark.",
     status: "open"
   },
   {
@@ -2904,8 +2904,8 @@ const RESTAURANTS = [
     lat: 35.6834,
     lng: 139.6842,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Traditional Edomae omakase sushi",
+    note: "A prestigious Ginza sushi counter. Bourdain experienced the rarefied art of old-school Tokyo sushi.",
     status: "open"
   },
 
@@ -2917,8 +2917,8 @@ const RESTAURANTS = [
     lat: 33.8989,
     lng: 35.5087,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Farmers' market produce, mezza, fresh juices",
+    note: "Bourdain visited Beirut's green market, celebrating Lebanon's agricultural heritage amid the chaos.",
     status: "open"
   },
   {
@@ -2928,8 +2928,8 @@ const RESTAURANTS = [
     lat: 33.8975,
     lng: 35.5081,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Lebanese home cooking, seasonal mezza",
+    note: "A different home cook each day. Bourdain was moved by the communal spirit of Lebanese food culture.",
     status: "open"
   },
   {
@@ -2939,8 +2939,8 @@ const RESTAURANTS = [
     lat: 33.8974,
     lng: 35.5028,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Gourmet hot dogs, craft beer",
+    note: "A Beirut hot dog joint — Bourdain explored how the city's food scene kept reinventing itself.",
     status: "closed"
   },
   {
@@ -2950,8 +2950,8 @@ const RESTAURANTS = [
     lat: 33.8981,
     lng: 35.5054,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Falafel sandwich with pickled turnips",
+    note: "Legendary Beirut falafel since the 1930s. Bourdain devoured the crispy, herb-packed falafel wraps.",
     status: "open"
   },
   {
@@ -2961,8 +2961,8 @@ const RESTAURANTS = [
     lat: 33.8983,
     lng: 35.5049,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Lebanese wine, mezza, grilled meats",
+    note: "A winery near the Syrian border. Bourdain was moved that winemaking continued amid conflict.",
     status: "open"
   },
   {
@@ -2972,8 +2972,8 @@ const RESTAURANTS = [
     lat: 33.8866,
     lng: 35.5039,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Broasted chicken, garlic sauce",
+    note: "Beirut's answer to fried chicken. Bourdain loved the crispy, garlic-drenched Lebanese broasted chicken.",
     status: "open"
   },
 
@@ -2985,8 +2985,8 @@ const RESTAURANTS = [
     lat: 19.4315,
     lng: -99.1331,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Botanas (bar snacks), tequila, mezcal",
+    note: "A classic Mexico City cantina. Bourdain drank and ate at the bar like a local.",
     status: "open"
   },
   {
@@ -2996,8 +2996,8 @@ const RESTAURANTS = [
     lat: 19.4264,
     lng: -99.1329,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tacos, quesadillas, street food",
+    note: "A Mexico City street food vendor. Bourdain explored the city's vibrant late-night taco scene.",
     status: "open"
   },
   {
@@ -3007,8 +3007,8 @@ const RESTAURANTS = [
     lat: 19.4264,
     lng: -99.1384,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tacos de suadero, tacos de cabeza",
+    note: "A legendary late-night taquería. Bourdain called the suadero tacos here revelatory.",
     status: "open"
   },
   {
@@ -3018,8 +3018,8 @@ const RESTAURANTS = [
     lat: 19.4273,
     lng: -99.1362,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Comida corrida (set lunch), mole, rice and beans",
+    note: "A home-style comida corrida spot. Bourdain ate the daily set lunch like a Mexico City worker.",
     status: "closed"
   },
   {
@@ -3029,8 +3029,8 @@ const RESTAURANTS = [
     lat: 19.4276,
     lng: -99.1332,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Migas, chilaquiles, street breakfast",
+    note: "A Mexico City breakfast stand. Bourdain started the day with the city's essential morning street food.",
     status: "open"
   },
 
@@ -3042,8 +3042,8 @@ const RESTAURANTS = [
     lat: -12.0422,
     lng: -77.0455,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Ceviche, leche de tigre, seafood cocktail",
+    note: "A Lima cevichería. Bourdain explored Peru's ceviche culture at this local favorite.",
     status: "open"
   },
   {
@@ -3053,8 +3053,8 @@ const RESTAURANTS = [
     lat: -12.0468,
     lng: -77.0388,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Ceviche prepared tableside",
+    note: "A legendary hole-in-the-wall where one chef serves ceviche from his home. Bourdain called it transcendent.",
     status: "open"
   },
   {
@@ -3064,8 +3064,8 @@ const RESTAURANTS = [
     lat: -12.0479,
     lng: -77.0394,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Amazonian cuisine — juane, tacacho, river fish",
+    note: "Pedro Miguel Schiaffino's Amazon-inspired restaurant. Bourdain was fascinated by Peru's jungle cuisine.",
     status: "open"
   },
   {
@@ -3075,8 +3075,8 @@ const RESTAURANTS = [
     lat: -12.0466,
     lng: -77.04,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Ceviche, chicharrón de pescado",
+    note: "A no-frills Lima seafood spot. Bourdain loved eating ceviche with the locals far from the tourist trail.",
     status: "open"
   },
 
@@ -3088,8 +3088,8 @@ const RESTAURANTS = [
     lat: 38.7169,
     lng: -9.1448,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tinned fish, wine, bread",
+    note: "A Lisbon bar serving only canned seafood. Bourdain loved the simplicity — great tinned fish and wine.",
     status: "open"
   },
   {
@@ -3099,8 +3099,8 @@ const RESTAURANTS = [
     lat: 38.7238,
     lng: -9.1348,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Petiscos (Portuguese tapas), wine, fado music",
+    note: "A tiny fado bar in Bairro Alto. Bourdain ate petiscos while listening to live fado singing.",
     status: "open"
   },
   {
@@ -3110,8 +3110,8 @@ const RESTAURANTS = [
     lat: 38.7246,
     lng: -9.132,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Ginjinha (sour cherry liqueur)",
+    note: "Lisbon's iconic ginjinha bar since 1840. Bourdain downed the sweet cherry liqueur at the standing bar.",
     status: "open"
   },
   {
@@ -3121,8 +3121,8 @@ const RESTAURANTS = [
     lat: 38.7176,
     lng: -9.1448,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Modern Portuguese — bacalhau, pica-pau",
+    note: "José Avillez's casual Lisbon restaurant. Bourdain explored the modernization of Portuguese cuisine.",
     status: "open"
   },
   {
@@ -3132,8 +3132,8 @@ const RESTAURANTS = [
     lat: 38.7164,
     lng: -9.1337,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tasting menu with Portuguese ingredients",
+    note: "A creative Lisbon tasting menu. Bourdain experienced the new wave of Portuguese fine dining.",
     status: "open"
   },
   {
@@ -3143,8 +3143,8 @@ const RESTAURANTS = [
     lat: 38.7184,
     lng: -9.1342,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Contemporary Portuguese tasting menu",
+    note: "Henrique Sá Pessoa's restaurant. Bourdain saw how Lisbon's chefs were reimagining traditional cuisine.",
     status: "open"
   },
   {
@@ -3154,8 +3154,8 @@ const RESTAURANTS = [
     lat: 38.7231,
     lng: -9.1467,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Bifana (pork sandwich), beer",
+    note: "A no-frills Lisbon tasca. Bourdain ate the classic bifana — pork on bread — like a Lisbon local.",
     status: "open"
   },
 
@@ -3167,8 +3167,8 @@ const RESTAURANTS = [
     lat: 1.3449,
     lng: 103.8215,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Durian pastries, afternoon tea",
+    note: "A colonial-era Singapore hotel. Bourdain explored its famous durian-flavored desserts and pastries.",
     status: "open"
   },
   {
@@ -3178,8 +3178,8 @@ const RESTAURANTS = [
     lat: 1.3555,
     lng: 103.8253,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Herbal soups, medicinal Chinese cuisine",
+    note: "Traditional Chinese medicinal dining. Bourdain tried dishes prescribed by an in-house herbalist.",
     status: "open"
   },
   {
@@ -3189,8 +3189,8 @@ const RESTAURANTS = [
     lat: 1.3557,
     lng: 103.8184,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Nasi padang, rendang, sambal goreng",
+    note: "A beloved Malay restaurant. Bourdain loaded his plate with nasi padang — rice with rich curries and sambals.",
     status: "open"
   },
   {
@@ -3200,8 +3200,8 @@ const RESTAURANTS = [
     lat: 1.3486,
     lng: 103.8233,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Crab bee hoon (crab vermicelli)",
+    note: "Legendary zi char joint. Bourdain called the crab bee hoon one of the greatest dishes he'd ever eaten.",
     status: "open"
   },
   {
@@ -3211,8 +3211,8 @@ const RESTAURANTS = [
     lat: 1.3596,
     lng: 103.8121,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fish head curry, biryani, banana leaf rice",
+    note: "Famous for its fish head curry served on banana leaves. Bourdain loved the messy, flavorful tradition.",
     status: "open"
   },
   {
@@ -3222,8 +3222,8 @@ const RESTAURANTS = [
     lat: 1.3564,
     lng: 103.8185,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hotel dining, cocktails",
+    note: "Bourdain stayed and dined here while exploring Singapore's food scene for the show.",
     status: "open"
   },
   {
@@ -3233,8 +3233,8 @@ const RESTAURANTS = [
     lat: 1.3463,
     lng: 103.8228,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Mee rebus, popiah, rojak",
+    note: "A Malay-focused hawker centre. Bourdain grazed through the stalls, praising Singapore's hawker culture.",
     status: "open"
   },
   {
@@ -3244,8 +3244,8 @@ const RESTAURANTS = [
     lat: 1.3519,
     lng: 103.8171,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Modern Singapore cocktails, bar bites",
+    note: "A Singapore cocktail bar. Bourdain explored the city's evolving bar and nightlife scene.",
     status: "closed"
   },
   {
@@ -3255,8 +3255,8 @@ const RESTAURANTS = [
     lat: 1.3503,
     lng: 103.8188,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Chilli crab, cereal prawns, salted egg dishes",
+    note: "A seafood restaurant. Bourdain continued his chilli crab obsession at this Singapore spot.",
     status: "open"
   },
   {
@@ -3266,8 +3266,8 @@ const RESTAURANTS = [
     lat: 1.3555,
     lng: 103.8124,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Chwee kueh, lor mee, char kway teow",
+    note: "An iconic Singapore hawker center. Bourdain loved the chwee kueh — steamed rice cakes with preserved radish.",
     status: "open"
   },
   {
@@ -3277,8 +3277,8 @@ const RESTAURANTS = [
     lat: 1.3463,
     lng: 103.8272,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Hokkien mee, carrot cake, ice kachang",
+    note: "An old-estate hawker centre. Bourdain mourned the slow disappearance of vintage Singapore food courts.",
     status: "closed"
   },
   {
@@ -3288,8 +3288,8 @@ const RESTAURANTS = [
     lat: 1.3471,
     lng: 103.8265,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Hainanese chicken rice",
+    note: "A Hainanese chicken rice institution. Bourdain ate the poached chicken and fragrant rice at this classic.",
     status: "open"
   },
   {
@@ -3299,8 +3299,8 @@ const RESTAURANTS = [
     lat: 1.3457,
     lng: 103.8199,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cocktails with a skyline view",
+    note: "Rooftop bar atop Marina Bay Sands. Bourdain took in the Singapore skyline with a cocktail.",
     status: "open"
   },
   {
@@ -3310,8 +3310,8 @@ const RESTAURANTS = [
     lat: 1.3574,
     lng: 103.8226,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Fish head curry, mutton curry on banana leaf",
+    note: "A legendary curry house since 1963. Bourdain loved the fiery curries served on banana leaves.",
     status: "open"
   },
   {
@@ -3321,8 +3321,8 @@ const RESTAURANTS = [
     lat: 1.3442,
     lng: 103.8184,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Japanese-inspired small plates, cocktails",
+    note: "A hip warehouse restaurant. Bourdain explored Singapore's modern creative dining scene.",
     status: "closed"
   },
   {
@@ -3332,8 +3332,8 @@ const RESTAURANTS = [
     lat: 1.3599,
     lng: 103.8193,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Claypot rice with Chinese sausage and salted fish",
+    note: "Claypot rice cooked over charcoal. Bourdain loved the smoky crust at the bottom of the pot.",
     status: "open"
   },
   {
@@ -3343,8 +3343,8 @@ const RESTAURANTS = [
     lat: 1.36,
     lng: 103.8132,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Nasi lemak with fried chicken, sambal, ikan bilis",
+    note: "A hawker stall serving Singapore's breakfast staple. Bourdain relished the coconut rice and spicy sambal.",
     status: "open"
   },
   {
@@ -3354,8 +3354,8 @@ const RESTAURANTS = [
     lat: 1.3466,
     lng: 103.8252,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Kaya toast, soft-boiled eggs, kopi",
+    note: "A traditional kopitiam. Bourdain did the classic Singapore breakfast — kaya toast dipped in soft eggs.",
     status: "closed"
   },
   {
@@ -3365,8 +3365,8 @@ const RESTAURANTS = [
     lat: 1.3531,
     lng: 103.8216,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Prawn mee (shrimp noodle soup)",
+    note: "Famous for its rich, deeply flavored prawn broth. Bourdain slurped the intensely shrimpy noodle soup.",
     status: "open"
   },
   {
@@ -3376,8 +3376,8 @@ const RESTAURANTS = [
     lat: 1.3448,
     lng: 103.8216,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Nasi padang, beef rendang, sayur lodeh",
+    note: "A Malay rice and curry stall. Bourdain loaded up on the rich coconut curries and sambals.",
     status: "open"
   },
   {
@@ -3387,8 +3387,8 @@ const RESTAURANTS = [
     lat: 1.3529,
     lng: 103.8143,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Hokkien mee (stir-fried prawn noodles)",
+    note: "A famed Hokkien mee hawker. Bourdain praised the wok hei-infused, prawn-stock-rich noodles.",
     status: "open"
   },
   {
@@ -3398,8 +3398,8 @@ const RESTAURANTS = [
     lat: 1.3454,
     lng: 103.8242,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Craft cocktails, bar food",
+    note: "A Singapore cocktail bar. Bourdain explored the city's growing craft cocktail culture.",
     status: "closed"
   },
   {
@@ -3409,8 +3409,8 @@ const RESTAURANTS = [
     lat: 1.3537,
     lng: 103.8245,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Peranakan — laksa lemak, ayam buah keluak",
+    note: "One of Singapore's oldest Peranakan restaurants. Bourdain tasted the Straits Chinese culinary tradition.",
     status: "open"
   },
   {
@@ -3420,8 +3420,8 @@ const RESTAURANTS = [
     lat: 1.3554,
     lng: 103.8252,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Char kway teow, curry puff, popiah",
+    note: "A Chinatown hawker centre. Bourdain ate through multiple stalls in Singapore's hawker paradise.",
     status: "open"
   },
 
@@ -3433,8 +3433,8 @@ const RESTAURANTS = [
     lat: 41.3896,
     lng: 2.1792,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Jamón ibérico de bellota, charcuterie",
+    note: "A jamón shop and bar in Barcelona. Bourdain savored the world's finest cured ham, sliced paper-thin.",
     status: "closed"
   },
   {
@@ -3444,8 +3444,8 @@ const RESTAURANTS = [
     lat: 41.3792,
     lng: 2.1785,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Avant-garde culinary creations",
+    note: "Ferran Adrià's creative workshop. Bourdain visited the laboratory behind the world's most influential restaurant.",
     status: "closed"
   },
   {
@@ -3455,8 +3455,8 @@ const RESTAURANTS = [
     lat: 41.3857,
     lng: 2.1698,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Montaditos (topped toasts), tinned seafood, vermouth",
+    note: "A standing-room-only tapas bar. Bourdain loved the towering montaditos made from conservas.",
     status: "open"
   },
   {
@@ -3466,8 +3466,8 @@ const RESTAURANTS = [
     lat: 41.3866,
     lng: 2.1792,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Churros with hot chocolate",
+    note: "A Barcelona churro shop. Bourdain dipped crispy churros into thick Spanish hot chocolate.",
     status: "open"
   },
   {
@@ -3477,8 +3477,8 @@ const RESTAURANTS = [
     lat: 41.386,
     lng: 2.1712,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Catalan cold cuts, fuet, butifarra",
+    note: "A charcuterie shop in the Gothic Quarter. Bourdain sampled Catalan cured meats and sausages.",
     status: "open"
   },
   {
@@ -3488,8 +3488,8 @@ const RESTAURANTS = [
     lat: 41.3795,
     lng: 2.1796,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vermouth, gilda pintxos, conservas",
+    note: "Albert Adrià's vermouth bar. Bourdain embraced the Catalan aperitivo tradition with tinned seafood.",
     status: "closed"
   },
   {
@@ -3499,8 +3499,8 @@ const RESTAURANTS = [
     lat: 41.3884,
     lng: 2.1686,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Catalan stews, cap i pota, escudella",
+    note: "A traditional Catalan restaurant in the Raval. Bourdain appreciated the hearty, old-school cooking.",
     status: "open"
   },
   {
@@ -3510,8 +3510,8 @@ const RESTAURANTS = [
     lat: 41.3778,
     lng: 2.1766,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Rice dishes, seafood, cocktails",
+    note: "A Barcelona restaurant with creative cocktails. Bourdain explored the city's evolving food scene.",
     status: "closed"
   },
   {
@@ -3521,8 +3521,8 @@ const RESTAURANTS = [
     lat: 41.3784,
     lng: 2.1748,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Immersive avant-garde tasting menu",
+    note: "Albert Adrià's theatrical dining experience. Bourdain experienced the high-concept molecular gastronomy.",
     status: "open"
   },
   {
@@ -3532,8 +3532,8 @@ const RESTAURANTS = [
     lat: 41.3904,
     lng: 2.1743,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tapas, montaditos, cold beer",
+    note: "A working-class tapas bar outside Barcelona. Bourdain found authentic local eating away from tourists.",
     status: "open"
   },
   {
@@ -3543,8 +3543,8 @@ const RESTAURANTS = [
     lat: 41.391,
     lng: 2.167,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Moroccan-Spanish dishes, tajine, couscous",
+    note: "A Moroccan restaurant in a Barcelona suburb. Bourdain explored the immigrant food scene.",
     status: "closed"
   },
 
@@ -3556,8 +3556,8 @@ const RESTAURANTS = [
     lat: 13.7604,
     lng: 100.5012,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Laotian-Thai dishes, laap, sticky rice",
+    note: "A Laotian restaurant in Bangkok. Bourdain explored the Thai-Lao culinary crossover on A Cook's Tour.",
     status: "closed"
   },
   {
@@ -3567,8 +3567,8 @@ const RESTAURANTS = [
     lat: 13.7524,
     lng: 100.5014,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Grilled prawns, steamed fish, crab",
+    note: "A Bangkok seafood institution. Bourdain picked fresh seafood and had it cooked to order.",
     status: "closed"
   },
   {
@@ -3578,8 +3578,8 @@ const RESTAURANTS = [
     lat: 13.7487,
     lng: 100.5003,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Noodles, dumplings, roast duck, shark fin soup",
+    note: "Yaowarat Road food stalls. Bourdain roamed Bangkok's Chinatown, eating at every crowded stall.",
     status: "open"
   },
   {
@@ -3589,8 +3589,8 @@ const RESTAURANTS = [
     lat: 13.7516,
     lng: 100.5049,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Kai yang (grilled chicken), som tam, sticky rice",
+    note: "A Bangkok grilled chicken spot. Bourdain loved the smoky, Isaan-style grilled chicken with papaya salad.",
     status: "open"
   },
 
@@ -3602,8 +3602,8 @@ const RESTAURANTS = [
     lat: 41.0131,
     lng: 28.9723,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Turkish breakfast, pastries, tea",
+    note: "A traditional Istanbul café. Bourdain savored the elaborate Turkish breakfast spread.",
     status: "open"
   },
   {
@@ -3613,8 +3613,8 @@ const RESTAURANTS = [
     lat: 41.0149,
     lng: 28.9792,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Wet hamburger (ıslak burger)",
+    note: "Famous for Istanbul's signature steam-soaked burgers. Bourdain tried this uniquely Turkish late-night snack.",
     status: "open"
   },
   {
@@ -3624,8 +3624,8 @@ const RESTAURANTS = [
     lat: 41.0063,
     lng: 28.9759,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Islak burger (wet burger)",
+    note: "The original wet burger spot in Taksim. Bourdain was intrigued by the steam-box burgers of Istanbul.",
     status: "open"
   },
   {
@@ -3635,8 +3635,8 @@ const RESTAURANTS = [
     lat: 41.0052,
     lng: 28.9772,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Lamb dürüm (wrap), Adana kebab",
+    note: "A legendary dürüm wrap shop. Bourdain called the spiced lamb wraps some of the best street food in Istanbul.",
     status: "open"
   },
   {
@@ -3646,8 +3646,8 @@ const RESTAURANTS = [
     lat: 41.0114,
     lng: 28.9706,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Ottoman palace cuisine — stuffed melon, almond soup",
+    note: "Recreating Ottoman court recipes. Bourdain was fascinated by the ancient, elaborate culinary traditions.",
     status: "closed"
   },
   {
@@ -3657,8 +3657,8 @@ const RESTAURANTS = [
     lat: 41.0142,
     lng: 28.9775,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Meze, fish, rakı",
+    note: "An Istanbul meyhane (tavern). Bourdain drank rakı and ate meze at this traditional Turkish tavern.",
     status: "open"
   },
   {
@@ -3668,8 +3668,8 @@ const RESTAURANTS = [
     lat: 41.0051,
     lng: 28.9705,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Turkish home cooking — dolma, karnıyarık",
+    note: "Home-style Turkish cooking. Bourdain ate like a local at this unassuming Istanbul ev yemekleri spot.",
     status: "closed"
   },
   {
@@ -3679,8 +3679,8 @@ const RESTAURANTS = [
     lat: 41.0113,
     lng: 28.9832,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Turkish home cooking, stews, pilav",
+    note: "A neighborhood lokanta. Bourdain appreciated the steam-table Turkish comfort food tradition.",
     status: "closed"
   },
   {
@@ -3690,8 +3690,8 @@ const RESTAURANTS = [
     lat: 41.0078,
     lng: 28.9724,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Modern Turkish-Scandinavian tasting menu, cocktails",
+    note: "Mehmet Gürs' rooftop restaurant with Bosphorus views. Bourdain saw Istanbul's fine dining evolution.",
     status: "open"
   },
 
@@ -3703,8 +3703,8 @@ const RESTAURANTS = [
     lat: 51.5045,
     lng: -0.1331,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Full English breakfast, grilled meats",
+    note: "Near the meat market. Bourdain ate a proper Full English overlooking Smithfield Market at dawn.",
     status: "open"
   },
   {
@@ -3714,8 +3714,8 @@ const RESTAURANTS = [
     lat: 51.4997,
     lng: -0.1354,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Pie and mash with liquor (parsley sauce), jellied eels",
+    note: "Old-school East End pie and mash. Bourdain experienced this vanishing London working-class tradition.",
     status: "open"
   },
   {
@@ -3725,8 +3725,8 @@ const RESTAURANTS = [
     lat: 51.5003,
     lng: -0.1239,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fine dining tasting menu",
+    note: "Ramsay's flagship. Bourdain visited his friend and sometime-rival's three-Michelin-star restaurant.",
     status: "open"
   },
   {
@@ -3736,8 +3736,8 @@ const RESTAURANTS = [
     lat: 51.5041,
     lng: -0.1336,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Drinks, Soho atmosphere",
+    note: "A legendary Soho members' club. Bourdain drank in the bohemian spirit of old London.",
     status: "open"
   },
   {
@@ -3747,8 +3747,8 @@ const RESTAURANTS = [
     lat: 51.5082,
     lng: -0.1314,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Roast meats, pints",
+    note: "A Smithfield Market pub. Bourdain drank with the market workers in the early morning hours.",
     status: "closed"
   },
   {
@@ -3758,8 +3758,8 @@ const RESTAURANTS = [
     lat: 51.5023,
     lng: -0.1336,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Bacon sandwich, seed cake, offal dishes",
+    note: "The casual sibling of St. JOHN. Bourdain loved the bacon sandwich — possibly the best in London.",
     status: "open"
   },
   {
@@ -3769,8 +3769,8 @@ const RESTAURANTS = [
     lat: 51.5013,
     lng: -0.1306,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Madeleines, Eccles cake, Welsh rarebit",
+    note: "Fergus Henderson's café. Bourdain appreciated the simple, perfectly executed British baking.",
     status: "closed"
   },
   {
@@ -3780,8 +3780,8 @@ const RESTAURANTS = [
     lat: 51.5001,
     lng: -0.1284,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Dover sole, smoked eel, potted shrimps",
+    note: "A City of London fish restaurant since 1889. Bourdain loved the old-school, no-nonsense British seafood.",
     status: "open"
   },
   {
@@ -3791,8 +3791,8 @@ const RESTAURANTS = [
     lat: 51.5099,
     lng: -0.1266,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pints, pub grub",
+    note: "A Westminster pub. Bourdain drank pints like a proper Londoner in this traditional local.",
     status: "open"
   },
   {
@@ -3802,8 +3802,8 @@ const RESTAURANTS = [
     lat: 51.5048,
     lng: -0.1346,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Oysters, Dover sole, fish and chips",
+    note: "A historic London fish restaurant. Bourdain appreciated the old-guard British seafood tradition.",
     status: "closed"
   },
   {
@@ -3813,8 +3813,8 @@ const RESTAURANTS = [
     lat: 51.5019,
     lng: -0.1222,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beer, jukebox, bar snacks",
+    note: "A Fitzrovia dive bar with a legendary jukebox. Bourdain loved London's eccentric drinking holes.",
     status: "open"
   },
   {
@@ -3824,8 +3824,8 @@ const RESTAURANTS = [
     lat: 51.508,
     lng: -0.1352,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Drinks, late-night Soho atmosphere",
+    note: "A Soho dive bar. Bourdain explored London's disappearing late-night drinking culture.",
     status: "open"
   },
   {
@@ -3835,8 +3835,8 @@ const RESTAURANTS = [
     lat: 51.5007,
     lng: -0.1245,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Full English breakfast, tea",
+    note: "A tiny Victorian-era shelter for taxi drivers. Bourdain ate a fry-up in one of London's hidden gems.",
     status: "open"
   },
   {
@@ -3846,8 +3846,8 @@ const RESTAURANTS = [
     lat: 51.5111,
     lng: -0.1237,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Jamaican jerk chicken, curry goat, rice and peas",
+    note: "Caribbean food in London. Bourdain explored the city's immigrant food traditions.",
     status: "open"
   },
   {
@@ -3857,8 +3857,8 @@ const RESTAURANTS = [
     lat: 51.5111,
     lng: -0.134,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Cocktails, modern British bar food",
+    note: "A London cocktail bar. Bourdain experienced the city's evolving cocktail scene.",
     status: "open"
   },
 
@@ -3871,8 +3871,8 @@ const RESTAURANTS = [
     lat: 42.3602,
     lng: -71.0603,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Lobster roll, fried clams, clam chowder",
+    note: "A Winthrop seafood shack. Bourdain ate New England fried seafood by the water.",
     status: "open"
   },
   {
@@ -3883,8 +3883,8 @@ const RESTAURANTS = [
     lat: 42.3597,
     lng: -71.0638,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Corned beef, pastrami, Reuben sandwich",
+    note: "A Brookline Jewish deli. Bourdain appreciated this outpost of New England deli tradition.",
     status: "open"
   },
   {
@@ -3895,8 +3895,8 @@ const RESTAURANTS = [
     lat: 42.3651,
     lng: -71.0563,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Sub sandwiches, Italian cold cuts",
+    note: "A South Boston sub shop. Bourdain ate a proper Southie Italian sub.",
     status: "open"
   },
   {
@@ -3907,8 +3907,8 @@ const RESTAURANTS = [
     lat: 42.3638,
     lng: -71.0547,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Portuguese food — bacalhau, chouriço, bifana",
+    note: "A Cambridge Portuguese restaurant. Bourdain explored Boston's Portuguese culinary community.",
     status: "closed"
   },
   {
@@ -3919,8 +3919,8 @@ const RESTAURANTS = [
     lat: 42.3562,
     lng: -71.0647,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, bar food, Irish pub vibes",
+    note: "A South Boston Irish bar. Bourdain drank with the locals in Southie's pub culture.",
     status: "open"
   },
   {
@@ -3931,8 +3931,8 @@ const RESTAURANTS = [
     lat: 42.3629,
     lng: -71.063,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, bar snacks",
+    note: "The bar from Good Will Hunting in Southie. Bourdain drank at this iconic Boston dive.",
     status: "open"
   },
   {
@@ -3943,8 +3943,8 @@ const RESTAURANTS = [
     lat: 42.3533,
     lng: -71.0609,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, dive bar atmosphere",
+    note: "A South Boston dive. Bourdain explored the disappearing old-guard Southie bar scene.",
     status: "closed"
   },
   {
@@ -3955,8 +3955,8 @@ const RESTAURANTS = [
     lat: 40.6839,
     lng: -73.9512,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Borscht, pelmeni, blintzes",
+    note: "A Brighton Beach Ukrainian café. Bourdain explored Brooklyn's Soviet-era immigrant food culture.",
     status: "closed"
   },
   {
@@ -3967,8 +3967,8 @@ const RESTAURANTS = [
     lat: 40.6853,
     lng: -73.9485,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Russian banquet, vodka, dancing",
+    note: "A Brighton Beach Russian supper club. Bourdain experienced the full vodka-soaked spectacle.",
     status: "closed"
   },
   {
@@ -3979,8 +3979,8 @@ const RESTAURANTS = [
     lat: 40.6819,
     lng: -73.9434,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Dim sum — har gow, siu mai, turnip cake",
+    note: "Brooklyn's Chinatown dim sum palace. Bourdain pushed through the cart-chasing Sunday crowds.",
     status: "open"
   },
   {
@@ -3991,8 +3991,8 @@ const RESTAURANTS = [
     lat: 40.6828,
     lng: -73.9432,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fresh tortillas, tacos, tamales",
+    note: "A Bushwick tortilleria. Bourdain highlighted Brooklyn's vibrant Mexican food scene.",
     status: "open"
   },
   {
@@ -4003,8 +4003,8 @@ const RESTAURANTS = [
     lat: 40.681,
     lng: -73.9478,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Oysters, seasonal market-driven dishes",
+    note: "A Williamsburg restaurant. Bourdain explored Brooklyn's farm-to-table dining movement.",
     status: "closed"
   },
   {
@@ -4015,8 +4015,8 @@ const RESTAURANTS = [
     lat: 40.6748,
     lng: -73.9406,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Caribbean home cooking, oxtail, jerk chicken",
+    note: "A Crown Heights Caribbean restaurant. Bourdain ate West Indian comfort food in Brooklyn.",
     status: "open"
   },
   {
@@ -4027,8 +4027,8 @@ const RESTAURANTS = [
     lat: 40.6824,
     lng: -73.9442,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vietnamese fish sauce chicken wings, papaya salad",
+    note: "Andy Ricker's Thai restaurant. Bourdain loved the fish sauce wings — sweet, funky, and addictive.",
     status: "closed"
   },
   {
@@ -4039,8 +4039,8 @@ const RESTAURANTS = [
     lat: 40.6752,
     lng: -73.9395,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried clams, linguine with clam sauce",
+    note: "A Sheepshead Bay seafood institution. Bourdain ate fried clams by the water in old Brooklyn.",
     status: "open"
   },
   {
@@ -4051,8 +4051,8 @@ const RESTAURANTS = [
     lat: 40.6853,
     lng: -73.9469,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Wood-fired pizza, seasonal toppings",
+    note: "A Bushwick pizza institution. Bourdain appreciated the industrial-chic setting and excellent pies.",
     status: "open"
   },
   {
@@ -4063,8 +4063,8 @@ const RESTAURANTS = [
     lat: 40.6804,
     lng: -73.9439,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Multi-course tasting menu",
+    note: "Roberta's fine-dining sibling. Bourdain experienced one of Brooklyn's most ambitious tasting menus.",
     status: "open"
   },
   {
@@ -4075,8 +4075,8 @@ const RESTAURANTS = [
     lat: 40.6761,
     lng: -73.9365,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Russian-Georgian cuisine, khachapuri, kebabs",
+    note: "A Brighton Beach restaurant. Bourdain ate Georgian-Russian food in Brooklyn's Little Odessa.",
     status: "closed"
   },
   {
@@ -4087,8 +4087,8 @@ const RESTAURANTS = [
     lat: 40.6761,
     lng: -73.9503,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Corned beef, pastrami, matzo ball soup",
+    note: "A Midwood kosher deli. Bourdain explored Brooklyn's Jewish deli tradition.",
     status: "closed"
   },
   {
@@ -4099,8 +4099,8 @@ const RESTAURANTS = [
     lat: 41.8778,
     lng: -87.6279,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Chicago-style tamales, Mexican comfort food",
+    note: "A Southside tamale factory. Bourdain explored Chicago's Mexican culinary backbone.",
     status: "open"
   },
   {
@@ -4111,8 +4111,8 @@ const RESTAURANTS = [
     lat: 41.8737,
     lng: -87.6359,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Mother-in-law (tamale in a bun with chili), jibarito",
+    note: "A Southside hot dog stand. Bourdain ate the mother-in-law — a Chicago original: tamale in a hot dog bun.",
     status: "open"
   },
   {
@@ -4123,8 +4123,8 @@ const RESTAURANTS = [
     lat: 41.882,
     lng: -87.6331,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Deep dish pizza, pan pizza",
+    note: "A suburban pizza spot run by a deep dish legend. Bourdain respected the personal, by-reservation-only approach.",
     status: "open"
   },
   {
@@ -4135,8 +4135,8 @@ const RESTAURANTS = [
     lat: 41.8704,
     lng: -87.6287,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Molecular gastronomy, edible menus",
+    note: "Homaro Cantu's avant-garde restaurant. Bourdain explored Chicago's experimental dining frontier.",
     status: "closed"
   },
   {
@@ -4147,8 +4147,8 @@ const RESTAURANTS = [
     lat: 41.8748,
     lng: -87.6281,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Seafood tasting menu",
+    note: "Laurent Gras's fine-dining seafood restaurant. Bourdain experienced Chicago's high-end dining scene.",
     status: "closed"
   },
   {
@@ -4159,8 +4159,8 @@ const RESTAURANTS = [
     lat: 41.8763,
     lng: -87.6232,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Foie gras and Sauternes duck sausage, Chicago dog",
+    note: "Doug Sohn's legendary sausage shop. Bourdain loved the creative gourmet encased meats and the cult following.",
     status: "open"
   },
   {
@@ -4171,8 +4171,8 @@ const RESTAURANTS = [
     lat: 41.8806,
     lng: -87.6335,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beer, dive bar atmosphere",
+    note: "A Lincoln Park dive bar. Bourdain loved the paintings of nude politicians and the unpretentious regulars.",
     status: "open"
   },
   {
@@ -4183,8 +4183,8 @@ const RESTAURANTS = [
     lat: 41.8851,
     lng: -87.6373,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cheezborger, cheezborger (double cheeseburger)",
+    note: "The SNL-famous tavern under Michigan Avenue. Bourdain ate the no-Pepsi, no-fries, cheezborger.",
     status: "open"
   },
   {
@@ -4195,8 +4195,8 @@ const RESTAURANTS = [
     lat: 41.8758,
     lng: -87.6371,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Charcuterie, terrines, sandwiches",
+    note: "Paul Kahan's butcher shop and café. Bourdain admired the craft charcuterie and meat program.",
     status: "open"
   },
   {
@@ -4207,8 +4207,8 @@ const RESTAURANTS = [
     lat: 41.8705,
     lng: -87.6221,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Glögg (hot spiced wine), beer",
+    note: "An Andersonville Swedish bar since 1934. Bourdain drank the Scandinavian-spiced glögg.",
     status: "open"
   },
   {
@@ -4219,8 +4219,8 @@ const RESTAURANTS = [
     lat: 41.8708,
     lng: -87.6354,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Chicago-style hot dog, no ketchup",
+    note: "A West Side hot dog stand. Bourdain respected the sacred Chicago rule: never ketchup on a hot dog.",
     status: "open"
   },
   {
@@ -4231,8 +4231,8 @@ const RESTAURANTS = [
     lat: 41.8792,
     lng: -87.6347,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beer, shots, dive bar atmosphere",
+    note: "A Bucktown dive bar. Bourdain appreciated the honest, unpretentious Chicago drinking culture.",
     status: "open"
   },
   {
@@ -4243,8 +4243,8 @@ const RESTAURANTS = [
     lat: 41.8816,
     lng: -87.6236,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Kohlrabi salad, wood-oven pig face, goat empanadas",
+    note: "Stephanie Izard's Top Chef-winning restaurant. Bourdain loved the bold, fearless flavors.",
     status: "open"
   },
   {
@@ -4255,8 +4255,8 @@ const RESTAURANTS = [
     lat: 41.8791,
     lng: -87.6232,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Italian beef sandwich, hot and sweet peppers",
+    note: "An Elmwood Park Italian beef stand. Bourdain ate the juicy, dipped Italian beef standing up.",
     status: "open"
   },
   {
@@ -4267,8 +4267,8 @@ const RESTAURANTS = [
     lat: 41.8778,
     lng: -87.6296,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Wild boar sloppy joe, seasonal American",
+    note: "A Logan Square gastropub. Bourdain explored Chicago's creative, neighborhood-driven dining scene.",
     status: "open"
   },
   {
@@ -4279,8 +4279,8 @@ const RESTAURANTS = [
     lat: 41.8741,
     lng: -87.6364,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Mapo tofu, dan dan noodles, Sichuan dishes",
+    note: "A Chinatown Sichuan restaurant. Bourdain embraced the numbing, fiery flavors.",
     status: "closed"
   },
   {
@@ -4291,8 +4291,8 @@ const RESTAURANTS = [
     lat: 41.8774,
     lng: -87.6355,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Breaded steak sandwich",
+    note: "A Bridgeport institution. Bourdain ate the massive breaded steak sandwich — a Chicago South Side classic.",
     status: "open"
   },
   {
@@ -4303,8 +4303,8 @@ const RESTAURANTS = [
     lat: 41.8828,
     lng: -87.6371,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Italian classics, pasta, osso buco",
+    note: "An Old Town Italian restaurant. Bourdain enjoyed the neighborhood red-sauce charm.",
     status: "open"
   },
   {
@@ -4315,8 +4315,8 @@ const RESTAURANTS = [
     lat: 29.766,
     lng: -95.3732,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Custom-built BBQ smokers, smoked meats",
+    note: "A legendary pit-maker. Bourdain visited where Texas's greatest pitmasters get their smokers built.",
     status: "open"
   },
   {
@@ -4327,8 +4327,8 @@ const RESTAURANTS = [
     lat: 29.7582,
     lng: -95.3674,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beef ribs, brisket, links",
+    note: "A Houston BBQ institution. Bourdain ate the massive beef ribs at this community favorite.",
     status: "open"
   },
   {
@@ -4339,8 +4339,8 @@ const RESTAURANTS = [
     lat: 29.7642,
     lng: -95.3733,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Barbacoa, breakfast tacos, menudo",
+    note: "A Houston Tex-Mex spot. Bourdain ate barbacoa tacos on a Sunday morning like a local.",
     status: "open"
   },
   {
@@ -4351,8 +4351,8 @@ const RESTAURANTS = [
     lat: 34.0517,
     lng: -118.2378,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hot dogs from a hot-dog-shaped stand",
+    note: "An iconic LA roadside stand shaped like a hot dog. Bourdain loved the absurd Los Angeles landmark.",
     status: "open"
   },
   {
@@ -4363,8 +4363,8 @@ const RESTAURANTS = [
     lat: 34.0505,
     lng: -118.2421,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Chili dogs, bacon-wrapped hot dogs",
+    note: "LA's famous hot dog stand since 1939. Bourdain stopped at this Hollywood Boulevard institution.",
     status: "open"
   },
   {
@@ -4375,8 +4375,8 @@ const RESTAURANTS = [
     lat: 34.0495,
     lng: -118.2446,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Glazed donuts, crullers",
+    note: "The giant donut-shaped building in Inglewood. Bourdain loved this quintessential LA landmark.",
     status: "open"
   },
   {
@@ -4387,8 +4387,8 @@ const RESTAURANTS = [
     lat: 34.0587,
     lng: -118.2502,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Sourdough bread, artisan pastries",
+    note: "Nancy Silverton's legendary bakery. Bourdain appreciated the craft that transformed LA bread culture.",
     status: "open"
   },
   {
@@ -4399,8 +4399,8 @@ const RESTAURANTS = [
     lat: 34.0451,
     lng: -118.2397,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Grilled prime steak, seasonal California cuisine",
+    note: "Mark Peel and Nancy Silverton's landmark restaurant. Bourdain admired their California culinary vision.",
     status: "closed"
   },
   {
@@ -4411,8 +4411,8 @@ const RESTAURANTS = [
     lat: 34.0545,
     lng: -118.2473,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Diner food — burgers, shakes, breakfast all day",
+    note: "A Los Feliz hipster diner. Bourdain explored LA's late-night diner culture.",
     status: "open"
   },
   {
@@ -4423,8 +4423,8 @@ const RESTAURANTS = [
     lat: 34.0594,
     lng: -118.2417,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried chicken and waffles, grits",
+    note: "An LA soul food institution. Bourdain loved the sweet-and-savory chicken and waffle combination.",
     status: "open"
   },
   {
@@ -4435,8 +4435,8 @@ const RESTAURANTS = [
     lat: 34.0473,
     lng: -118.2476,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "French dip sandwich, coleslaw, pie",
+    note: "Claims to have invented the French dip in 1918. Bourdain loved the sawdust-floor atmosphere.",
     status: "open"
   },
   {
@@ -4447,8 +4447,8 @@ const RESTAURANTS = [
     lat: 34.0489,
     lng: -118.2496,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Thai groceries, prepared Thai food",
+    note: "An East Hollywood Thai market. Bourdain explored LA's Thai Town and its authentic Thai ingredients.",
     status: "closed"
   },
   {
@@ -4459,8 +4459,8 @@ const RESTAURANTS = [
     lat: 34.0575,
     lng: -118.2442,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Thai desserts, kanom chan, mango sticky rice",
+    note: "Thai sweets in Thai Town. Bourdain discovered the colorful world of Thai desserts in LA.",
     status: "open"
   },
   {
@@ -4471,8 +4471,8 @@ const RESTAURANTS = [
     lat: 34.0535,
     lng: -118.2501,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Jade noodles, boat noodles, Thai iced tea",
+    note: "A Thai Town hole-in-the-wall. Bourdain called the jade noodles a revelation — rich, spicy, complex.",
     status: "open"
   },
   {
@@ -4483,8 +4483,8 @@ const RESTAURANTS = [
     lat: 34.05,
     lng: -118.2497,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Carne asada tacos, al pastor",
+    note: "A street taco stand. Bourdain ate late-night tacos in LA's sprawling taco landscape.",
     status: "closed"
   },
   {
@@ -4495,8 +4495,8 @@ const RESTAURANTS = [
     lat: 34.0578,
     lng: -118.2463,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Fried chicken sandwich, truffle jus",
+    note: "Ludo Lefebvre's food truck. Bourdain experienced the LA food truck revolution at its peak.",
     status: "closed"
   },
   {
@@ -4507,8 +4507,8 @@ const RESTAURANTS = [
     lat: 34.0568,
     lng: -118.246,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pork neck bones, galbi, Korean BBQ",
+    note: "A Koreatown specialist in pork neck bone soup. Bourdain loved the spicy, meaty, late-night Korean feast.",
     status: "open"
   },
   {
@@ -4519,8 +4519,8 @@ const RESTAURANTS = [
     lat: 34.0462,
     lng: -118.247,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Korean bar food — pajeon, fried chicken, soju",
+    note: "A Koreatown pojangmacha-style bar. Bourdain drank soju and ate Korean bar snacks until late.",
     status: "open"
   },
   {
@@ -4531,8 +4531,8 @@ const RESTAURANTS = [
     lat: 34.0543,
     lng: -118.2453,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Tacos, burritos, Mexican street food",
+    note: "A late-night LA taco spot. Bourdain explored the city's endless taco trail.",
     status: "open"
   },
   {
@@ -4543,8 +4543,8 @@ const RESTAURANTS = [
     lat: 34.0502,
     lng: -118.2476,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Poutine with oxtail gravy, foie gras loco moco",
+    note: "Jon Shook and Vinny Dotolo's meat-centric restaurant. Bourdain loved the unapologetic excess.",
     status: "closed"
   },
   {
@@ -4555,8 +4555,8 @@ const RESTAURANTS = [
     lat: 34.051,
     lng: -118.249,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beer, atmosphere (it's a dive bar/burlesque club)",
+    note: "A legendary Hollywood dive bar. Bourdain experienced the weird, wonderful side of LA nightlife.",
     status: "open"
   },
   {
@@ -4567,8 +4567,8 @@ const RESTAURANTS = [
     lat: 34.0476,
     lng: -118.2402,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Oaxacan mole, tlayudas, mezcal",
+    note: "An Oaxacan restaurant in Boyle Heights. Bourdain explored the deep Mexican regional traditions in LA.",
     status: "closed"
   },
   {
@@ -4579,8 +4579,8 @@ const RESTAURANTS = [
     lat: 34.0587,
     lng: -118.2485,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Mexican street food, tacos, elote",
+    note: "A food stand in the heart of LA's Latino community. Bourdain ate street food with the neighborhood.",
     status: "open"
   },
   {
@@ -4591,8 +4591,8 @@ const RESTAURANTS = [
     lat: 34.0467,
     lng: -118.2395,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Tacos, burritos, cocktails",
+    note: "Danny Trejo's restaurant. Bourdain explored LA's celebrity restaurant culture.",
     status: "open"
   },
   {
@@ -4603,8 +4603,8 @@ const RESTAURANTS = [
     lat: 34.0591,
     lng: -118.2479,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Ceviche, aguachile, mariscos cocktail",
+    note: "A Mexican seafood spot in South LA. Bourdain loved the zingy, fresh Mexican-style seafood.",
     status: "closed"
   },
   {
@@ -4615,8 +4615,8 @@ const RESTAURANTS = [
     lat: 34.052,
     lng: -118.2401,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Modern Mexican, mole, lamb barbacoa",
+    note: "Ray Garcia's elevated Mexican restaurant in DTLA. Bourdain saw how chefs were redefining Mexican cuisine.",
     status: "closed"
   },
   {
@@ -4627,8 +4627,8 @@ const RESTAURANTS = [
     lat: 34.056,
     lng: -118.24,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Rum cocktails, Latin American small plates",
+    note: "A Downtown LA rum bar. Bourdain explored the city's cocktail culture with Caribbean-inspired drinks.",
     status: "open"
   },
   {
@@ -4639,8 +4639,8 @@ const RESTAURANTS = [
     lat: 34.045,
     lng: -118.2513,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Street tacos, al pastor, carnitas",
+    note: "A street taco cart. Bourdain ate with the late-night crowd at one of LA's countless taco carts.",
     status: "open"
   },
   {
@@ -4651,8 +4651,8 @@ const RESTAURANTS = [
     lat: 25.755,
     lng: -80.1848,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cocktails, poolside dining",
+    note: "An Art Deco South Beach hotel. Bourdain drank at the classic 1940s pool bar.",
     status: "open"
   },
   {
@@ -4663,8 +4663,8 @@ const RESTAURANTS = [
     lat: 25.7646,
     lng: -80.184,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Haitian griot (fried pork), lambi (conch), rice and beans",
+    note: "Haitian food in Little Haiti. Bourdain explored Miami's vibrant Haitian culinary community.",
     status: "open"
   },
   {
@@ -4675,8 +4675,8 @@ const RESTAURANTS = [
     lat: 25.7579,
     lng: -80.1907,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cheap drinks, dive bar atmosphere",
+    note: "South Beach's oldest bar. Bourdain loved this anti-Miami dive in the heart of glitz.",
     status: "open"
   },
   {
@@ -4687,8 +4687,8 @@ const RESTAURANTS = [
     lat: 25.7651,
     lng: -80.1914,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cuban sandwich, croquetas, empanadas",
+    note: "A Little Havana market. Bourdain ate Cuban street food in the heart of Miami's Cuban exile community.",
     status: "open"
   },
   {
@@ -4699,8 +4699,8 @@ const RESTAURANTS = [
     lat: 25.762,
     lng: -80.1977,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Frita cubana (Cuban hamburger with shoestring fries)",
+    note: "Miami's frita king. Bourdain loved the Cuban-style burger topped with crispy shoestring potatoes.",
     status: "open"
   },
   {
@@ -4711,8 +4711,8 @@ const RESTAURANTS = [
     lat: 25.769,
     lng: -80.184,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Colombian hot dogs with all the toppings",
+    note: "Colombian-style loaded hot dogs. Bourdain experienced Miami's Latin street food scene.",
     status: "closed"
   },
   {
@@ -4723,8 +4723,8 @@ const RESTAURANTS = [
     lat: 25.7566,
     lng: -80.1976,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Beer, pool, dive bar",
+    note: "The ultimate anti-South Beach dive. Bourdain returned to this no-frills bar again and again.",
     status: "open"
   },
   {
@@ -4735,8 +4735,8 @@ const RESTAURANTS = [
     lat: 25.7672,
     lng: -80.1927,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Stone crab, fish sandwich, ceviche",
+    note: "A Miami River seafood spot. Bourdain ate fresh-off-the-boat seafood at this waterfront institution.",
     status: "open"
   },
   {
@@ -4747,8 +4747,8 @@ const RESTAURANTS = [
     lat: 25.7537,
     lng: -80.1869,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pancakes, eggs, classic American diner food",
+    note: "An old-school Miami diner. Bourdain ate a classic American breakfast at this disappearing breed.",
     status: "closed"
   },
   {
@@ -4759,8 +4759,8 @@ const RESTAURANTS = [
     lat: 25.7652,
     lng: -80.1869,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Wood-roasted local fish, seasonal American",
+    note: "Michael Schwartz's Design District restaurant. Bourdain appreciated the farm-to-table Miami approach.",
     status: "open"
   },
   {
@@ -4771,8 +4771,8 @@ const RESTAURANTS = [
     lat: 25.7566,
     lng: -80.1916,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fish sandwich, fried shrimp, conch fritters",
+    note: "A North Miami seafood market. Bourdain found the real Miami food scene far from South Beach.",
     status: "open"
   },
   {
@@ -4783,8 +4783,8 @@ const RESTAURANTS = [
     lat: 25.7684,
     lng: -80.199,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fried chicken, biscuits, watermelon and feta salad",
+    note: "Southern comfort in South Beach. Bourdain ate proper fried chicken in the heart of Miami.",
     status: "open"
   },
   {
@@ -4795,8 +4795,8 @@ const RESTAURANTS = [
     lat: 25.7688,
     lng: -80.1841,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Smoked fish, smoked fish spread, dip",
+    note: "A Miami seafood market. Bourdain sampled the local smoked fish tradition.",
     status: "open"
   },
   {
@@ -4807,8 +4807,8 @@ const RESTAURANTS = [
     lat: 25.7572,
     lng: -80.1857,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Colombian arepas, empanadas",
+    note: "A Colombian restaurant in Doral. Bourdain explored Miami's deep Colombian food culture.",
     status: "open"
   },
   {
@@ -4819,8 +4819,8 @@ const RESTAURANTS = [
     lat: 25.7615,
     lng: -80.1954,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Seasonal American, craft cocktails",
+    note: "A Miami Beach restaurant. Bourdain explored the city's evolving dining landscape.",
     status: "closed"
   },
   {
@@ -4831,8 +4831,8 @@ const RESTAURANTS = [
     lat: 36.1565,
     lng: -86.7833,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cheeseburger, beer",
+    note: "An East Nashville dive bar with a famous burger. Bourdain loved the no-frills, late-night charm.",
     status: "open"
   },
   {
@@ -4843,8 +4843,8 @@ const RESTAURANTS = [
     lat: 36.1658,
     lng: -86.7781,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Meat-and-three, Southern comfort food",
+    note: "A Nashville meat-and-three spot. Bourdain ate classic Southern plates with the neighborhood regulars.",
     status: "closed"
   },
   {
@@ -4855,8 +4855,8 @@ const RESTAURANTS = [
     lat: 36.1651,
     lng: -86.7784,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hot chicken, hot fish",
+    note: "Nashville hot chicken done extra-hot. Bourdain braved Bolton's fiery bird and declared it essential.",
     status: "open"
   },
   {
@@ -4867,8 +4867,8 @@ const RESTAURANTS = [
     lat: 36.1682,
     lng: -86.7846,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Craft cocktails, tasting menu",
+    note: "Nashville's cocktail and counter-dining scene. Bourdain experienced the city's culinary ambition.",
     status: "closed"
   },
   {
@@ -4879,8 +4879,8 @@ const RESTAURANTS = [
     lat: 29.957,
     lng: -90.0636,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Shaved ice sno-balls with homemade syrups",
+    note: "The world's finest sno-balls since 1939. Bourdain loved the handmade syrups and feathery-light ice.",
     status: "open"
   },
   {
@@ -4891,8 +4891,8 @@ const RESTAURANTS = [
     lat: 29.9565,
     lng: -90.0648,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, live music, laundromat",
+    note: "A Frenchmen Street bar/laundromat/live music venue. Bourdain experienced New Orleans' eccentric nightlife.",
     status: "open"
   },
   {
@@ -4903,8 +4903,8 @@ const RESTAURANTS = [
     lat: 29.949,
     lng: -90.0642,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Seafood, po'boys, gumbo",
+    note: "A neighborhood seafood spot. Bourdain explored the working-class side of New Orleans dining.",
     status: "closed"
   },
   {
@@ -4915,8 +4915,8 @@ const RESTAURANTS = [
     lat: 29.9558,
     lng: -90.0757,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried chicken, blackened redfish, alligator sausage",
+    note: "A funky Oak Street restaurant. Bourdain loved the joyful, over-the-top New Orleans cooking.",
     status: "open"
   },
   {
@@ -4927,8 +4927,8 @@ const RESTAURANTS = [
     lat: 29.9551,
     lng: -90.0639,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Pralines, sno-balls, sweet potato pie",
+    note: "A Magazine Street sweet shop. Bourdain sampled the legendary pralines and New Orleans sweets.",
     status: "open"
   },
   {
@@ -4939,8 +4939,8 @@ const RESTAURANTS = [
     lat: 29.9516,
     lng: -90.0739,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "All That Jazz po'boy, hot plates",
+    note: "A French Quarter deli open 24 hours. Bourdain ate the stuffed-to-bursting po'boys at 3 AM.",
     status: "open"
   },
   {
@@ -4951,8 +4951,8 @@ const RESTAURANTS = [
     lat: 29.9455,
     lng: -90.0672,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, live brass music",
+    note: "A Bywater bar with legendary Thursday night brass band. Bourdain drank and danced in the real New Orleans.",
     status: "open"
   },
   {
@@ -4963,8 +4963,8 @@ const RESTAURANTS = [
     lat: 29.9473,
     lng: -90.0654,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Shrimp po'boy, oyster po'boy",
+    note: "An Uptown po'boy shop. Bourdain declared these among the finest po'boys in New Orleans.",
     status: "open"
   },
   {
@@ -4975,8 +4975,8 @@ const RESTAURANTS = [
     lat: 29.9488,
     lng: -90.0672,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Oysters Rockefeller, pompano en papillote",
+    note: "The oldest restaurant in New Orleans since 1840. Bourdain ate where Oysters Rockefeller was invented.",
     status: "open"
   },
   {
@@ -4987,8 +4987,8 @@ const RESTAURANTS = [
     lat: 29.9485,
     lng: -90.0672,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Soul food lunch, red beans and rice",
+    note: "A nonprofit training young people in the restaurant industry. Bourdain was moved by the mission and the food.",
     status: "open"
   },
   {
@@ -4999,8 +4999,8 @@ const RESTAURANTS = [
     lat: 29.9448,
     lng: -90.0691,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Barbecue shrimp, banana cream pie",
+    note: "Emeril Lagasse's flagship. Bourdain had a complicated relationship with Emeril but respected the food.",
     status: "open"
   },
   {
@@ -5011,8 +5011,8 @@ const RESTAURANTS = [
     lat: 29.9449,
     lng: -90.065,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Beer, bar atmosphere",
+    note: "A Tchoupitoulas Street Australian-themed dive. Bourdain found even the bars in New Orleans had soul.",
     status: "open"
   },
   {
@@ -5023,8 +5023,8 @@ const RESTAURANTS = [
     lat: 29.9451,
     lng: -90.0744,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Yakamein (Old Sober noodle soup)",
+    note: "The Yakamein Lady's legendary hangover soup. Bourdain called it New Orleans' best-kept culinary secret.",
     status: "open"
   },
   {
@@ -5035,8 +5035,8 @@ const RESTAURANTS = [
     lat: 29.9526,
     lng: -90.068,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried chicken, butter beans, cornbread",
+    note: "Bourdain called it the best fried chicken in the world — crispy, peppery, transcendent.",
     status: "open"
   },
   {
@@ -5047,8 +5047,8 @@ const RESTAURANTS = [
     lat: 29.9475,
     lng: -90.067,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Drive-through daiquiris",
+    note: "A drive-through frozen daiquiri stand. Bourdain was delighted by the uniquely New Orleans concept.",
     status: "open"
   },
   {
@@ -5059,8 +5059,8 @@ const RESTAURANTS = [
     lat: 29.9442,
     lng: -90.0722,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Italian deli meats, muffuletta, olive salad",
+    note: "An Italian market in Metairie. Bourdain explored New Orleans' deep Italian grocery tradition.",
     status: "closed"
   },
   {
@@ -5071,8 +5071,8 @@ const RESTAURANTS = [
     lat: 29.9471,
     lng: -90.0714,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Boiled crabs, shrimp, crawfish",
+    note: "A lakefront boiled seafood spot. Bourdain ate piles of boiled crabs with newspaper and cold beer.",
     status: "open"
   },
   {
@@ -5083,8 +5083,8 @@ const RESTAURANTS = [
     lat: 29.9581,
     lng: -90.0741,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Sazerac cocktail, Ramos Gin Fizz",
+    note: "The birthplace of the Sazerac. Bourdain drank the city's signature cocktail where it was invented.",
     status: "open"
   },
   {
@@ -5095,8 +5095,8 @@ const RESTAURANTS = [
     lat: 29.9585,
     lng: -90.0739,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Vietnamese pho, spring rolls",
+    note: "A New Orleans Vietnamese restaurant. Bourdain highlighted the city's underrated Vietnamese food scene.",
     status: "open"
   },
   {
@@ -5107,8 +5107,8 @@ const RESTAURANTS = [
     lat: 29.9498,
     lng: -90.0685,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Frozen daiquiris in every flavor",
+    note: "Frozen daiquiris to go — only in New Orleans. Bourdain marveled at the city's open-container culture.",
     status: "open"
   },
   {
@@ -5119,8 +5119,8 @@ const RESTAURANTS = [
     lat: 29.9589,
     lng: -90.0786,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cheap cocktails, pool table",
+    note: "A Marigny dive bar. Bourdain drank with the locals in this neighborhood hangout.",
     status: "open"
   },
   {
@@ -5131,8 +5131,8 @@ const RESTAURANTS = [
     lat: 29.9462,
     lng: -90.0765,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Roast beef po'boy, fried seafood",
+    note: "A Bucktown seafood and Italian spot. Bourdain ate the massive, gravy-soaked roast beef po'boy.",
     status: "open"
   },
   {
@@ -5143,8 +5143,8 @@ const RESTAURANTS = [
     lat: 29.9505,
     lng: -90.0672,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cheap beer, Christmas lights",
+    note: "A legendary Uptown dive covered in Christmas lights year-round. Bourdain found it perfectly New Orleans.",
     status: "open"
   },
   {
@@ -5155,8 +5155,8 @@ const RESTAURANTS = [
     lat: 29.9587,
     lng: -90.0656,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Taco truck tacos, Cajun-Mexican fusion",
+    note: "A New Orleans taco truck. Bourdain explored the city's growing street food scene.",
     status: "closed"
   },
   {
@@ -5167,8 +5167,8 @@ const RESTAURANTS = [
     lat: 40.7092,
     lng: -74.0051,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tasting menu with wine pairings",
+    note: "Scott Bryan's restaurant, Bourdain's friend from Kitchen Confidential. A fine-dining New York gem.",
     status: "closed"
   },
   {
@@ -5179,8 +5179,8 @@ const RESTAURANTS = [
     lat: 40.7166,
     lng: -74.0048,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Artisan cheeses, stinky runny cheese",
+    note: "Bourdain's favorite cheese shop — the stinkier and runnier, the better. A Greenwich Village institution.",
     status: "open"
   },
   {
@@ -5191,8 +5191,8 @@ const RESTAURANTS = [
     lat: 40.7149,
     lng: -74.0137,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hot dogs, papaya juice",
+    note: "Bourdain conceded the Upper East Side had one shining light — Papaya King's hot dogs and tropical juice.",
     status: "closed"
   },
   {
@@ -5203,8 +5203,8 @@ const RESTAURANTS = [
     lat: 40.7115,
     lng: -74.0008,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Falafel sandwich, hummus",
+    note: "A late-night cabbie haunt. Bourdain went on his taxi driver's recommendation for 3 AM falafel.",
     status: "closed"
   },
   {
@@ -5215,8 +5215,8 @@ const RESTAURANTS = [
     lat: 40.7057,
     lng: -73.9983,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Drinks, after-hours industry hangout",
+    note: "A legendary dive bar where NYC cooks and chefs unwound. Bourdain made it his after-shift home base.",
     status: "closed"
   },
   {
@@ -5227,8 +5227,8 @@ const RESTAURANTS = [
     lat: 40.712,
     lng: -74.0004,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cocktails, bar atmosphere",
+    note: "A Park Avenue South bar. Bourdain explored the elements of a great New York drinking establishment.",
     status: "closed"
   },
   {
@@ -5239,8 +5239,8 @@ const RESTAURANTS = [
     lat: 40.715,
     lng: -73.9996,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Steaks, cocktails",
+    note: "A TriBeCa bar and restaurant. Part of Bourdain's quest to find the perfect New York bar.",
     status: "closed"
   },
   {
@@ -5251,8 +5251,8 @@ const RESTAURANTS = [
     lat: 40.7117,
     lng: -74.0034,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried fish, beer in styrofoam cups",
+    note: "One of the last great NYC dive bars near the Seaport. Bourdain loved the no-frills, bra-on-the-ceiling charm.",
     status: "open"
   },
   {
@@ -5263,8 +5263,8 @@ const RESTAURANTS = [
     lat: 40.7089,
     lng: -74.003,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cheap beer, free hot dogs",
+    note: "A Hell's Kitchen dive with free hot dogs. Bourdain appreciated the fundamental New York bar equation.",
     status: "open"
   },
   {
@@ -5275,8 +5275,8 @@ const RESTAURANTS = [
     lat: 40.7084,
     lng: -74.0033,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Ceviche, Latin American cuisine",
+    note: "A Peruvian-influenced restaurant. Bourdain explored New York's Latin culinary diversity.",
     status: "closed"
   },
   {
@@ -5287,8 +5287,8 @@ const RESTAURANTS = [
     lat: 40.7098,
     lng: -73.9998,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hot dogs, papaya drink",
+    note: "The classic New York recession special — two dogs and a drink. Bourdain called it essential NYC.",
     status: "open"
   },
   {
@@ -5299,8 +5299,8 @@ const RESTAURANTS = [
     lat: 40.7085,
     lng: -73.9999,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cheap drinks, punk rock",
+    note: "A legendary underground dive bar. Bourdain loved Siberia's grimy, anarchic spirit.",
     status: "closed"
   },
   {
@@ -5311,8 +5311,8 @@ const RESTAURANTS = [
     lat: 40.7197,
     lng: -74.002,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Yakitori, sake, izakaya small plates",
+    note: "A basement izakaya near Times Square. Bourdain escaped tourist hell for authentic Japanese drinking food.",
     status: "open"
   },
   {
@@ -5323,8 +5323,8 @@ const RESTAURANTS = [
     lat: 40.7205,
     lng: -74.012,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Premium sake, Japanese small plates",
+    note: "A hidden sake den beneath a Midtown office building. Bourdain loved the secret speakeasy feel.",
     status: "open"
   },
   {
@@ -5335,8 +5335,8 @@ const RESTAURANTS = [
     lat: 40.7091,
     lng: -74.0129,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Chargrilled burger with Roquefort, gnudi",
+    note: "April Bloomfield's gastropub. Bourdain raved about the Roquefort-topped burger and the gnudi.",
     status: "closed"
   },
   {
@@ -5347,8 +5347,8 @@ const RESTAURANTS = [
     lat: 40.7139,
     lng: -74.0105,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Smoked salmon, bagel with cream cheese and lox, herring",
+    note: "Appetizing since 1914. Bourdain called Russ & Daughters a 'quintessential New York institution.'",
     status: "open"
   },
   {
@@ -5359,8 +5359,8 @@ const RESTAURANTS = [
     lat: 40.7175,
     lng: -74.0032,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Pastrami on rye, matzo ball soup",
+    note: "A New York icon since 1888. Bourdain called the hand-carved pastrami an essential New York experience.",
     status: "open"
   },
   {
@@ -5371,8 +5371,8 @@ const RESTAURANTS = [
     lat: 40.7143,
     lng: -74.0133,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fresh sausages, cured meats, dried pasta",
+    note: "An old-school Hell's Kitchen pork store. Bourdain loved these disappearing neighborhood Italian shops.",
     status: "open"
   },
   {
@@ -5383,8 +5383,8 @@ const RESTAURANTS = [
     lat: 40.7083,
     lng: -74.0071,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hero sandwiches, Italian imports",
+    note: "A Hell's Kitchen Italian grocer since 1893. Bourdain mourned the loss of old-school New York food shops.",
     status: "closed"
   },
   {
@@ -5395,8 +5395,8 @@ const RESTAURANTS = [
     lat: 40.7207,
     lng: -74.0032,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tuna melt, egg cream, matzo ball soup",
+    note: "A Flatiron lunch counter since 1929. Bourdain appreciated the no-frills, time-capsule diner.",
     status: "open"
   },
   {
@@ -5407,8 +5407,8 @@ const RESTAURANTS = [
     lat: 40.7206,
     lng: -74.0041,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Bratwurst, sauerkraut, German beer",
+    note: "A Yorkville German institution. Bourdain explored the remnants of New York's German heritage.",
     status: "open"
   },
   {
@@ -5419,8 +5419,8 @@ const RESTAURANTS = [
     lat: 40.7156,
     lng: -74.0043,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Quenelles, pâté, classical French dishes",
+    note: "A 1930s French restaurant frozen in amber. Bourdain found it a beautiful time capsule of old New York.",
     status: "open"
   },
   {
@@ -5431,8 +5431,8 @@ const RESTAURANTS = [
     lat: 40.7075,
     lng: -74.0042,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cuban sandwiches, cheap beer, live music",
+    note: "An East Village Cuban bar. Bourdain drank cheap beer and listened to live salsa.",
     status: "open"
   },
   {
@@ -5443,8 +5443,8 @@ const RESTAURANTS = [
     lat: 40.7147,
     lng: -74.0077,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cheap drinks, dive bar atmosphere",
+    note: "A legendary Upper East Side dive. Bourdain drank where New York's old guard once bellied up.",
     status: "closed"
   },
   {
@@ -5455,8 +5455,8 @@ const RESTAURANTS = [
     lat: 40.7099,
     lng: -74.0136,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Craft cocktails",
+    note: "The speakeasy behind Crif Dogs' phone booth. Bourdain entered through the hot dog shop for world-class cocktails.",
     status: "open"
   },
   {
@@ -5467,8 +5467,8 @@ const RESTAURANTS = [
     lat: 40.7088,
     lng: -73.9995,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Japanese-style grilled beef, yakiniku",
+    note: "A West Village yakiniku restaurant. Bourdain explored Japanese grilling techniques with rare cuts.",
     status: "closed"
   },
   {
@@ -5479,8 +5479,8 @@ const RESTAURANTS = [
     lat: 40.7137,
     lng: -74.0109,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Salty Pimp cone, soft serve",
+    note: "The beloved ice cream truck turned brand. Bourdain was charmed by the inventive soft-serve creations.",
     status: "open"
   },
   {
@@ -5491,8 +5491,8 @@ const RESTAURANTS = [
     lat: 40.715,
     lng: -74.0106,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Gua bao (Taiwanese pork belly buns)",
+    note: "Eddie Huang's Taiwanese bao shop. Bourdain ate the pillowy steamed buns stuffed with braised pork.",
     status: "closed"
   },
   {
@@ -5503,8 +5503,8 @@ const RESTAURANTS = [
     lat: 40.7173,
     lng: -74.0029,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cocktails, bar atmosphere",
+    note: "An East Village bar. Part of Bourdain's Layover tour of New York's best drinking spots.",
     status: "closed"
   },
   {
@@ -5515,8 +5515,8 @@ const RESTAURANTS = [
     lat: 40.7143,
     lng: -74.0035,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Salt-baked seafood, roast duck, wonton noodle soup",
+    note: "A Chinatown institution open until 4 AM. Bourdain called it essential late-night New York eating.",
     status: "open"
   },
   {
@@ -5527,8 +5527,8 @@ const RESTAURANTS = [
     lat: 40.7204,
     lng: -74.0036,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fried Oreos, egg creams, hot dogs",
+    note: "An East Village institution open 24 hours. Bourdain loved the deep-fried everything and Ray's indomitable spirit.",
     status: "open"
   },
   {
@@ -5539,8 +5539,8 @@ const RESTAURANTS = [
     lat: 40.7157,
     lng: -73.9992,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Pierogi, borscht, Ukrainian kombination plate",
+    note: "A 24-hour East Village Ukrainian diner. Bourdain loved the pierogi and the neighborhood spirit.",
     status: "open"
   },
   {
@@ -5551,8 +5551,8 @@ const RESTAURANTS = [
     lat: 40.717,
     lng: -74.0122,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Italian-American red sauce classics, candles in Chianti bottles",
+    note: "An old-school East Village Italian joint. Bourdain loved the dripping candle wax and classic red-sauce charm.",
     status: "open"
   },
   {
@@ -5563,8 +5563,8 @@ const RESTAURANTS = [
     lat: 40.7107,
     lng: -74.0126,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Mofongo, pernil, Dominican rice and beans",
+    note: "A Dominican restaurant. Bourdain explored the East Village's Latin food heritage.",
     status: "open"
   },
   {
@@ -5575,8 +5575,8 @@ const RESTAURANTS = [
     lat: 40.7188,
     lng: -74.0037,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Spaghetti pomodoro, veal parmigiana",
+    note: "An old-school Italian-American restaurant in SoHo. Bourdain loved the unpretentious red-sauce classics.",
     status: "open"
   },
   {
@@ -5587,8 +5587,8 @@ const RESTAURANTS = [
     lat: 40.7196,
     lng: -74.0032,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Communal dining, seasonal American",
+    note: "Part of the Public Hotel. Bourdain ate communally in this Lower East Side restaurant.",
     status: "closed"
   },
   {
@@ -5599,8 +5599,8 @@ const RESTAURANTS = [
     lat: 45.505,
     lng: -122.6648,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Hotel dining, cocktails",
+    note: "Portland's historic hotel, rumored to be haunted. Bourdain stayed and drank at this landmark.",
     status: "open"
   },
   {
@@ -5611,8 +5611,8 @@ const RESTAURANTS = [
     lat: 40.7279,
     lng: -73.8003,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Lanzhou hand-pulled noodles, lamb dumplings",
+    note: "A Flushing food court basement. Bourdain called it proof that Queens has the best food in NYC.",
     status: "open"
   },
   {
@@ -5623,8 +5623,8 @@ const RESTAURANTS = [
     lat: 40.7264,
     lng: -73.7886,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "South Indian dosa, idli, sambar",
+    note: "Vegetarian temple food in Flushing. Bourdain was amazed by the quality and spirituality of the meal.",
     status: "open"
   },
   {
@@ -5635,8 +5635,8 @@ const RESTAURANTS = [
     lat: 40.735,
     lng: -73.7992,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Live octopus, seafood hot pot, soju",
+    note: "A wild Korean seafood joint in Woodside. Bourdain wrestled with live octopus and drank soju.",
     status: "open"
   },
   {
@@ -5647,8 +5647,8 @@ const RESTAURANTS = [
     lat: 40.7274,
     lng: -73.791,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Foie gras, poutine, Québécois-inspired dishes",
+    note: "Hugue Dufour's Québécois diner in Long Island City. Bourdain called it brilliant and unhinged.",
     status: "closed"
   },
   {
@@ -5659,8 +5659,8 @@ const RESTAURANTS = [
     lat: 40.7277,
     lng: -73.7889,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Hornado, llapingachos, Ecuadorian street food",
+    note: "A Jackson Heights food cart. Bourdain explored Queens' incredible Ecuadorian street food scene.",
     status: "open"
   },
   {
@@ -5671,8 +5671,8 @@ const RESTAURANTS = [
     lat: 40.7303,
     lng: -73.8028,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Soup dumplings (xiaolongbao), pan-fried buns",
+    note: "A Flushing soup dumpling specialist. Bourdain loved the juicy, scalding-hot xiaolongbao.",
     status: "open"
   },
   {
@@ -5683,8 +5683,8 @@ const RESTAURANTS = [
     lat: 40.7282,
     lng: -73.8026,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Gamjatang (pork bone soup), Korean stews",
+    note: "A Flushing Korean restaurant. Bourdain slurped the hearty, spicy pork bone soup.",
     status: "open"
   },
   {
@@ -5695,8 +5695,8 @@ const RESTAURANTS = [
     lat: 40.725,
     lng: -73.7946,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Burgers, beer, historic atmosphere",
+    note: "One of NYC's oldest bars, established 1829. Bourdain drank where Goodfellas was filmed.",
     status: "open"
   },
   {
@@ -5707,8 +5707,8 @@ const RESTAURANTS = [
     lat: 40.7307,
     lng: -73.7993,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Tibetan momos (dumplings), thukpa noodle soup",
+    note: "Tibetan food in Jackson Heights. Bourdain was fascinated by Queens' culinary diversity.",
     status: "open"
   },
   {
@@ -5719,8 +5719,8 @@ const RESTAURANTS = [
     lat: 40.7328,
     lng: -73.7928,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Pernil, mofongo, arroz con gandules",
+    note: "A Queens Latin restaurant. Bourdain explored the borough's deep Puerto Rican and Dominican roots.",
     status: "open"
   },
   {
@@ -5731,8 +5731,8 @@ const RESTAURANTS = [
     lat: 37.7742,
     lng: -122.4238,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Unusual ice cream flavors (durian, ube, taro)",
+    note: "Exotic ice cream flavors in the Sunset. Bourdain tried durian and other adventurous scoops.",
     status: "open"
   },
   {
@@ -5743,8 +5743,8 @@ const RESTAURANTS = [
     lat: 37.779,
     lng: -122.4122,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Thomas Keller's tasting menu, oysters and pearls",
+    note: "Thomas Keller's legendary restaurant. Bourdain made the pilgrimage to America's most celebrated kitchen.",
     status: "open"
   },
   {
@@ -5755,8 +5755,8 @@ const RESTAURANTS = [
     lat: 37.7675,
     lng: -122.4167,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Coffee, radio station atmosphere",
+    note: "A Mission café that doubled as a pirate radio station. Bourdain loved San Francisco's counterculture.",
     status: "closed"
   },
   {
@@ -5767,8 +5767,8 @@ const RESTAURANTS = [
     lat: 37.7777,
     lng: -122.4239,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Martinis, cocktails",
+    note: "A Haight-Ashbury cocktail lounge. Bourdain drank perfectly made martinis at the legendary curved bar.",
     status: "open"
   },
   {
@@ -5779,8 +5779,8 @@ const RESTAURANTS = [
     lat: 37.771,
     lng: -122.412,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Slow-roasted prime rib, Yorkshire pudding, creamed spinach",
+    note: "A San Francisco institution since 1949. Bourdain loved the old-school tableside prime rib carving.",
     status: "open"
   },
   {
@@ -5791,8 +5791,8 @@ const RESTAURANTS = [
     lat: 37.7753,
     lng: -122.4178,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Seasonal produce, artisan food, oysters",
+    note: "San Francisco's iconic farmers' market. Bourdain grazed through California's finest produce.",
     status: "open"
   },
   {
@@ -5803,8 +5803,8 @@ const RESTAURANTS = [
     lat: 37.774,
     lng: -122.4122,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Handmade tamales, pupusas",
+    note: "An Oakland tamale shop. Bourdain ate deeply flavored, handmade Central American tamales.",
     status: "open"
   },
   {
@@ -5815,8 +5815,8 @@ const RESTAURANTS = [
     lat: 37.7725,
     lng: -122.4172,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Omakase sushi, rare Japanese fish",
+    note: "A Hayes Valley sushi bar. Bourdain experienced San Francisco's world-class sushi scene.",
     status: "closed"
   },
   {
@@ -5827,8 +5827,8 @@ const RESTAURANTS = [
     lat: 37.7725,
     lng: -122.4201,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Tacos, burritos, Mission-style Mexican",
+    note: "A Mission District market and taqueria. Bourdain explored SF's legendary burrito culture.",
     status: "open"
   },
   {
@@ -5839,8 +5839,8 @@ const RESTAURANTS = [
     lat: 37.7772,
     lng: -122.4263,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Salt-and-pepper crab, Peking duck",
+    note: "A Chinatown Cantonese restaurant. Bourdain loved the salt-and-pepper crab — crispy, garlicky perfection.",
     status: "open"
   },
   {
@@ -5851,8 +5851,8 @@ const RESTAURANTS = [
     lat: 37.7722,
     lng: -122.4201,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Nose-to-tail Italian, offal, house-cured salumi",
+    note: "Chris Cosentino's offal-forward Italian restaurant. Bourdain respected the whole-animal approach.",
     status: "closed"
   },
   {
@@ -5863,8 +5863,8 @@ const RESTAURANTS = [
     lat: 37.7782,
     lng: -122.4273,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Double cheeseburger, beer",
+    note: "A waterfront greasy spoon since 1955. Bourdain ate cheap burgers and drank beer on the Embarcadero.",
     status: "open"
   },
   {
@@ -5875,8 +5875,8 @@ const RESTAURANTS = [
     lat: 37.7774,
     lng: -122.4117,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Korean tofu stew (soondubu), banchan",
+    note: "A Richmond District Korean restaurant. Bourdain ate bubbling-hot tofu stew with banchan.",
     status: "closed"
   },
   {
@@ -5887,8 +5887,8 @@ const RESTAURANTS = [
     lat: 37.7716,
     lng: -122.4237,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Vietnamese-inspired pop-up dishes",
+    note: "A San Francisco pop-up restaurant. Bourdain explored the city's experimental dining scene.",
     status: "closed"
   },
   {
@@ -5899,8 +5899,8 @@ const RESTAURANTS = [
     lat: 37.7816,
     lng: -122.4127,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Chinese mai tais, dive bar atmosphere",
+    note: "A Chinatown dive bar. Bourdain drank potent mai tais beneath the glowing Buddha statue.",
     status: "open"
   },
   {
@@ -5911,8 +5911,8 @@ const RESTAURANTS = [
     lat: 37.781,
     lng: -122.418,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Cocktails, Chinatown dive atmosphere",
+    note: "A North Beach/Chinatown dive bar. Bourdain explored SF's late-night drinking culture.",
     status: "open"
   },
   {
@@ -5923,8 +5923,8 @@ const RESTAURANTS = [
     lat: 37.7742,
     lng: -122.4148,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pizza by the slice, burgers",
+    note: "A North Beach no-frills pizza spot. Bourdain ate cheap slices in San Francisco's Italian quarter.",
     status: "open"
   },
   {
@@ -5935,8 +5935,8 @@ const RESTAURANTS = [
     lat: 37.7676,
     lng: -122.4271,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Yucatecan tacos, cochinita pibil",
+    note: "A Mexican food cart. Bourdain ate Yucatecan specialties from one of SF's street food vendors.",
     status: "closed"
   },
   {
@@ -5947,8 +5947,8 @@ const RESTAURANTS = [
     lat: 37.7803,
     lng: -122.418,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Italian deli sandwiches, salumi, cheese",
+    note: "A North Beach Italian deli since 1896. Bourdain loved the old-school Italian-American provisions.",
     status: "open"
   },
   {
@@ -5959,8 +5959,8 @@ const RESTAURANTS = [
     lat: 37.7771,
     lng: -122.4257,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Seafood, waterfront views, cocktails",
+    note: "An Embarcadero seafood restaurant. Bourdain dined at this San Francisco waterfront spot.",
     status: "closed"
   },
   {
@@ -5971,8 +5971,8 @@ const RESTAURANTS = [
     lat: 37.7671,
     lng: -122.4237,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Mai tais, pupu platter, Polynesian dishes",
+    note: "The birthplace of the mai tai. Bourdain paid homage to the original tiki restaurant.",
     status: "open"
   },
   {
@@ -5983,8 +5983,8 @@ const RESTAURANTS = [
     lat: 37.7806,
     lng: -122.4204,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Smoked brisket, cheeseburger, pulled pork",
+    note: "Ryan Farr's BBQ and burger spot. Bourdain ate the smoked meats at this SF favorite.",
     status: "open"
   },
   {
@@ -5995,8 +5995,8 @@ const RESTAURANTS = [
     lat: 37.7775,
     lng: -122.4255,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Caribbean — roti, saltfish, jerk chicken",
+    note: "Caribbean food in Oakland. Bourdain explored the Bay Area's diverse culinary scene.",
     status: "closed"
   },
   {
@@ -6007,8 +6007,8 @@ const RESTAURANTS = [
     lat: 37.7713,
     lng: -122.4156,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Indian street food — vada pav, pavs, chaat",
+    note: "Mumbai street food in Oakland. Bourdain loved the funky, flavorful Indian snacks.",
     status: "closed"
   },
   {
@@ -6019,8 +6019,8 @@ const RESTAURANTS = [
     lat: 37.7694,
     lng: -122.4118,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Sushi, Japanese home cooking",
+    note: "A Japantown restaurant in San Jose. Bourdain explored the Bay Area's Japanese culinary heritage.",
     status: "open"
   },
   {
@@ -6031,8 +6031,8 @@ const RESTAURANTS = [
     lat: 37.7737,
     lng: -122.4265,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fine dining (COI) / fast food reimagined (Locol)",
+    note: "Bourdain explored the contrast between high-end and Roy Choi's mission-driven fast food concept.",
     status: "closed"
   },
   {
@@ -6043,8 +6043,8 @@ const RESTAURANTS = [
     lat: 47.6037,
     lng: -122.3394,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Mac and cheese, flagship cheese curds",
+    note: "Artisan cheese at Pike Place. Bourdain watched cheese being made and ate the famous mac and cheese.",
     status: "open"
   },
   {
@@ -6055,8 +6055,8 @@ const RESTAURANTS = [
     lat: 47.5986,
     lng: -122.3388,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cured meats, meatball sub, oxtail sandwich",
+    note: "Armandino Batali's legendary salumeria. Bourdain called the cured meats world-class.",
     status: "open"
   },
   {
@@ -6067,8 +6067,8 @@ const RESTAURANTS = [
     lat: 47.605,
     lng: -122.3355,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Dungeness crab roll, rotisserie chicken",
+    note: "A Pike Place seafood spot. Bourdain ate Pacific Northwest shellfish steps from the market.",
     status: "closed"
   },
   {
@@ -6079,8 +6079,8 @@ const RESTAURANTS = [
     lat: 47.6112,
     lng: -122.3375,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Oysters on the half shell, steak tartare",
+    note: "A Ballard oyster bar. Bourdain ate briny Pacific oysters at this beloved Seattle spot.",
     status: "open"
   },
   {
@@ -6091,8 +6091,8 @@ const RESTAURANTS = [
     lat: 47.6045,
     lng: -122.3262,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Pacific Northwest tasting menu, Canlis salad",
+    note: "Seattle's iconic fine-dining restaurant since 1950. Bourdain appreciated the city's culinary ambition.",
     status: "open"
   },
   {
@@ -6103,8 +6103,8 @@ const RESTAURANTS = [
     lat: 47.605,
     lng: -122.3286,
     show: "The Layover",
-    dish: "",
-    note: "",
+    dish: "Hot dogs, cheap beer, pinball",
+    note: "A Belltown dive bar with hot dogs and pinball machines. Bourdain loved the combination.",
     status: "open"
   },
   {
@@ -6115,8 +6115,8 @@ const RESTAURANTS = [
     lat: 47.6049,
     lng: -122.3329,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fish and chips, beer",
+    note: "A Fremont dive with great fish and chips. Bourdain ate beer-battered fish in this no-frills Seattle pub.",
     status: "open"
   },
   {
@@ -6127,8 +6127,8 @@ const RESTAURANTS = [
     lat: 47.6047,
     lng: -122.3385,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Korean-inspired rice bowls, dumplings, pancakes",
+    note: "A Fremont Korean-fusion restaurant. Bourdain loved the creative, boundary-crossing cooking.",
     status: "open"
   },
   {
@@ -6139,8 +6139,8 @@ const RESTAURANTS = [
     lat: 47.6112,
     lng: -122.3374,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Cannabis (legal Washington dispensary)",
+    note: "Bourdain visited a legal cannabis dispensary — exploring Seattle's post-legalization culture.",
     status: "closed"
   },
   {
@@ -6151,8 +6151,8 @@ const RESTAURANTS = [
     lat: 47.599,
     lng: -122.3324,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Lamb kebab, hummus, Syrian-inspired meze",
+    note: "A Capitol Hill Middle Eastern restaurant. Bourdain ate the Levantine meze and grilled meats.",
     status: "open"
   },
   {
@@ -6163,8 +6163,8 @@ const RESTAURANTS = [
     lat: 47.612,
     lng: -122.3401,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Nathan Myhrvold's test kitchen, experimental cooking",
+    note: "The Modernist Cuisine lab. Bourdain toured Nathan Myhrvold's high-tech culinary research facility.",
     status: "closed"
   },
   {
@@ -6175,8 +6175,8 @@ const RESTAURANTS = [
     lat: 47.5992,
     lng: -122.3266,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Geoduck, oysters, Manila clams",
+    note: "A Seattle shellfish institution. Bourdain slurped Pacific Northwest bivalves at the raw bar.",
     status: "open"
   },
   {
@@ -6187,8 +6187,8 @@ const RESTAURANTS = [
     lat: 47.5998,
     lng: -122.3307,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Diner breakfast, Chinese-American food, tiki drinks",
+    note: "A quirky Seattle spot. Bourdain loved the diner-meets-tiki-bar atmosphere.",
     status: "open"
   },
   {
@@ -6199,8 +6199,8 @@ const RESTAURANTS = [
     lat: 47.6079,
     lng: -122.3355,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Spanish tapas, wine",
+    note: "A Ballard tapas bar. Bourdain ate Spanish-inspired small plates in Seattle's Scandinavian neighborhood.",
     status: "open"
   },
   {
@@ -6211,8 +6211,8 @@ const RESTAURANTS = [
     lat: 40.8506,
     lng: -73.8707,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Fried chicken, collard greens, mac and cheese",
+    note: "A Bronx soul food restaurant. Bourdain explored the borough's rich African-American food traditions.",
     status: "closed"
   },
   {
@@ -6223,8 +6223,8 @@ const RESTAURANTS = [
     lat: 40.846,
     lng: -73.8711,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Cuchifritos (fried pork), alcapurria, pastelillos",
+    note: "A Bronx frituras counter. Bourdain ate deep-fried Puerto Rican snacks in the South Bronx.",
     status: "open"
   },
   {
@@ -6235,8 +6235,8 @@ const RESTAURANTS = [
     lat: 40.8509,
     lng: -73.8632,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "West Indian roti, curry goat, jerk chicken",
+    note: "A Bronx Caribbean restaurant. Bourdain explored the borough's thriving West Indian food scene.",
     status: "open"
   },
   {
@@ -6247,8 +6247,8 @@ const RESTAURANTS = [
     lat: 40.8522,
     lng: -73.8607,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Fried calamari, lobster, Italian-American seafood",
+    note: "A City Island seafood institution. Bourdain ate fried seafood on the Bronx's little fishing island.",
     status: "open"
   },
   {
@@ -6259,8 +6259,8 @@ const RESTAURANTS = [
     lat: 40.8455,
     lng: -73.858,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Pastrami, corned beef, matzo ball soup",
+    note: "A Riverdale kosher deli. Bourdain appreciated this outpost of old-school Jewish deli culture.",
     status: "open"
   },
 
@@ -6272,8 +6272,8 @@ const RESTAURANTS = [
     lat: 21.0226,
     lng: 105.836,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vietnamese noodle soup, local dishes",
+    note: "A Hanoi restaurant from Bourdain's first Vietnam trip. The country changed him forever.",
     status: "closed"
   },
   {
@@ -6283,8 +6283,8 @@ const RESTAURANTS = [
     lat: 21.0352,
     lng: 105.8361,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Bún chả with nem rán (spring rolls)",
+    note: "A Hanoi bún chả stall. Bourdain ate grilled pork with noodles and crispy spring rolls at this street spot.",
     status: "open"
   },
   {
@@ -6294,8 +6294,8 @@ const RESTAURANTS = [
     lat: 21.0202,
     lng: 105.8421,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vietnamese home cooking, family-style dishes",
+    note: "A Hanoi restaurant. Bourdain ate family-style Vietnamese dishes during his No Reservations visit.",
     status: "open"
   },
   {
@@ -6305,8 +6305,8 @@ const RESTAURANTS = [
     lat: 21.0198,
     lng: 105.8351,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Gà tần (rooster stew), chicken dishes",
+    note: "A Hanoi restaurant specializing in chicken. Bourdain explored Vietnamese poultry-focused cuisine.",
     status: "open"
   },
   {
@@ -6316,8 +6316,8 @@ const RESTAURANTS = [
     lat: 21.0201,
     lng: 105.8348,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Bún ốc (snail noodle soup)",
+    note: "A Hanoi snail noodle soup specialist. Bourdain slurped the tangy, tomato-based broth with river snails.",
     status: "open"
   },
   {
@@ -6327,8 +6327,8 @@ const RESTAURANTS = [
     lat: 21.03,
     lng: 105.8348,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Bánh cuốn (steamed rice rolls with pork)",
+    note: "Hanoi's famous steamed rice rolls. Bourdain watched them made fresh — paper-thin, filled with pork and mushrooms.",
     status: "open"
   },
   {
@@ -6338,8 +6338,8 @@ const RESTAURANTS = [
     lat: 21.0351,
     lng: 105.8306,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Bún with pork ribs, tongue, and trotters",
+    note: "A Hanoi noodle stall with nose-to-tail pork. Bourdain loved the variety of pork cuts in the bowl.",
     status: "open"
   },
   {
@@ -6349,8 +6349,8 @@ const RESTAURANTS = [
     lat: 21.0279,
     lng: 105.8351,
     show: "Parts Unknown",
-    dish: "",
-    note: "",
+    dish: "Bia hơi (fresh draft beer), bar snacks",
+    note: "A Hanoi bia hơi corner. Bourdain drank the world's cheapest fresh beer on tiny plastic stools.",
     status: "open"
   },
   {
@@ -6360,8 +6360,8 @@ const RESTAURANTS = [
     lat: 10.8291,
     lng: 106.6227,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Cháo mực (squid congee)",
+    note: "A Ho Chi Minh City congee shop. Bourdain savored the silky rice porridge with tender squid.",
     status: "open"
   },
   {
@@ -6371,8 +6371,8 @@ const RESTAURANTS = [
     lat: 10.8178,
     lng: 106.6368,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vietnamese coffee, light bites",
+    note: "A Saigon café with colonial charm. Bourdain sipped Vietnamese coffee in the French-era atmosphere.",
     status: "closed"
   },
   {
@@ -6382,8 +6382,8 @@ const RESTAURANTS = [
     lat: 10.8301,
     lng: 106.6239,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Jungle-style Vietnamese dishes, exotic meats",
+    note: "A Saigon restaurant featuring forest flavors. Bourdain explored Vietnam's adventurous culinary traditions.",
     status: "open"
   },
   {
@@ -6393,8 +6393,8 @@ const RESTAURANTS = [
     lat: 10.8239,
     lng: 106.6328,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Bánh xèo (crispy Vietnamese crepe)",
+    note: "A Saigon bánh xèo specialist. Bourdain ate the sizzling, turmeric-yellow crepes stuffed with shrimp and pork.",
     status: "open"
   },
   {
@@ -6404,8 +6404,8 @@ const RESTAURANTS = [
     lat: 10.8179,
     lng: 106.6223,
     show: "No Reservations",
-    dish: "",
-    note: "",
+    dish: "Vietnamese-Chinese cuisine",
+    note: "A Saigon restaurant blending Vietnamese and Chinese traditions. Bourdain explored the culinary crossover.",
     status: "open"
   },
 ];
